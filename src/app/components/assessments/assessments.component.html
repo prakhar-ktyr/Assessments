@@ -1,0 +1,17 @@
+<table class="table">
+    <tr>
+        <td *ngFor="let a of arrAssessments">
+            <div class="card">
+                <img [src]="a.assessmentImage" class="card-img-top" alt="Image">
+                <div class="card-body">
+                    <h5 class="card-title">{{a.assessmentName}}</h5>
+                    <p class="card-text">{{a.assessmentDescription}}</p>
+                </div>
+                <div class="card-footer">
+                    <button class="btn btn-primary btn-primary-custom" (click)="displayDetails(a.id, a.assessmentName, a.assessmentDescription)">Details</button>
+                    <a href="#" class="btn btn-primary btn-primary-custom">Add to Cart</a>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>

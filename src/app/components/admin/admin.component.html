@@ -1,0 +1,202 @@
+<ul class="nav nav-tabs" id="adminTabs" role="tablist">
+    <li class="nav-item">
+        <a class="nav-link active" id="users-tab" data-bs-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Users</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="courses-tab" data-bs-toggle="tab" href="#courses" role="tab" aria-controls="courses" aria-selected="false">Courses</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="course-category-tab" data-bs-toggle="tab" href="#course-category" role="tab" aria-controls="course-category" aria-selected="false">Course Categories</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="assessments-tab" data-bs-toggle="tab" href="#assessments" role="tab" aria-controls="assessments" aria-selected="false">Assessments</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="assessment-scores-tab" data-bs-toggle="tab" href="#assessment-scores" role="tab" aria-controls="assessment-scores" aria-selected="false">Assessment Scores</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" id="reports-tab" data-bs-toggle="tab" href="#reports" role="tab" aria-controls="reports" aria-selected="false">Reports</a>
+    </li>
+</ul>
+<div class="tab-content" id="adminTabsContent">
+    <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+        <ul class="nav nav-tabs" id="usersSubTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="faculty-tab" data-bs-toggle="tab" href="#faculty" role="tab" aria-controls="faculty" aria-selected="true">Faculty</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="trainee-tab" data-bs-toggle="tab" href="#trainee" role="tab" aria-controls="trainee" aria-selected="false">Trainee</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="usersSubTabsContent">
+            <div class="tab-pane fade show active" id="faculty" role="tabpanel" aria-labelledby="faculty-tab">
+                <ul class="nav nav-tabs" id="facultyCrudTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="faculty-create-tab" data-bs-toggle="tab" href="#faculty-create" role="tab" aria-controls="faculty-create" aria-selected="true">Create</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="faculty-update-tab" data-bs-toggle="tab" href="#faculty-update" role="tab" aria-controls="faculty-update" aria-selected="false">Update</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="faculty-delete-tab" data-bs-toggle="tab" href="#faculty-delete" role="tab" aria-controls="faculty-delete" aria-selected="false">Delete</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="faculty-view-tab" data-bs-toggle="tab" href="#faculty-view" role="tab" aria-controls="faculty-view" aria-selected="false">View</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="facultyCrudTabsContent">
+                    <div class="tab-pane fade show active" id="faculty-create" role="tabpanel" aria-labelledby="faculty-create-tab">
+                        <app-add-user></app-add-user>
+                    </div>
+                    <div class="tab-pane fade" id="faculty-update" role="tabpanel" aria-labelledby="faculty-update-tab">
+                        <app-update-user></app-update-user>
+                    </div>
+                    <div class="tab-pane fade" id="faculty-delete" role="tabpanel" aria-labelledby="faculty-delete-tab">
+                        <form>
+                            <div class="mb-3">
+                                <label for="facultyDeleteID" class="form-label">Faculty ID</label>
+                                <input type="text" class="form-control" id="facultyDeleteID">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="faculty-view" role="tabpanel" aria-labelledby="faculty-view-tab">
+                        <form>
+                            <div class="mb-3">
+                                <label for="facultyViewID" class="form-label">Faculty ID</label>
+                                <input type="text" class="form-control" id="facultyViewID">
+                            </div>
+                            <button type="submit" class="btn btn-primary">View</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="trainee" role="tabpanel" aria-labelledby="trainee-tab">
+                <ul class="nav nav-tabs" id="traineeCrudTabs" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active" id="trainee-create-tab" data-bs-toggle="tab" href="#trainee-create" role="tab" aria-controls="trainee-create" aria-selected="true">Create</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="trainee-update-tab" data-bs-toggle="tab" href="#trainee-update" role="tab" aria-controls="trainee-update" aria-selected="false">Update</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="trainee-delete-tab" data-bs-toggle="tab" href="#trainee-delete" role="tab" aria-controls="trainee-delete" aria-selected="false">Delete</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" id="trainee-view-tab" data-bs-toggle="tab" href="#trainee-view" role="tab" aria-controls="trainee-view" aria-selected="false">View</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="traineeCrudTabsContent">
+                    <div class="tab-pane fade show active" id="trainee-create" role="tabpanel" aria-labelledby="trainee-create-tab">
+                        <app-add-user></app-add-user>
+                    </div>
+                    <div class="tab-pane fade" id="trainee-update" role="tabpanel" aria-labelledby="trainee-update-tab">
+                        <app-update-user></app-update-user>
+                    </div>
+                    <div class="tab-pane fade" id="trainee-delete" role="tabpanel" aria-labelledby="trainee-delete-tab">
+                        <form>
+                            <div class="mb-3">
+                                <label for="traineeDeleteID" class="form-label">Trainee ID</label>
+                                <input type="text" class="form-control" id="traineeDeleteID">
+                            </div>
+                            <button type="submit" class="btn btn-primary">Delete</button>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="trainee-view" role="tabpanel" aria-labelledby="trainee-view-tab">
+                        <form>
+                            <div class="mb-3">
+                                <label for="traineeViewID" class="form-label">Trainee ID</label>
+                                <input type="text" class="form-control" id="traineeViewID">
+                            </div>
+                            <button type="submit" class="btn btn-primary">View</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Courses Tab -->
+    <div class="tab-pane fade" id="courses" role="tabpanel" aria-labelledby="courses-tab">
+        <ul class="nav nav-tabs" id="coursesCrudTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="courses-create-tab" data-bs-toggle="tab" href="#courses-create" role="tab" aria-controls="courses-create" aria-selected="true">Create</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="courses-update-tab" data-bs-toggle="tab" href="#courses-update" role="tab" aria-controls="courses-update" aria-selected="false">Update</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="courses-delete-tab" data-bs-toggle="tab" href="#courses-delete" role="tab" aria-controls="courses-delete" aria-selected="false">Delete</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="courses-view-tab" data-bs-toggle="tab" href="#courses-view" role="tab" aria-controls="courses-view" aria-selected="false">View</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="coursesCrudTabsContent">
+            <div class="tab-pane fade show active" id="courses-create" role="tabpanel" aria-labelledby="courses-create-tab">
+                <app-add-user></app-add-user>
+            </div>
+            <div class="tab-pane fade" id="courses-update" role="tabpanel" aria-labelledby="courses-update-tab">
+                <!-- Update Content Here -->
+            </div>
+            <div class="tab-pane fade" id="courses-delete" role="tabpanel" aria-labelledby="courses-delete-tab">
+                <!-- Delete Content Here -->
+            </div>
+            <div class="tab-pane fade" id="courses-view" role="tabpanel" aria-labelledby="courses-view-tab">
+                <!-- View Content Here -->
+            </div>
+        </div>
+    </div>
+    <div class="tab-pane fade" id="course-category" role="tabpanel" aria-labelledby="course-category-tab">
+        <form>
+            <div class="mb-3">
+                <label for="categoryName" class="form-label">Category Name</label>
+                <input type="text" class="form-control" id="categoryName">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="tab-pane fade" id="assessments" role="tabpanel" aria-labelledby="assessments-tab">
+        <form>
+            <div class="mb-3">
+                <label for="assessmentName" class="form-label">Assessment Name</label>
+                <input type="text" class="form-control" id="assessmentName">
+            </div>
+            <div class="mb-3">
+                <label for="assessmentDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="assessmentDescription" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="tab-pane fade" id="assessment-scores" role="tabpanel" aria-labelledby="assessment-scores-tab">
+        <form>
+            <div class="mb-3">
+                <label for="assessmentID" class="form-label">Assessment ID</label>
+                <input type="text" class="form-control" id="assessmentID">
+            </div>
+            <div class="mb-3">
+                <label for="userID" class="form-label">User ID</label>
+                <input type="text" class="form-control" id="userID">
+            </div>
+            <div class="mb-3">
+                <label for="score" class="form-label">Score</label>
+                <input type="number" class="form-control" id="score">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+    <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
+        <form>
+            <div class="mb-3">
+                <label for="reportType" class="form-label">Report Type</label>
+                <input type="text" class="form-control" id="reportType">
+            </div>
+            <div class="mb-3">
+                <label for="reportDescription" class="form-label">Description</label>
+                <textarea class="form-control" id="reportDescription" rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
