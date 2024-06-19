@@ -31,6 +31,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewUserComponent } from './components/view-user/view-user.component';
+import { UpdateCourseComponent } from './components/update-course/update-course.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { ViewUserComponent } from './components/view-user/view-user.component';
     UpdateUserComponent,
     AddCourseComponent,
     CreateAssessmentComponent,
-    ViewUserComponent
+    ViewUserComponent,
+    UpdateCourseComponent
   ],
   imports: [
     ReactiveFormsModule,

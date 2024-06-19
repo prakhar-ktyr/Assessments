@@ -40,7 +40,32 @@
       "dob": "1990-01-01",
       "role": "user"
     }
-    
+  ],
+  "courses": [
+    {
+      "id": "1",
+      "courseName": "Introduction to Programming",
+      "courseDescription": "Learn the basics of programming",
+      "categoryId": 1
+    },
+    {
+      "id": "2",
+      "courseName": "Web Development Fundamentals",
+      "courseDescription": "Build websites using HTML, CSS, and JavaScript",
+      "categoryId": 1
+    },
+    {
+      "id": "3",
+      "courseName": "Data Structures and Algorithms",
+      "courseDescription": "Learn about common data structures and algorithms",
+      "categoryId": 1
+    },
+    {
+      "id": "",
+      "courseName": "fe",
+      "courseDescription": "gf\ng\ndgdgdg\ndgdg\nrtet",
+      "categoryId": 2
+    }
   ],
   "coursecategories": [
     {

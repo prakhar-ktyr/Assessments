@@ -31,7 +31,7 @@ export class AddCourseComponent implements OnInit {
     console.log('Form Value:', frmValue);
 
     const newCourse: Course = {
-      id: 0, // Set an appropriate id or generate it as needed
+      id: '', // Ensure to provide a unique id if necessary
       courseName: frmValue.courseName,
       courseDescription: frmValue.courseDescription,
       categoryId: frmValue.categoryId
