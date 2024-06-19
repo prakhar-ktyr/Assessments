@@ -12,7 +12,7 @@ import { Address } from '../../models/address';
 export class UpdateUserComponent implements OnInit {
   userAddForm: FormGroup;
   arrUsers: User[] = [];
-  idUpdated: number = 0;;
+  idUpdated: string = '';
 
   constructor(private fb: FormBuilder, private userService: UserService) {
     this.userAddForm = this.fb.group({
@@ -29,7 +29,9 @@ export class UpdateUserComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.arrUsers = this.userService.getUsers();
+    this.userService.getUsers().subscribe((users: User[]) => {
+      this.arrUsers = users;
+    });
   }
 
   createAddress(): FormGroup {
@@ -75,7 +77,7 @@ export class UpdateUserComponent implements OnInit {
       role: frmValue.role,
       password: frmValue.password,
       address: frmValue.address.map((addr: any) => ({
-        id: addr.id || 0,
+        id: addr.id || '0',
         houseNo: addr.houseNo,
         street: addr.street,
         area: addr.area,
@@ -96,15 +98,15 @@ export class UpdateUserComponent implements OnInit {
     );
   }
 
-  onChangeType(evt: any){
+  onChangeType(evt: any): void {
     console.log(evt.target.value);
 
-    var idObtained=evt.target.value;
-    this.idUpdated=parseInt(idObtained.split(':')[1].trim());
+    var idObtained = evt.target.value;
+    this.idUpdated = idObtained.split(':')[1].trim();
     console.log(this.idUpdated);
 
-    for(var i=0; i<this.arrUsers.length; i++){
-      if(this.idUpdated==this.arrUsers[i].id){
+    for (var i = 0; i < this.arrUsers.length; i++) {
+      if (this.idUpdated === this.arrUsers[i].id) {
         this.userAddForm.patchValue({
           id: this.arrUsers[i].id,
           firstName: this.arrUsers[i].firstName,
@@ -116,12 +118,12 @@ export class UpdateUserComponent implements OnInit {
           password: this.arrUsers[i].password
         });
 
-        var addressArray=this.arrUsers[i].address;
-        var addressArrayLength=addressArray.length;
+        var addressArray = this.arrUsers[i].address;
+        var addressArrayLength = addressArray.length;
         console.log(addressArrayLength);
 
-        for(var j=0; j<addressArrayLength; j++){
-          if(j==0){
+        for (var j = 0; j < addressArrayLength; j++) {
+          if (j == 0) {
             this.userAddForm.patchValue({
               address: [
                 {
@@ -136,8 +138,7 @@ export class UpdateUserComponent implements OnInit {
                 }
               ]
             });
-          }
-          else{
+          } else {
             (this.userAddForm.get('address') as FormArray).push(this.createAddress());
             this.userAddForm.patchValue({
               address: [
@@ -157,9 +158,5 @@ export class UpdateUserComponent implements OnInit {
         }
       }
     }
-
-
-
   }
-
 }

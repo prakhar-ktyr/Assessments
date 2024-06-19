@@ -10,10 +10,12 @@ import { AssessmentService } from '../../services/assessment.service';
 export class AssessmentsComponent {
 
   arrAssessments:Assessment[] = []
-  assessment:Assessment = new Assessment(0, "", "", "") 
+  assessment:Assessment = new Assessment(0, "", "", "", [])
 
   constructor(private assessmentService: AssessmentService) { 
-    this.arrAssessments = this.assessmentService.getAssessments()
+    this.assessmentService.getAssessments().subscribe((assessments: Assessment[]) => {
+      this.arrAssessments = assessments;
+    });
   }
 
   displayDetails(aid:number, aName: string, aDescription: string) {

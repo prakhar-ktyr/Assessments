@@ -1,12 +1,17 @@
+import { Question } from './questions';
+
 export class Assessment {
     id: number;
     assessmentName: string;
     assessmentDescription: string;
     assessmentImage: string;
-    constructor(id: number, aName: string, aDescription: string, aImage: string) {
+    questions: Question[];
+
+    constructor(id: number, name: string, description: string, assessmentImage: string, questions: Question[]) {
         this.id = id;
-        this.assessmentName = aName;
-        this.assessmentDescription = aDescription;
-        this.assessmentImage = aImage;
+        this.assessmentName = name;
+        this.assessmentDescription = description;
+        this.assessmentImage = assessmentImage;
+        this.questions = questions;
     }
 }

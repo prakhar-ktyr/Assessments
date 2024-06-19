@@ -30,15 +30,17 @@ export class AppComponent implements OnInit {
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
 
-    const user = this.userService.getUsers().find(u => u.email === email && u.password === password);
+    this.userService.getUsers().subscribe((users: User[]) => {
+      const user = users.find(u => u.email === email && u.password === password);
 
-    if (user) {
-      this.localStorageService.setItem('username', `${user.firstName} ${user.lastName}`);
-      this.localStorageService.setItem('role', user.role);
-      console.log('Login successful');
-      // Add navigation or any other actions after successful login
-    } else {
-      console.log('Invalid credentials');
-    }
+      if (user) {
+        this.localStorageService.setItem('username', `${user.firstName} ${user.lastName}`);
+        this.localStorageService.setItem('role', user.role);
+        console.log('Login successful');
+        // Add navigation or any other actions after successful login
+      } else {
+        console.log('Invalid credentials');
+      }
+    });
   }
 }

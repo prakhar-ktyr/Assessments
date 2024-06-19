@@ -62,7 +62,7 @@ export class AddUserComponent implements OnInit {
     console.log('Form Value:', frmValue);
 
     const tempUser: User = {
-      id: 0, 
+      id: "0", 
       firstName: frmValue.firstName,
       lastName: frmValue.lastName,
       email: frmValue.email,
@@ -83,11 +83,11 @@ export class AddUserComponent implements OnInit {
     };
 
     this.userService.addUser(tempUser).subscribe(
-      (response: any) => {
-        console.log('User added successfully', response);
+      (data) => {
+        console.log('User Added:' + data);
       },
-      (error: any) => {
-        console.error('Error adding user', error);
+      (err) => {
+        console.log('Error:', err);
       }
     );
   }

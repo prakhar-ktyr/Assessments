@@ -61,13 +61,7 @@
                         </form>
                     </div>
                     <div class="tab-pane fade" id="faculty-view" role="tabpanel" aria-labelledby="faculty-view-tab">
-                        <form>
-                            <div class="mb-3">
-                                <label for="facultyViewID" class="form-label">Faculty ID</label>
-                                <input type="text" class="form-control" id="facultyViewID">
-                            </div>
-                            <button type="submit" class="btn btn-primary">View</button>
-                        </form>
+                        <app-view-user></app-view-user>
                     </div>
                 </div>
             </div>
@@ -147,28 +141,72 @@
             </div>
         </div>
     </div>
+
+
     <div class="tab-pane fade" id="course-category" role="tabpanel" aria-labelledby="course-category-tab">
-        <form>
-            <div class="mb-3">
-                <label for="categoryName" class="form-label">Category Name</label>
-                <input type="text" class="form-control" id="categoryName">
+        <ul class="nav nav-tabs" id="courseCategoryCrudTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="course-category-create-tab" data-bs-toggle="tab" href="#course-category-create" role="tab" aria-controls="course-category-create" aria-selected="true">Create</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="course-category-update-tab" data-bs-toggle="tab" href="#course-category-update" role="tab" aria-controls="course-category-update" aria-selected="false">Update</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="course-category-delete-tab" data-bs-toggle="tab" href="#course-category-delete" role="tab" aria-controls="course-category-delete" aria-selected="false">Delete</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="course-category-view-tab" data-bs-toggle="tab" href="#course-category-view" role="tab" aria-controls="course-category-view" aria-selected="false">View</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="courseCategoryCrudTabsContent">
+            <div class="tab-pane fade show active" id="course-category-create" role="tabpanel" aria-labelledby="course-category-create-tab">
+                <!-- Create Course Category Content Here -->
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <div class="tab-pane fade" id="course-category-update" role="tabpanel" aria-labelledby="course-category-update-tab">
+                <!-- Update Course Category Content Here -->
+            </div>
+            <div class="tab-pane fade" id="course-category-delete" role="tabpanel" aria-labelledby="course-category-delete-tab">
+                <!-- Delete Course Category Content Here -->
+            </div>
+            <div class="tab-pane fade" id="course-category-view" role="tabpanel" aria-labelledby="course-category-view-tab">
+                <!-- View Course Category Content Here -->
+            </div>
+        </div>
     </div>
+
+
     <div class="tab-pane fade" id="assessments" role="tabpanel" aria-labelledby="assessments-tab">
-        <form>
-            <div class="mb-3">
-                <label for="assessmentName" class="form-label">Assessment Name</label>
-                <input type="text" class="form-control" id="assessmentName">
+        <ul class="nav nav-tabs" id="assessmentsCrudTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="assessments-create-tab" data-bs-toggle="tab" href="#assessments-create" role="tab" aria-controls="assessments-create" aria-selected="true">Create</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="assessments-update-tab" data-bs-toggle="tab" href="#assessments-update" role="tab" aria-controls="assessments-update" aria-selected="false">Update</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="assessments-delete-tab" data-bs-toggle="tab" href="#assessments-delete" role="tab" aria-controls="assessments-delete" aria-selected="false">Delete</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="assessments-view-tab" data-bs-toggle="tab" href="#assessments-view" role="tab" aria-controls="assessments-view" aria-selected="false">View</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="assessmentsCrudTabsContent">
+            <div class="tab-pane fade show active" id="assessments-create" role="tabpanel" aria-labelledby="assessments-create-tab">
+                <app-create-assessment></app-create-assessment>
             </div>
-            <div class="mb-3">
-                <label for="assessmentDescription" class="form-label">Description</label>
-                <textarea class="form-control" id="assessmentDescription" rows="3"></textarea>
+            <div class="tab-pane fade" id="assessments-update" role="tabpanel" aria-labelledby="assessments-update-tab">
+                <!-- Update Assessment Content Here -->
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+            <div class="tab-pane fade" id="assessments-delete" role="tabpanel" aria-labelledby="assessments-delete-tab">
+                <!-- Delete Assessment Content Here -->
+            </div>
+            <div class="tab-pane fade" id="assessments-view" role="tabpanel" aria-labelledby="assessments-view-tab">
+                <!-- View Assessment Content Here -->
+            </div>
+        </div>
     </div>
+
+    
     <div class="tab-pane fade" id="assessment-scores" role="tabpanel" aria-labelledby="assessment-scores-tab">
         <form>
             <div class="mb-3">
