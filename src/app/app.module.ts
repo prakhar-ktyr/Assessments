@@ -32,6 +32,7 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UpdateCourseComponent } from './components/update-course/update-course.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import { UpdateCourseComponent } from './components/update-course/update-course.
     AddCourseComponent,
     CreateAssessmentComponent,
     ViewUserComponent,
-    UpdateCourseComponent
+    UpdateCourseComponent,
+    NavbarComponent
   ],
   imports: [
     ReactiveFormsModule,
