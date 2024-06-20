@@ -11,10 +11,7 @@ import { AssessmentService } from '../../services/assessment.service';
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
-  assessmentName = "Angular V18"
-  arrAssessmentNames = ["ROR V18", "Angular V18", "React V18"]
-  arrAssessments:Assessment[] = [
-  ];
+  arrAssessments:Assessment[] = [];
   constructor(private router:Router , private assessmentService : AssessmentService){
     this.assessmentService.getAssessments().subscribe(data =>{
       for(let i = data.length - 1 ; i >= data.length - 3 ; i--){
