@@ -39,6 +39,7 @@ export class NavbarComponent implements OnInit {
       if (user) {
         this.localStorageService.setItem('username', `${user.firstName} ${user.lastName}`);
         this.localStorageService.setItem('role', user.role);
+        this.localStorageService.setItem('loggedUserId', user.id);
         this.isLoggedIn = true;
         console.log('Login successful');
       } else {
