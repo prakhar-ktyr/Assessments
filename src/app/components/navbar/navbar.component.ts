@@ -4,7 +4,6 @@ import { UserService } from '../../services/user.service';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { User } from '../../models/user';
 
-
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -12,8 +11,8 @@ import { User } from '../../models/user';
 })
 
 export class NavbarComponent implements OnInit {
-  title = 'first';
   loginForm: FormGroup;
+  isLoggedIn: boolean = false;
 
   constructor(
     private fb: FormBuilder,
@@ -26,7 +25,9 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.isLoggedIn = !!this.localStorageService.getItem('username');
+  }
 
   onSubmit(): void {
     const email = this.loginForm.value.email;
@@ -38,11 +39,17 @@ export class NavbarComponent implements OnInit {
       if (user) {
         this.localStorageService.setItem('username', `${user.firstName} ${user.lastName}`);
         this.localStorageService.setItem('role', user.role);
+        this.isLoggedIn = true;
         console.log('Login successful');
-        // Add navigation or any other actions after successful login
       } else {
         console.log('Invalid credentials');
       }
     });
+  }
+
+  logout(): void {
+    this.localStorageService.clear();
+    this.isLoggedIn = false;
+    console.log('Logout successful');
   }
 }
