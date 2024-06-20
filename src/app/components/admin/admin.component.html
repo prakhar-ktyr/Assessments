@@ -17,6 +17,10 @@
     <li class="nav-item">
         <a class="nav-link" id="reports-tab" data-bs-toggle="tab" href="#reports" role="tab" aria-controls="reports" aria-selected="false">Reports</a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" id="attendance-tab" data-bs-toggle="tab" href="#attendance" role="tab" aria-controls="attendance" aria-selected="false">Attendance</a>
+    </li>
+    
 </ul>
 <div class="tab-content" id="adminTabsContent">
     <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
@@ -38,9 +42,6 @@
                         <a class="nav-link" id="faculty-update-tab" data-bs-toggle="tab" href="#faculty-update" role="tab" aria-controls="faculty-update" aria-selected="false">Update</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" id="faculty-delete-tab" data-bs-toggle="tab" href="#faculty-delete" role="tab" aria-controls="faculty-delete" aria-selected="false">Delete</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link" id="faculty-view-tab" data-bs-toggle="tab" href="#faculty-view" role="tab" aria-controls="faculty-view" aria-selected="false">View</a>
                     </li>
                 </ul>
@@ -51,15 +52,7 @@
                     <div class="tab-pane fade" id="faculty-update" role="tabpanel" aria-labelledby="faculty-update-tab">
                         <app-update-user></app-update-user>
                     </div>
-                    <div class="tab-pane fade" id="faculty-delete" role="tabpanel" aria-labelledby="faculty-delete-tab">
-                        <form>
-                            <div class="mb-3">
-                                <label for="facultyDeleteID" class="form-label">Faculty ID</label>
-                                <input type="text" class="form-control" id="facultyDeleteID">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Delete</button>
-                        </form>
-                    </div>
+                    
                     <div class="tab-pane fade" id="faculty-view" role="tabpanel" aria-labelledby="faculty-view-tab">
                         <app-view-user></app-view-user>
                     </div>
@@ -73,9 +66,7 @@
                     <li class="nav-item">
                         <a class="nav-link" id="trainee-update-tab" data-bs-toggle="tab" href="#trainee-update" role="tab" aria-controls="trainee-update" aria-selected="false">Update</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" id="trainee-delete-tab" data-bs-toggle="tab" href="#trainee-delete" role="tab" aria-controls="trainee-delete" aria-selected="false">Delete</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" id="trainee-view-tab" data-bs-toggle="tab" href="#trainee-view" role="tab" aria-controls="trainee-view" aria-selected="false">View</a>
                     </li>
@@ -87,15 +78,7 @@
                     <div class="tab-pane fade" id="trainee-update" role="tabpanel" aria-labelledby="trainee-update-tab">
                         <app-update-user></app-update-user>
                     </div>
-                    <div class="tab-pane fade" id="trainee-delete" role="tabpanel" aria-labelledby="trainee-delete-tab">
-                        <form>
-                            <div class="mb-3">
-                                <label for="traineeDeleteID" class="form-label">Trainee ID</label>
-                                <input type="text" class="form-control" id="traineeDeleteID">
-                            </div>
-                            <button type="submit" class="btn btn-primary">Delete</button>
-                        </form>
-                    </div>
+                    
                     <div class="tab-pane fade" id="trainee-view" role="tabpanel" aria-labelledby="trainee-view-tab">
                         <form>
                             <div class="mb-3">
@@ -119,9 +102,7 @@
             <li class="nav-item">
                 <a class="nav-link" id="courses-update-tab" data-bs-toggle="tab" href="#courses-update" role="tab" aria-controls="courses-update" aria-selected="false">Update</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="courses-delete-tab" data-bs-toggle="tab" href="#courses-delete" role="tab" aria-controls="courses-delete" aria-selected="false">Delete</a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" id="courses-view-tab" data-bs-toggle="tab" href="#courses-view" role="tab" aria-controls="courses-view" aria-selected="false">View</a>
             </li>
@@ -133,9 +114,7 @@
             <div class="tab-pane fade" id="courses-update" role="tabpanel" aria-labelledby="courses-update-tab">
                 <app-update-course></app-update-course>
             </div>
-            <div class="tab-pane fade" id="courses-delete" role="tabpanel" aria-labelledby="courses-delete-tab">
-                <!-- Delete Content Here -->
-            </div>
+            
             <div class="tab-pane fade" id="courses-view" role="tabpanel" aria-labelledby="courses-view-tab">
                 <!-- View Content Here -->
             </div>
@@ -183,9 +162,7 @@
             <li class="nav-item">
                 <a class="nav-link" id="assessments-update-tab" data-bs-toggle="tab" href="#assessments-update" role="tab" aria-controls="assessments-update" aria-selected="false">Update</a>
             </li>
-            <li class="nav-item">
-                <a class="nav-link" id="assessments-delete-tab" data-bs-toggle="tab" href="#assessments-delete" role="tab" aria-controls="assessments-delete" aria-selected="false">Delete</a>
-            </li>
+            
             <li class="nav-item">
                 <a class="nav-link" id="assessments-view-tab" data-bs-toggle="tab" href="#assessments-view" role="tab" aria-controls="assessments-view" aria-selected="false">View</a>
             </li>
@@ -197,9 +174,7 @@
             <div class="tab-pane fade" id="assessments-update" role="tabpanel" aria-labelledby="assessments-update-tab">
                 <!-- Update Assessment Content Here -->
             </div>
-            <div class="tab-pane fade" id="assessments-delete" role="tabpanel" aria-labelledby="assessments-delete-tab">
-                <!-- Delete Assessment Content Here -->
-            </div>
+            
             <div class="tab-pane fade" id="assessments-view" role="tabpanel" aria-labelledby="assessments-view-tab">
                 <!-- View Assessment Content Here -->
             </div>
@@ -237,4 +212,32 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+
+    <div class="tab-pane fade" id="attendance" role="tabpanel" aria-labelledby="attendance-tab">
+        <ul class="nav nav-tabs" id="attendanceCrudTabs" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="attendance-create-tab" data-bs-toggle="tab" href="#attendance-create" role="tab" aria-controls="attendance-create" aria-selected="true">Create</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="attendance-update-tab" data-bs-toggle="tab" href="#attendance-update" role="tab" aria-controls="attendance-update" aria-selected="false">Update</a>
+            </li>
+            
+            <li class="nav-item">
+                <a class="nav-link" id="attendance-view-tab" data-bs-toggle="tab" href="#attendance-view" role="tab" aria-controls="attendance-view" aria-selected="false">View</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="attendanceCrudTabsContent">
+            <div class="tab-pane fade show active" id="attendance-create" role="tabpanel" aria-labelledby="attendance-create-tab">
+                <!-- Create Attendance Content Here -->
+            </div>
+            <div class="tab-pane fade" id="attendance-update" role="tabpanel" aria-labelledby="attendance-update-tab">
+                <!-- Update Attendance Content Here -->
+            </div>
+            
+            <div class="tab-pane fade" id="attendance-view" role="tabpanel" aria-labelledby="attendance-view-tab">
+                <!-- View Attendance Content Here -->
+            </div>
+        </div>
+    </div>
+    
 </div>
