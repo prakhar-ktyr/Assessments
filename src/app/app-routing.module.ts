@@ -8,6 +8,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { AdminGuard } from './guards/adminguard';
 import { CartComponent } from './components/cart/cart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ViewDetailsComponent } from './components/view-details/view-details.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
   { path: 'cart', component: CartComponent },
   { path: 'dashboard', component: DashboardComponent },
+  {path : 'viewDetails/:id' , component:ViewDetailsComponent}
 ];
 
 @NgModule({

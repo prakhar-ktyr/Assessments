@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Assessment } from '../../models/assessment';
 import { User} from '../../models/user';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -26,8 +27,11 @@ export class HomeComponent {
   //   new User(2, "Jane", "Doe", "janedoe@gmail.com"),
   //   new User(3, "John", "Smith", "johnsmith@gmail.com")
   // ]
+  constructor(private router:Router){
+    
+  }
 
-  displayDetails(aName: string, aDescription: string) {
-    console.log(aName + " - " + aDescription)
+  displayDetails(aid:number,  aName: string, aDescription: string) {
+    this.router.navigate(["viewDetails/" + aid]) ; 
   }
 }

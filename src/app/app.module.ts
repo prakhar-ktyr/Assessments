@@ -35,6 +35,7 @@ import { UpdateCourseComponent } from './components/update-course/update-course.
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { ViewDetailsComponent } from './components/view-details/view-details.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     UpdateCourseComponent,
     NavbarComponent,
     CartComponent,
-    DashboardComponent
+    DashboardComponent,
+    ViewDetailsComponent
   ],
   imports: [
     ReactiveFormsModule,
