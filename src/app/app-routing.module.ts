@@ -6,6 +6,8 @@ import { AssessmentsComponent } from './components/assessments/assessments.compo
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { AdminGuard } from './guards/adminguard';
+import { CartComponent } from './components/cart/cart.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -13,11 +15,13 @@ const routes: Routes = [
   { path: 'aboutus', component: AboutusComponent },
   { path: 'assessments', component: AssessmentsComponent },
   { path: 'contactus', component: ContactusComponent },
-  { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] }
+  { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
+  { path: 'cart', component: CartComponent },
+  { path: 'dashboard', component: DashboardComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

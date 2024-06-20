@@ -33,6 +33,8 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ViewUserComponent } from './components/view-user/view-user.component';
 import { UpdateCourseComponent } from './components/update-course/update-course.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { CartComponent } from './components/cart/cart.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +52,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     CreateAssessmentComponent,
     ViewUserComponent,
     UpdateCourseComponent,
-    NavbarComponent
+    NavbarComponent,
+    CartComponent,
+    DashboardComponent
   ],
   imports: [
     ReactiveFormsModule,
