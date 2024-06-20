@@ -54,21 +54,16 @@ export class UpdateCourseComponent implements OnInit {
   }
 
   onChangeType(evt: any): void {
-    console.log(evt.target.value);
+    const selectedCourseId = evt.target.value;
+    const selectedCourse = this.arrCourses.find(course => course.id === selectedCourseId);
 
-    var idObtained = evt.target.value;
-    this.idUpdated = idObtained.trim();
-    console.log(this.idUpdated);
-
-    for (var i = 0; i < this.arrCourses.length; i++) {
-      if (this.idUpdated === this.arrCourses[i].id) {
-        this.courseUpdateForm.patchValue({
-          id: this.arrCourses[i].id,
-          courseName: this.arrCourses[i].courseName,
-          courseDescription: this.arrCourses[i].courseDescription,
-          categoryId: this.arrCourses[i].categoryId
-        });
-      }
+    if (selectedCourse) {
+      this.courseUpdateForm.patchValue({
+        id: selectedCourse.id,
+        courseName: selectedCourse.courseName,
+        courseDescription: selectedCourse.courseDescription,
+        categoryId: selectedCourse.categoryId
+      });
     }
   }
 }
