@@ -1,9 +1,21 @@
 import { Injectable } from '@angular/core';
+import { Question } from '../models/questions';
 
 @Injectable({
   providedIn: 'root'
 })
-export class QuestionsService {
+export class QuestionService {
 
-  constructor() { }
+  arrQuestion : Question[] = []; 
+  constructor() { 
+    
+  }
+
+  getQuestion(){
+    return this.arrQuestion ; 
+  }
+
+  getQuestionByID(id:number){
+    return this.arrQuestion[id] ; 
+  }
 }
