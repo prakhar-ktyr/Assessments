@@ -86,6 +86,29 @@
 
     
     
+  ] , 
+  "assessments":[
+    {
+      "id":"1",
+      "assessmentName":"Ruby on Rails",
+      "assessmentDescription":"This assessment covers Ruby on Rails, a server-side web application framework. Test your skills in MVC architecture, routing, and more." ,
+      "assessmentImage":"/assets/images/ror.png",
+      "questions":[]
+    } ,
+    {
+      "id":"2",
+      "assessmentName":"Angular",
+      "assessmentDescription":"This assessment covers Angular, a front-end web application framework. Test your skills in TypeScript, components, and more." ,
+      "assessmentImage":"/assets/images/angular.png",
+      "questions":[]
+    } , 
+    {
+      "id":"3",
+      "assessmentName":"React",
+      "assessmentDescription":"This assessment covers React, a front-end web application framework. Test your skills in JSX, components, and more" ,
+      "assessmentImage":"/assets/images/react.webp",
+      "questions":[]
+    }
   ]
 
 }
