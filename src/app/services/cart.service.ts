@@ -23,8 +23,9 @@ export class CartService {
      return this.httpClient.get<Cart[]>(this.baseUrl + "/cart" , this.httpHeader).pipe(catchError(this.httpError)); 
   }
 
-  getCartByID(id:number){
-    return this.arrCart[id] ; 
+  getCartByID(id:string){
+    return this.httpClient.get<Cart>(this.baseUrl + '/cart/' + id , this.httpHeader)
+    .pipe(catchError(this.httpError));
   }
   httpError(error:HttpErrorResponse){
     let msg='';

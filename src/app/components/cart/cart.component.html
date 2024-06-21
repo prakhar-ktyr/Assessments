@@ -1,1 +1,33 @@
-<p>cart works!</p>
+<div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">ID</th>
+          <th scope="col">Assessment Name</th>
+          <th scope="col">Quantity</th>
+          <th scope="col">Price</th>
+          <th scope="col">Add</th>
+          <th scope="col">Remove</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let assessment of arrAssessments ; let ind = index" >
+          <td>{{assessment.id}}</td>
+          <td>{{assessment.assessmentName}}</td>
+          <td>{{arrQuantity[ind]}}</td>
+          <td>{{assessment.price}}</td>
+          <td>
+            <button class="btn btn-success" (click)="addQuantity()">
+              <i class="bi bi-plus"></i>
+            </button>
+          </td>
+          <td>
+            <button class="btn btn-danger" (click)="removeQuantity()">
+              <i class="bi bi-dash"></i>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
