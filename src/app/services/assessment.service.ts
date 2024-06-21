@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Assessment } from '../models/assessment';
 import { Observable, catchError, of, throwError } from 'rxjs';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +19,7 @@ export class AssessmentService {
   constructor(private httpClient: HttpClient) {
     this.arrAssessments = [
       // Example assessments can be initialized here
-      // new Assessment(1, "Angular Assessment", "Test your Angular skills", "/path/to/image.png", [], 29.99),
+      // new Assessment(1, "Angular Assessment", "Test your Angular skills", "/path/to/image.png", [], 2999),
     ];
   }
 
@@ -27,8 +28,19 @@ export class AssessmentService {
       .pipe(catchError(this.httpError));
   }
 
-  getAssessmentById(id: number): Assessment {
-    return this.arrAssessments.find(assessment => assessment.id === id) || new Assessment(0, "", "", "", [], 0);
+  getAssessmentById(id: number): Observable<Assessment> {
+    const localAssessment = this.arrAssessments.find(assessment => assessment.id === id);
+    if (localAssessment) {
+      return of(localAssessment);
+    }
+    return this.httpClient.get<Assessment>(`${this.baseUrl}/assessments/${id}`, this.httpHeader)
+      .pipe(
+        map((assessment: Assessment) => {
+          this.arrAssessments.push(assessment);
+          return assessment;
+        }),
+        catchError(this.httpError)
+      );
   }
 
   addAssessment(assessment: Assessment): Observable<Assessment[]> {
