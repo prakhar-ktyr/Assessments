@@ -131,7 +131,7 @@
       "id": "4",
       "assessmentName": "Node.js",
       "assessmentDescription": "This assessment covers Node.js, a server-side JavaScript runtime. Test your skills in asynchronous programming, Express.js, and more.",
-      "assessmentImage": "/assets/images/nodejs.png",
+      "assessmentImage": "/assets/images/node.png",
       "questions": [],
       "price": 2099
     },
@@ -147,7 +147,7 @@
       "id": "6",
       "assessmentName": "Java",
       "assessmentDescription": "This assessment covers Java, a popular object-oriented programming language. Test your skills in OOP principles, Java syntax, and more.",
-      "assessmentImage": "/assets/images/java.png",
+      "assessmentImage": "/assets/images/java.svg",
       "questions": [],
       "price": 2199
     },
@@ -195,7 +195,7 @@
       "id": "12",
       "assessmentName": "JavaScript",
       "assessmentDescription": "This assessment covers JavaScript, a language for web development. Test your skills in ES6 features, DOM manipulation, and more.",
-      "assessmentImage": "/assets/images/javascript.png",
+      "assessmentImage": "/assets/images/javascript.webp",
       "questions": [],
       "price": 1799
     },
@@ -227,7 +227,7 @@
       "id": "16",
       "assessmentName": "Django",
       "assessmentDescription": "This assessment covers Django, a high-level Python web framework. Test your skills in MVT architecture, ORM, and more.",
-      "assessmentImage": "/assets/images/django.png",
+      "assessmentImage": "/assets/images/django.webp",
       "questions": [],
       "price": 2199
     },
@@ -243,7 +243,7 @@
       "id": "18",
       "assessmentName": "Vue.js",
       "assessmentDescription": "This assessment covers Vue.js, a progressive JavaScript framework. Test your skills in Vue components, directives, and more.",
-      "assessmentImage": "/assets/images/vuejs.png",
+      "assessmentImage": "/assets/images/vue.png",
       "questions": [],
       "price": 2299
     },
@@ -251,7 +251,7 @@
       "id": "19",
       "assessmentName": "ASP.NET",
       "assessmentDescription": "This assessment covers ASP.NET, a framework for building web apps on the .NET platform. Test your skills in MVC, Razor, and more.",
-      "assessmentImage": "/assets/images/aspnet.png",
+      "assessmentImage": "/assets/images/aspnet.svg",
       "questions": [],
       "price": 2399
     },
@@ -259,7 +259,7 @@
       "id": "20",
       "assessmentName": "Spring",
       "assessmentDescription": "This assessment covers Spring, a framework for building Java applications. Test your skills in Spring Boot, dependency injection, and more.",
-      "assessmentImage": "/assets/images/spring.png",
+      "assessmentImage": "/assets/images/spring.svg",
       "questions": [],
       "price": 2499
     },
@@ -291,7 +291,7 @@
       "id": "24",
       "assessmentName": "Elixir",
       "assessmentDescription": "This assessment covers Elixir, a dynamic, functional language designed for building scalable and maintainable applications. Test your skills in Elixir syntax, concurrency, and more.",
-      "assessmentImage": "/assets/images/elixir.png",
+      "assessmentImage": "/assets/images/elixir.webp",
       "questions": [],
       "price": 2499
     },

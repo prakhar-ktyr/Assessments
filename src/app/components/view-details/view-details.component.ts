@@ -15,12 +15,21 @@ export class ViewDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe((params) => {
-      const assessmentId = params['id'];
+      const assessmentId = +params['id'];
       this.loadAssessmentDetails(assessmentId);
     });
   }
 
   loadAssessmentDetails(id: number): void {
-    this.assessment = this.assessmentService.getAssessmentById(id);
+    this.assessmentService.getAssessmentById(id).subscribe((assessment: Assessment) => {
+      this.assessment = assessment;
+    }, error => {
+      console.error('Error fetching assessment:', error);
+    });
+  }
+
+  addToCart(assessmentId: number): void {
+    console.log(`Adding assessment with ID ${assessmentId} to cart`);
+    // Implement add to cart functionality here
   }
 }
