@@ -11,23 +11,32 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let assessment of arrAssessments ; let ind = index" >
+        <tr *ngFor="let assessment of arrAssessments; let ind = index">
           <td>{{assessment.id}}</td>
           <td>{{assessment.assessmentName}}</td>
           <td>{{arrQuantity[ind]}}</td>
-          <!-- <td>{{assessment.price}}</td> -->
+          <td>{{assessment.price}}</td>
           <td>
-            <button class="btn btn-success" (click)="addQuantity()">
-              <i class="bi bi-plus"></i>
+            <button class="btn btn-success" (click)="addQuantity(ind)">
+              <mat-icon>add</mat-icon>
             </button>
           </td>
           <td>
-            <button class="btn btn-danger" (click)="removeQuantity()">
-              <i class="bi bi-dash"></i>
+            <button class="btn btn-danger" (click)="removeQuantity(ind)">
+              <mat-icon>remove</mat-icon>
             </button>
           </td>
         </tr>
       </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="3">Total</td>
+          <td colspan="3">{{getTotalCost()}}</td>
+        </tr>
+      </tfoot>
     </table>
+  </div>
+  <div class="d-flex justify-content-center mt-3">
+    <button class="btn btn-primary" (click)="placeOrder()">Place Order</button>
   </div>
   

@@ -27,6 +27,10 @@ export class CartService {
     return this.httpClient.get<Cart>(this.baseUrl + '/cart/' + id , this.httpHeader)
     .pipe(catchError(this.httpError));
   }
+
+  updateCartById(cartId:number , newCart : Cart){
+    return this.httpClient.put<Cart>(this.baseUrl + "/cart/" + cartId , newCart , this.httpHeader).pipe(catchError(this.httpError)) ; 
+  }
   httpError(error:HttpErrorResponse){
     let msg='';
     if(error.error instanceof ErrorEvent){
@@ -38,4 +42,5 @@ export class CartService {
     console.log(msg);
     return throwError(msg);
   }
+
 }
