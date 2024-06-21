@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 export class AssessmentsComponent {
 
   arrAssessments:Assessment[] = []
-  assessment:Assessment = new Assessment(0, "", "", "", [])
+  assessment:Assessment = new Assessment(0, "", "", "", [], 0)
 
   constructor(private assessmentService: AssessmentService , private router : Router) { 
     this.assessmentService.getAssessments().subscribe((assessments: Assessment[]) => {

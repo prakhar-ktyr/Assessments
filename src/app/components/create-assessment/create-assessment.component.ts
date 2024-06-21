@@ -68,7 +68,8 @@ export class CreateAssessmentComponent implements OnInit {
       assessmentData.name,
       assessmentData.description,
       assessmentData.assessmentImage,
-      questionsData
+      questionsData,
+      0
     );
 
     this.assessmentService.addAssessment(newAssessment).subscribe(
