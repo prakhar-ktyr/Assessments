@@ -75,7 +75,6 @@ import { ViewDetailsComponent } from './components/view-details/view-details.com
     MatIconModule,
     MatSelectModule,
     HttpClientModule,
-    MatBadgeModule
   ],
   providers: [
     provideClientHydration(),
