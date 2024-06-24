@@ -36,6 +36,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
+import { MatBadgeModule } from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -74,7 +75,8 @@ import { ViewDetailsComponent } from './components/view-details/view-details.com
     MatOptionModule,
     MatIconModule,
     MatSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    MatBadgeModule
   ],
   providers: [
     provideClientHydration(),
