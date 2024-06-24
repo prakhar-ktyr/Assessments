@@ -401,7 +401,15 @@
     {
       "id": "1",
       "userId": "1",
-      "quantity": [6, 15, 5, 2, 8, 1, 1],
+      "quantity": [
+        6,
+        15,
+        5,
+        2,
+        8,
+        1,
+        1
+      ],
       "total": 46190,
       "arrAssessments": [
         {
@@ -465,8 +473,12 @@
     {
       "id": "2",
       "userId": "2",
-      "quantity": [2, 2, 2],
-      "total": "1000",
+      "quantity": [
+        2,
+        2,
+        3
+      ],
+      "total": 6800,
       "arrAssessments": [
         {
           "id": "1",
@@ -499,22 +511,26 @@
     {
       "assessmentId": "1",
       "traineeId": "1",
-      "id": "1"
+      "id": "1",
+      "quantity" : "1"
     },
     {
       "assessmentId": "2",
       "traineeId": "1",
-      "id": "2"
+      "id": "2",
+      "quantity":"2"
     },
     {
       "assessmentId": "3",
       "traineeId": "2",
-      "id": "3"
+      "id": "3",
+      "quantity":"4"
     },
     {
       "assessmentId": "4",
       "traineeId": "2",
-      "id": "4"
+      "id": "4",
+      "quantity":"100"
     }
   ]
 }

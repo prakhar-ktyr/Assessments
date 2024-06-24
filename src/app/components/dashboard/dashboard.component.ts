@@ -4,6 +4,7 @@ import { LocalStorageService } from '../../services/local-storage.service';
 import { AssessmentService } from '../../services/assessment.service';
 import { TraineeService } from '../../services/trainee.service';
 import { AssessmentTrainees } from '../../models/assessmentTrainess';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,8 +15,9 @@ export class DashboardComponent {
   arrAssessments : Assessment[] = [] ; 
   loggedUserId : string = "" ; 
   loggedUserRole: string = "" ; 
+  quantityMap = new Map() ; 
   arrAssessmentTrainees : AssessmentTrainees[] = [] ; 
-  constructor(private localStorageService : LocalStorageService , private assessmentService : AssessmentService , private traineeService : TraineeService){
+  constructor(private router:Router , private localStorageService : LocalStorageService , private assessmentService : AssessmentService , private traineeService : TraineeService){
     let id = this.localStorageService.getItem("loggedUserId") ; 
     this.loggedUserId = id === null ? "0" : id ; 
 
@@ -36,10 +38,13 @@ export class DashboardComponent {
         let arrId:string[] = [] ; 
         for(let i = 0; i < this.arrAssessmentTrainees.length ; i++){
           if(this.arrAssessmentTrainees[i].traineeId === this.loggedUserId){
-            arrId.push(this.arrAssessmentTrainees[i].assessmentId) ;
+            let aid = this.arrAssessmentTrainees[i].assessmentId;
+            let q = this.arrAssessmentTrainees[i].quantity ; 
+            arrId.push(aid) ;
+            this.quantityMap.set(aid , q); 
           }
         }
-
+        console.log(this.quantityMap) ; 
         let arrAssess:Assessment[] = [] ; 
         this.assessmentService.getAssessments().subscribe(data => {
           arrAssess = data ; 
@@ -67,5 +72,10 @@ export class DashboardComponent {
       })
 
     }
+  }
+
+
+  displayDetails(aid: number, aName: string, aDescription: string): void {
+    this.router.navigate(["viewDetails/" + aid]);
   }
 }
