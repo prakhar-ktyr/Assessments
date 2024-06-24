@@ -59,6 +59,50 @@
       "password": "password",
       "dob": "1990-01-01",
       "role": "Faculty"
+    },
+    {
+      "id": "4",
+      "firstName": "Prakhar",
+      "lastName": "Katiyar",
+      "email": "prakharkatiyar99@gmail.com",
+      "phone": "8299879259",
+      "dob": "2001-07-22",
+      "role": "Trainee",
+      "password": "password",
+      "address": [
+        {
+          "id": 4,
+          "houseNo": 1203,
+          "street": "7th Main Road",
+          "area": "Malleshwaram",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "country": "India",
+          "pincode": "560003"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "firstName": "Jai",
+      "lastName": "Goyal",
+      "email": "jaigoyal@gmail.com",
+      "phone": "8259879257",
+      "dob": "2001-11-13",
+      "role": "Trainee",
+      "password": "password",
+      "address": [
+        {
+          "id": 1,
+          "houseNo": 234,
+          "street": "40th Avenue",
+          "area": "Malleshwaram",
+          "city": "Bengaluru",
+          "state": "Karnataka",
+          "country": "India",
+          "pincode": "560003"
+        }
+      ]
     }
   ],
   "courses": [
