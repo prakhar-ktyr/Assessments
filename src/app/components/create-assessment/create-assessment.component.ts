@@ -69,6 +69,7 @@ export class CreateAssessmentComponent implements OnInit {
       assessmentData.description,
       assessmentData.assessmentImage,
       questionsData,
+      0,
       0
     );
 

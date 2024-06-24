@@ -6,16 +6,18 @@
       "lastName": "Doe",
       "email": "johndoe@gmail.com",
       "phone": "1234567890",
-      "address": [{
-        "id": 1,
-        "houseNo": "123",
-        "street": "Main Street",
-        "area": "Malleshwaram",
-        "city": "Bangalore",
-        "state": "Karnataka",
-        "country": "India",
-        "pincode": "560003"
-      }],
+      "address": [
+        {
+          "id": 1,
+          "houseNo": "123",
+          "street": "Main Street",
+          "area": "Malleshwaram",
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "country": "India",
+          "pincode": "560003"
+        }
+      ],
       "password": "password",
       "dob": "1990-01-01",
       "role": "Admin"
@@ -26,16 +28,18 @@
       "lastName": "Doe",
       "email": "janedoe@gmail.com",
       "phone": "1234567890",
-      "address": [{
-        "id": 2,
-        "houseNo": "123",
-        "street": "Main Street",
-        "area": "Malleshwaram",
-        "city": "Bangalore",
-        "state": "Karnataka",
-        "country": "India",
-        "pincode": "560003"
-      }],
+      "address": [
+        {
+          "id": 2,
+          "houseNo": "123",
+          "street": "Main Street",
+          "area": "Malleshwaram",
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "country": "India",
+          "pincode": "560003"
+        }
+      ],
       "password": "password",
       "dob": "1990-01-01",
       "role": "Trainee"
@@ -46,16 +50,18 @@
       "lastName": "Doe",
       "email": "alicedoe@gmail.com",
       "phone": "1234567890",
-      "address": [{
-        "id": 3,
-        "houseNo": "123",
-        "street": "Main Street",
-        "area": "Malleshwaram",
-        "city": "Bangalore",
-        "state": "Karnataka",
-        "country": "India",
-        "pincode": "560003"
-      }],
+      "address": [
+        {
+          "id": 3,
+          "houseNo": "123",
+          "street": "Main Street",
+          "area": "Malleshwaram",
+          "city": "Bangalore",
+          "state": "Karnataka",
+          "country": "India",
+          "pincode": "560003"
+        }
+      ],
       "password": "password",
       "dob": "1990-01-01",
       "role": "Faculty"
@@ -153,7 +159,8 @@
       "assessmentDescription": "This assessment covers Ruby on Rails, a server-side web application framework. Test your skills in MVC architecture, routing, and more.",
       "assessmentImage": "/assets/images/ror.png",
       "questions": [],
-      "price": 1999
+      "price": 1999,
+      "facultyId": "1"
     },
     {
       "id": "2",
@@ -161,7 +168,8 @@
       "assessmentDescription": "This assessment covers Angular, a front-end web application framework. Test your skills in TypeScript, components, and more.",
       "assessmentImage": "/assets/images/angular.png",
       "questions": [],
-      "price": 2499
+      "price": 2499,
+      "facultyId": "2"
     },
     {
       "id": "3",
@@ -169,7 +177,8 @@
       "assessmentDescription": "This assessment covers React, a front-end web application framework. Test your skills in JSX, components, and more.",
       "assessmentImage": "/assets/images/react.webp",
       "questions": [],
-      "price": 2299
+      "price": 2299,
+      "facultyId": "3"
     },
     {
       "id": "4",
@@ -177,7 +186,8 @@
       "assessmentDescription": "This assessment covers Node.js, a server-side JavaScript runtime. Test your skills in asynchronous programming, Express.js, and more.",
       "assessmentImage": "/assets/images/node.png",
       "questions": [],
-      "price": 2099
+      "price": 2099,
+      "facultyId": "4"
     },
     {
       "id": "5",
@@ -185,7 +195,8 @@
       "assessmentDescription": "This assessment covers Python, a versatile programming language. Test your skills in data types, control structures, and more.",
       "assessmentImage": "/assets/images/python.png",
       "questions": [],
-      "price": 1899
+      "price": 1899,
+      "facultyId": "5"
     },
     {
       "id": "6",
@@ -193,7 +204,8 @@
       "assessmentDescription": "This assessment covers Java, a popular object-oriented programming language. Test your skills in OOP principles, Java syntax, and more.",
       "assessmentImage": "/assets/images/java.svg",
       "questions": [],
-      "price": 2199
+      "price": 2199,
+      "facultyId": "6"
     },
     {
       "id": "7",
@@ -201,7 +213,8 @@
       "assessmentDescription": "This assessment covers C#, a language used for developing Windows applications. Test your skills in .NET framework, OOP, and more.",
       "assessmentImage": "/assets/images/csharp.png",
       "questions": [],
-      "price": 2399
+      "price": 2399,
+      "facultyId": "7"
     },
     {
       "id": "8",
@@ -209,7 +222,8 @@
       "assessmentDescription": "This assessment covers PHP, a server-side scripting language. Test your skills in web development, database interaction, and more.",
       "assessmentImage": "/assets/images/php.png",
       "questions": [],
-      "price": 1999
+      "price": 1999,
+      "facultyId": "8"
     },
     {
       "id": "9",
@@ -217,7 +231,8 @@
       "assessmentDescription": "This assessment covers Swift, a language used for iOS and macOS development. Test your skills in Swift syntax, Xcode, and more.",
       "assessmentImage": "/assets/images/swift.png",
       "questions": [],
-      "price": 2499
+      "price": 2499,
+      "facultyId": "9"
     },
     {
       "id": "10",
@@ -225,7 +240,8 @@
       "assessmentDescription": "This assessment covers Kotlin, a language for Android development. Test your skills in Kotlin syntax, Android Studio, and more.",
       "assessmentImage": "/assets/images/kotlin.png",
       "questions": [],
-      "price": 2299
+      "price": 2299,
+      "facultyId": "10"
     },
     {
       "id": "11",
@@ -233,7 +249,8 @@
       "assessmentDescription": "This assessment covers HTML & CSS, the building blocks of web development. Test your skills in web page structure, styling, and more.",
       "assessmentImage": "/assets/images/html_css.png",
       "questions": [],
-      "price": 1599
+      "price": 1599,
+      "facultyId": "11"
     },
     {
       "id": "12",
@@ -241,7 +258,8 @@
       "assessmentDescription": "This assessment covers JavaScript, a language for web development. Test your skills in ES6 features, DOM manipulation, and more.",
       "assessmentImage": "/assets/images/javascript.webp",
       "questions": [],
-      "price": 1799
+      "price": 1799,
+      "facultyId": "12"
     },
     {
       "id": "13",
@@ -249,7 +267,8 @@
       "assessmentDescription": "This assessment covers SQL, a language for database management. Test your skills in querying, joins, and more.",
       "assessmentImage": "/assets/images/sql.png",
       "questions": [],
-      "price": 1499
+      "price": 1499,
+      "facultyId": "13"
     },
     {
       "id": "14",
@@ -257,7 +276,8 @@
       "assessmentDescription": "This assessment covers TypeScript, a superset of JavaScript. Test your skills in static typing, interfaces, and more.",
       "assessmentImage": "/assets/images/typescript.png",
       "questions": [],
-      "price": 1899
+      "price": 1899,
+      "facultyId": "14"
     },
     {
       "id": "15",
@@ -265,7 +285,8 @@
       "assessmentDescription": "This assessment covers Go, a statically typed language. Test your skills in concurrency, Go syntax, and more.",
       "assessmentImage": "/assets/images/go.png",
       "questions": [],
-      "price": 2099
+      "price": 2099,
+      "facultyId": "15"
     },
     {
       "id": "16",
@@ -273,7 +294,8 @@
       "assessmentDescription": "This assessment covers Django, a high-level Python web framework. Test your skills in MVT architecture, ORM, and more.",
       "assessmentImage": "/assets/images/django.webp",
       "questions": [],
-      "price": 2199
+      "price": 2199,
+      "facultyId": "16"
     },
     {
       "id": "17",
@@ -281,7 +303,8 @@
       "assessmentDescription": "This assessment covers Flask, a micro web framework for Python. Test your skills in routing, Jinja2 templates, and more.",
       "assessmentImage": "/assets/images/flask.png",
       "questions": [],
-      "price": 1999
+      "price": 1999,
+      "facultyId": "17"
     },
     {
       "id": "18",
@@ -289,7 +312,8 @@
       "assessmentDescription": "This assessment covers Vue.js, a progressive JavaScript framework. Test your skills in Vue components, directives, and more.",
       "assessmentImage": "/assets/images/vue.png",
       "questions": [],
-      "price": 2299
+      "price": 2299,
+      "facultyId": "18"
     },
     {
       "id": "19",
@@ -297,7 +321,8 @@
       "assessmentDescription": "This assessment covers ASP.NET, a framework for building web apps on the .NET platform. Test your skills in MVC, Razor, and more.",
       "assessmentImage": "/assets/images/aspnet.svg",
       "questions": [],
-      "price": 2399
+      "price": 2399,
+      "facultyId": "19"
     },
     {
       "id": "20",
@@ -305,7 +330,8 @@
       "assessmentDescription": "This assessment covers Spring, a framework for building Java applications. Test your skills in Spring Boot, dependency injection, and more.",
       "assessmentImage": "/assets/images/spring.svg",
       "questions": [],
-      "price": 2499
+      "price": 2499,
+      "facultyId": "20"
     },
     {
       "id": "21",
@@ -313,7 +339,8 @@
       "assessmentDescription": "This assessment covers Laravel, a PHP framework for web artisans. Test your skills in Eloquent ORM, Blade templating, and more.",
       "assessmentImage": "/assets/images/laravel.png",
       "questions": [],
-      "price": 2199
+      "price": 2199,
+      "facultyId": "21"
     },
     {
       "id": "22",
@@ -321,7 +348,8 @@
       "assessmentDescription": "This assessment covers Scala, a language for functional programming and strong static systems. Test your skills in Scala syntax, collections, and more.",
       "assessmentImage": "/assets/images/scala.png",
       "questions": [],
-      "price": 2299
+      "price": 2299,
+      "facultyId": "22"
     },
     {
       "id": "23",
@@ -329,7 +357,8 @@
       "assessmentDescription": "This assessment covers Rust, a language empowering everyone to build reliable and efficient software. Test your skills in Rust syntax, ownership, and more.",
       "assessmentImage": "/assets/images/rust.png",
       "questions": [],
-      "price": 2399
+      "price": 2399,
+      "facultyId": "23"
     },
     {
       "id": "24",
@@ -337,7 +366,8 @@
       "assessmentDescription": "This assessment covers Elixir, a dynamic, functional language designed for building scalable and maintainable applications. Test your skills in Elixir syntax, concurrency, and more.",
       "assessmentImage": "/assets/images/elixir.webp",
       "questions": [],
-      "price": 2499
+      "price": 2499,
+      "facultyId": "24"
     },
     {
       "id": "25",
@@ -345,7 +375,8 @@
       "assessmentDescription": "This assessment covers Perl, a highly capable, feature-rich programming language with over 30 years of development. Test your skills in Perl syntax, regex, and more.",
       "assessmentImage": "/assets/images/perl.png",
       "questions": [],
-      "price": 1899
+      "price": 1899,
+      "facultyId": "25"
     },
     {
       "id": "26",
@@ -353,7 +384,8 @@
       "assessmentDescription": "This assessment covers Shell Scripting, a powerful tool for automating tasks in Unix-based systems. Test your skills in Bash syntax, scripting, and more.",
       "assessmentImage": "/assets/images/shell_scripting.png",
       "questions": [],
-      "price": 2099
+      "price": 2099,
+      "facultyId": "26"
     },
     {
       "id": "27",
@@ -361,22 +393,15 @@
       "assessmentDescription": "This assessment covers MATLAB, a high-level language and interactive environment for numerical computation, visualization, and programming. Test your skills in MATLAB syntax, functions, and more.",
       "assessmentImage": "/assets/images/matlab.png",
       "questions": [],
-      "price": 2499
+      "price": 2499,
+      "facultyId": "27"
     }
   ],
   "cart": [
     {
       "id": "1",
       "userId": "1",
-      "quantity": [
-        6,
-        15,
-        5,
-        2,
-        8,
-        1,
-        1
-      ],
+      "quantity": [6, 15, 5, 2, 8, 1, 1],
       "total": 46190,
       "arrAssessments": [
         {
@@ -440,11 +465,7 @@
     {
       "id": "2",
       "userId": "2",
-      "quantity": [
-        2,
-        2,
-        2
-      ],
+      "quantity": [2, 2, 2],
       "total": "1000",
       "arrAssessments": [
         {
@@ -478,12 +499,17 @@
     {
       "assementId": "1",
       "traineeId": "1",
-      "id": "600b"
+      "id": "1"
     },
     {
       "assementId": "2",
+      "traineeId": "1",
+      "id": "2"
+    },
+    {
+      "assementId": "3",
       "traineeId": "2",
-      "id": "9e59"
+      "id": "3"
     }
   ]
 }
