@@ -9,10 +9,7 @@ import { Cart } from '../../models/cart';
   templateUrl: './cart.component.html',
   styleUrl: './cart.component.scss'
 })
-export class CartComponent {
-  arrAssessments : Assessment[] = [] ; 
-  arrQuantity: number[] = [] ; 
-  cartId : number = 0 ; 
+export class CartComponent { 
   currentUserCart : Cart = new Cart(0 , 0 , [] , [] , 0); 
   constructor(private localStorageService:LocalStorageService , private cartService : CartService){
     let loggedUserId = localStorageService.getItem("loggedUserId") ; 
@@ -21,37 +18,32 @@ export class CartComponent {
     }
     this.cartService.getCartByID(loggedUserId).subscribe(data => {
       this.currentUserCart = data ;  
-      this.cartId = data.id ; 
-      this.arrAssessments = data.arrAssessments ; 
-      this.arrQuantity = data.quantity ; 
       this.currentUserCart.total = this.calculateCost() ;
     })
   }
   calculateCost(){
     let cost = 0 ; 
-      for(let i = 0 ; i < this.arrAssessments.length ; i++){
+      for(let i = 0 ; i < this.currentUserCart.arrAssessments.length ; i++){
         cost += (this.currentUserCart.quantity[i] * this.currentUserCart.arrAssessments[i].price) ; 
       }
       return cost ;
   }
   addQuantity(addAssessmentId:number){
-    this.cartService.getCartByID(String(this.cartId)).subscribe(data => {
-      this.arrQuantity =  data.quantity; 
-      this.arrQuantity[addAssessmentId] += 1 ; 
-      this.currentUserCart.quantity = this.arrQuantity ;
+    this.cartService.getCartByID(String(this.currentUserCart.userId)).subscribe(data => {
+      this.currentUserCart.quantity =  data.quantity; 
+      this.currentUserCart.quantity[addAssessmentId] += 1 ; 
       this.currentUserCart.total = this.calculateCost() ; 
-      this.cartService.updateCartById(this.cartId , this.currentUserCart).subscribe(data => {
+      this.cartService.updateCartById(this.currentUserCart.userId , this.currentUserCart).subscribe(data => {
         
       })
     })
   }
   removeQuantity(removeAssessmentId:number){
-    this.cartService.getCartByID(String(this.cartId)).subscribe(data => {
-      this.arrQuantity =  data.quantity; 
-      this.arrQuantity[removeAssessmentId] = Math.max(this.arrQuantity[removeAssessmentId] - 1 , 0) ;
-      this.currentUserCart.quantity = this.arrQuantity ; 
+    this.cartService.getCartByID(String(this.currentUserCart.userId)).subscribe(data => {
+      this.currentUserCart.quantity =  data.quantity; 
+      this.currentUserCart.quantity[removeAssessmentId] = Math.max(this.currentUserCart.quantity[removeAssessmentId] - 1 , 0) ;
       this.currentUserCart.total = this.calculateCost() ;
-      this.cartService.updateCartById(this.cartId , this.currentUserCart).subscribe(data => {
+      this.cartService.updateCartById(this.currentUserCart.userId , this.currentUserCart).subscribe(data => {
  
       })
     })

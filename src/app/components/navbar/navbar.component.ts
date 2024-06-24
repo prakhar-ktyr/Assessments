@@ -13,7 +13,6 @@ import { User } from '../../models/user';
 export class NavbarComponent implements OnInit {
   loginForm: FormGroup;
   isLoggedIn: boolean = false;
-
   constructor(
     private fb: FormBuilder,
     private userService: UserService,

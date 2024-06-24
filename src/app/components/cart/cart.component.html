@@ -11,10 +11,11 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let assessment of arrAssessments; let ind = index">
+        <tr *ngFor="let assessment of currentUserCart.arrAssessments; let ind = index">
+         
           <td>{{assessment.id}}</td>
           <td>{{assessment.assessmentName}}</td>
-          <td>{{arrQuantity[ind]}}</td>
+          <td>{{currentUserCart.quantity[ind]}}</td>
           <td>{{assessment.price}}</td>
           <td>
             <button class="btn btn-success" (click)="addQuantity(ind)">
