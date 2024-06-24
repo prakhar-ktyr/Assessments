@@ -497,19 +497,24 @@
   ],
   "assessmentTrainees": [
     {
-      "assementId": "1",
+      "assessmentId": "1",
       "traineeId": "1",
       "id": "1"
     },
     {
-      "assementId": "2",
+      "assessmentId": "2",
       "traineeId": "1",
       "id": "2"
     },
     {
-      "assementId": "3",
+      "assessmentId": "3",
       "traineeId": "2",
       "id": "3"
+    },
+    {
+      "assessmentId": "4",
+      "traineeId": "2",
+      "id": "4"
     }
   ]
 }
