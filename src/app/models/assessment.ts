@@ -7,7 +7,7 @@ export class Assessment {
     assessmentImage: string;
     questions: Question[];
     price: number; 
-    facultyId:number ;
+    facultyId: number;
     constructor(id: number, name: string, description: string, assessmentImage: string, questions: Question[], price: number , facultyId:number) {
         this.id = id;
         this.assessmentName = name;
