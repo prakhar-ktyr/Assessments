@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Cart } from '../models/cart';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Observable, catchError, throwError } from 'rxjs';
+import { Assessment } from '../models/assessment';
 
 @Injectable({
   providedIn: 'root'
@@ -27,7 +28,10 @@ export class CartService {
     return this.httpClient.get<Cart>(this.baseUrl + '/cart/' + id , this.httpHeader)
     .pipe(catchError(this.httpError));
   }
-
+  addAssessmentToCart(cartId:number , updatedCart:Cart){
+    
+    return this.httpClient.put<Cart>(this.baseUrl + "/cart/" + cartId , updatedCart , this.httpHeader).pipe(catchError(this.httpError))
+  }
   updateCartById(cartId:number , newCart : Cart){
     return this.httpClient.put<Cart>(this.baseUrl + "/cart/" + cartId , newCart , this.httpHeader).pipe(catchError(this.httpError)) ; 
   }

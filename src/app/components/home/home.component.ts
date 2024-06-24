@@ -1,27 +1,65 @@
 import { Component } from '@angular/core';
 import { Assessment } from '../../models/assessment';
-import { User} from '../../models/user';
+import { User } from '../../models/user';
 import { Router } from '@angular/router';
 import { UserService } from '../../services/user.service';
 import { AssessmentService } from '../../services/assessment.service';
+import { LocalStorageService } from '../../services/local-storage.service';
+import { CartService } from '../../services/cart.service';
+import { Cart } from '../../models/cart';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss'
+  styleUrl: './home.component.scss',
 })
 export class HomeComponent {
-  arrAssessments:Assessment[] = [];
-  constructor(private router:Router , private assessmentService : AssessmentService){
-    this.assessmentService.getAssessments().subscribe(data =>{
-      for(let i = data.length - 1 ; i >= data.length - 3 ; i--){
-        this.arrAssessments.push(data[i]) ; 
+  arrAssessments: Assessment[] = [];
+  constructor(
+    private router: Router,
+    private assessmentService: AssessmentService,
+    private locatStorageService: LocalStorageService,
+    private cartService: CartService
+  ) {
+    this.assessmentService.getAssessments().subscribe((data) => {
+      for (let i = data.length - 1; i >= data.length - 3; i--) {
+        this.arrAssessments.push(data[i]);
       }
-
-    }) 
+    });
   }
 
-  displayDetails(aid:number,  aName: string, aDescription: string) {
-    this.router.navigate(["viewDetails/" + aid]) ; 
+  displayDetails(aid: number, aName: string, aDescription: string) {
+    this.router.navigate(['viewDetails/' + aid]);
+  }
+
+  addToCart(newAssessmentForCart: Assessment) {
+    let cartId = this.locatStorageService.getItem('loggedUserId');
+    if (cartId === null) {
+      console.log("User not logged in , can't add to cart");
+      return;
+    }
+
+    this.cartService.getCartByID(String(cartId)).subscribe((data) => {
+      // check if assessment already exists
+      let assessmentExistsInCart: boolean = false;
+      for (let i = 0; i < data.arrAssessments.length; i++) {
+        if (data.arrAssessments[i].id === newAssessmentForCart.id) {
+          // then just increment
+          data.quantity[i] += 1;
+          assessmentExistsInCart = true;
+          this.cartService.updateCartById( data.id , data).subscribe(data => {
+          }) 
+          break;
+        }
+      }
+      if (!assessmentExistsInCart) {
+        data.arrAssessments.push(newAssessmentForCart);
+        data.quantity.push(1);
+        this.cartService
+          .addAssessmentToCart(Number(cartId), data)
+          .subscribe((data) => {
+          });
+      }
+    });
   }
 }

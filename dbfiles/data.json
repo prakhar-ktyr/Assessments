@@ -325,11 +325,15 @@
       "id": "1",
       "userId": "1",
       "quantity": [
+        6,
+        15,
+        3,
         2,
-        4,
-        1
+        7,
+        0,
+        0
       ],
-      "total": 7200,
+      "total": 44291,
       "arrAssessments": [
         {
           "id": "1",
@@ -354,6 +358,38 @@
           "assessmentImage": "/assets/images/react.webp",
           "questions": [],
           "price": 800
+        },
+        {
+          "id": "27",
+          "assessmentName": "MATLAB",
+          "assessmentDescription": "This assessment covers MATLAB, a high-level language and interactive environment for numerical computation, visualization, and programming. Test your skills in MATLAB syntax, functions, and more.",
+          "assessmentImage": "/assets/images/matlab.png",
+          "questions": [],
+          "price": 2499
+        },
+        {
+          "id": "26",
+          "assessmentName": "Shell Scripting",
+          "assessmentDescription": "This assessment covers Shell Scripting, a powerful tool for automating tasks in Unix-based systems. Test your skills in Bash syntax, scripting, and more.",
+          "assessmentImage": "/assets/images/shell_scripting.png",
+          "questions": [],
+          "price": 2099
+        },
+        {
+          "id": "25",
+          "assessmentName": "Perl",
+          "assessmentDescription": "This assessment covers Perl, a highly capable, feature-rich programming language with over 30 years of development. Test your skills in Perl syntax, regex, and more.",
+          "assessmentImage": "/assets/images/perl.png",
+          "questions": [],
+          "price": 1899
+        },
+        {
+          "id": "26",
+          "assessmentName": "Shell Scripting",
+          "assessmentDescription": "This assessment covers Shell Scripting, a powerful tool for automating tasks in Unix-based systems. Test your skills in Bash syntax, scripting, and more.",
+          "assessmentImage": "/assets/images/shell_scripting.png",
+          "questions": [],
+          "price": 2099
         }
       ]
     },
@@ -392,6 +428,16 @@
           "price": 800
         }
       ]
+    }
+  ] ,
+  "assessmentTrainees":[
+    {
+      "assementId":"1" ,
+      "traineeId":"1"
+    },
+    {
+      "assementId":"2" ,
+      "traineeId":"2"
     }
   ]
 }
