@@ -14,7 +14,7 @@ export class AssessmentsComponent implements OnInit {
 
   arrAssessments: Assessment[] = [];
   pagedAssessments: Assessment[] = [];
-  assessment: Assessment = new Assessment(0, "", "", "", [], 0);
+  assessment: Assessment = new Assessment(0, "", "", "", [], 0, 0);
   currentPage: number = 1;
   pageSize: number = 9;
   totalPages: number = 0;
