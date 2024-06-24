@@ -6,7 +6,7 @@
       "lastName": "Doe",
       "email": "johndoe@gmail.com",
       "phone": "1234567890",
-      "address": {
+      "address": [{
         "id": 1,
         "houseNo": "123",
         "street": "Main Street",
@@ -15,7 +15,7 @@
         "state": "Karnataka",
         "country": "India",
         "pincode": "560003"
-      },
+      }],
       "password": "password",
       "dob": "1990-01-01",
       "role": "Admin"
@@ -26,7 +26,7 @@
       "lastName": "Doe",
       "email": "janedoe@gmail.com",
       "phone": "1234567890",
-      "address": {
+      "address": [{
         "id": 2,
         "houseNo": "123",
         "street": "Main Street",
@@ -35,7 +35,7 @@
         "state": "Karnataka",
         "country": "India",
         "pincode": "560003"
-      },
+      }],
       "password": "password",
       "dob": "1990-01-01",
       "role": "Trainee"
@@ -46,7 +46,7 @@
       "lastName": "Doe",
       "email": "alicedoe@gmail.com",
       "phone": "1234567890",
-      "address": {
+      "address": [{
         "id": 3,
         "houseNo": "123",
         "street": "Main Street",
@@ -55,7 +55,7 @@
         "state": "Karnataka",
         "country": "India",
         "pincode": "560003"
-      },
+      }],
       "password": "password",
       "dob": "1990-01-01",
       "role": "Faculty"
@@ -71,7 +71,7 @@
       "password": "password",
       "address": [
         {
-          "id": 4,
+          "id": "0",
           "houseNo": 1203,
           "street": "7th Main Road",
           "area": "Malleshwaram",
