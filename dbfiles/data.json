@@ -478,12 +478,17 @@
     {
       "assementId": "1",
       "traineeId": "1",
-      "id": "600b"
+      "id": "1"
     },
     {
       "assementId": "2",
+      "traineeId": "1",
+      "id": "2"
+    },
+    {
+      "assementId": "3",
       "traineeId": "2",
-      "id": "9e59"
+      "id": "3"
     }
   ]
 }
