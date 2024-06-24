@@ -371,13 +371,13 @@
       "quantity": [
         6,
         15,
-        3,
+        5,
         2,
-        7,
-        0,
-        0
+        8,
+        1,
+        1
       ],
-      "total": 44291,
+      "total": 46190,
       "arrAssessments": [
         {
           "id": "1",
@@ -428,10 +428,10 @@
           "price": 1899
         },
         {
-          "id": "26",
-          "assessmentName": "Shell Scripting",
-          "assessmentDescription": "This assessment covers Shell Scripting, a powerful tool for automating tasks in Unix-based systems. Test your skills in Bash syntax, scripting, and more.",
-          "assessmentImage": "/assets/images/shell_scripting.png",
+          "id": "4",
+          "assessmentName": "Node.js",
+          "assessmentDescription": "This assessment covers Node.js, a server-side JavaScript runtime. Test your skills in asynchronous programming, Express.js, and more.",
+          "assessmentImage": "/assets/images/node.png",
           "questions": [],
           "price": 2099
         }
@@ -473,15 +473,17 @@
         }
       ]
     }
-  ] ,
-  "assessmentTrainees":[
+  ],
+  "assessmentTrainees": [
     {
-      "assementId":"1" ,
-      "traineeId":"1"
+      "assementId": "1",
+      "traineeId": "1",
+      "id": "600b"
     },
     {
-      "assementId":"2" ,
-      "traineeId":"2"
+      "assementId": "2",
+      "traineeId": "2",
+      "id": "9e59"
     }
   ]
 }
