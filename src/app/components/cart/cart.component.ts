@@ -64,9 +64,6 @@ export class CartComponent {
         let aid = String(this.currentUserCart.arrAssessments[i].id) ; 
         let id = String(currentId) ; 
         let q = String(this.currentUserCart.quantity[i]) ; 
-        // let obj:AssessmentTrainees = new AssessmentTrainees(id , aid , this.loggedUserId , q) ; 
-        // arr.push(obj) ;
-        
         let obj = {
           assessmentId:aid ,
           traineeId:this.loggedUserId , 
@@ -79,6 +76,10 @@ export class CartComponent {
         })
         currentId += 1 ;
       }       
+    })
+    let cartId = this.currentUserCart.id ; 
+    this.cartService.deleteCart(cartId).subscribe(data => {
+      console.log("deleted")
     })
   }
 }

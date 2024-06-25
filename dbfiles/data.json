@@ -469,42 +469,6 @@
           "price": 2099
         }
       ]
-    },
-    {
-      "id": "2",
-      "userId": "2",
-      "quantity": [
-        2,
-        2,
-        3
-      ],
-      "total": 6800,
-      "arrAssessments": [
-        {
-          "id": "1",
-          "assessmentName": "Ruby on Rails",
-          "assessmentDescription": "This assessment covers Ruby on Rails, a server-side web application framework. Test your skills in MVC architecture, routing, and more.",
-          "assessmentImage": "/assets/images/ror.png",
-          "questions": [],
-          "price": 1200
-        },
-        {
-          "id": "2",
-          "assessmentName": "Angular",
-          "assessmentDescription": "This assessment covers Angular, a front-end web application framework. Test your skills in TypeScript, components, and more.",
-          "assessmentImage": "/assets/images/angular.png",
-          "questions": [],
-          "price": 1000
-        },
-        {
-          "id": "3",
-          "assessmentName": "React",
-          "assessmentDescription": "This assessment covers React, a front-end web application framework. Test your skills in JSX, components, and more",
-          "assessmentImage": "/assets/images/react.webp",
-          "questions": [],
-          "price": 800
-        }
-      ]
     }
   ],
   "assessmentTrainees": [
@@ -567,6 +531,24 @@
       "assessmentId": "3",
       "traineeId": "2",
       "quantity": "3"
+    },
+    {
+      "id": "11",
+      "assessmentId": "1",
+      "traineeId": "2",
+      "quantity": "2"
+    },
+    {
+      "id": "13",
+      "assessmentId": "3",
+      "traineeId": "2",
+      "quantity": "3"
+    },
+    {
+      "id": "12",
+      "assessmentId": "2",
+      "traineeId": "2",
+      "quantity": "2"
     }
   ]
 }
