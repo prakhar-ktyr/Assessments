@@ -78,4 +78,8 @@ export class DashboardComponent {
   displayDetails(aid: number, aName: string, aDescription: string): void {
     this.router.navigate(["viewDetails/" + aid]);
   }
+
+  attemptAssessment(){
+    
+  }
 }

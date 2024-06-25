@@ -33,6 +33,15 @@ export class HomeComponent {
   }
 
   addToCart(newAssessmentForCart: Assessment) {
+    // first check if the current user cart obj exists in db or not 
+    //
+
+
+
+
+
+
+
     let cartId = this.locatStorageService.getItem('loggedUserId');
     if (cartId === null) {
       console.log("User not logged in , can't add to cart");
@@ -52,6 +61,8 @@ export class HomeComponent {
           break;
         }
       }
+      
+
       if (!assessmentExistsInCart) {
         data.arrAssessments.push(newAssessmentForCart);
         data.quantity.push(1);
