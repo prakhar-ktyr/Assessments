@@ -38,6 +38,10 @@ export class CartService {
   deleteCart(cartId:number){
     return this.httpClient.delete<Cart>(this.baseUrl + "/cart/" + cartId , this.httpHeader).pipe(catchError(this.httpError)) ;
   }
+
+  addNewCart(newCart:any){
+    return this.httpClient.post<Cart>(this.baseUrl + "/cart", JSON.stringify(newCart) , this.httpHeader).pipe(catchError(this.httpError)) ;
+  }
   httpError(error:HttpErrorResponse){
     let msg='';
     if(error.error instanceof ErrorEvent){
