@@ -3,6 +3,8 @@ import { LocalStorageService } from '../../services/local-storage.service';
 import { CartService } from '../../services/cart.service';
 import { Assessment } from '../../models/assessment';
 import { Cart } from '../../models/cart';
+import { TraineeService } from '../../services/trainee.service';
+import { AssessmentTrainees } from '../../models/assessmentTrainess';
 
 @Component({
   selector: 'app-cart',
@@ -11,12 +13,14 @@ import { Cart } from '../../models/cart';
 })
 export class CartComponent { 
   currentUserCart : Cart = new Cart(0 , 0 , [] , [] , 0); 
-  constructor(private localStorageService:LocalStorageService , private cartService : CartService){
-    let loggedUserId = localStorageService.getItem("loggedUserId") ; 
-    if(loggedUserId === null){
-      loggedUserId = "0" ; 
+  loggedUserId : string = "" ; 
+  constructor(private traineeService:TraineeService , private localStorageService:LocalStorageService , private cartService : CartService){
+    let loggedId = localStorageService.getItem("loggedUserId") ; 
+    if(loggedId === null){
+      loggedId = "0" ; 
     }
-    this.cartService.getCartByID(loggedUserId).subscribe(data => {
+    this.loggedUserId = loggedId ; 
+    this.cartService.getCartByID(this.loggedUserId).subscribe(data => {
       this.currentUserCart = data ;  
       this.currentUserCart.total = this.calculateCost() ;
     })
@@ -52,6 +56,24 @@ export class CartComponent {
     return this.currentUserCart.total ; 
   }
   placeOrder(){
+    this.traineeService.getAssessmentTrainess().subscribe(data => {
+      let currentId = data.length + 1 ;
+      console.log(data) ; 
+      let arr :AssessmentTrainees[] = data ; 
+      for(let i = 0 ; i < this.currentUserCart.quantity.length ; i++){
+        let aid = String(this.currentUserCart.arrAssessments[i].id) ; 
+        let id = String(currentId) ; 
+        let q = String(this.currentUserCart.quantity[i]) ; 
+        // let obj:AssessmentTrainees = new AssessmentTrainees(id , aid , this.loggedUserId , q) ; 
+        // arr.push(obj) ; 
 
+        currentId += 1 ;
+      } 
+      //  this.traineeService.updateAssessmentTrainees(data).subscribe(data => {
+      //     console.log(data) ;
+      //   })
+      console.log(arr) ; 
+      
+    })
   }
 }
