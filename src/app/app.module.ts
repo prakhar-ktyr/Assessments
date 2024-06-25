@@ -36,6 +36,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartComponent } from './components/cart/cart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
+import { TruncatePipe } from './pipes/truncate.pipe';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,8 @@ import { ViewDetailsComponent } from './components/view-details/view-details.com
     NavbarComponent,
     CartComponent,
     DashboardComponent,
-    ViewDetailsComponent
+    ViewDetailsComponent,
+    TruncatePipe
   ],
   imports: [
     ReactiveFormsModule,
