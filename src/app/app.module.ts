@@ -37,6 +37,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
+import { AttemptAssessmentComponent } from './components/attempt-assessment/attempt-assessment.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { TruncatePipe } from './pipes/truncate.pipe';
     CartComponent,
     DashboardComponent,
     ViewDetailsComponent,
-    TruncatePipe
+    TruncatePipe,
+    AttemptAssessmentComponent
   ],
   imports: [
     ReactiveFormsModule,

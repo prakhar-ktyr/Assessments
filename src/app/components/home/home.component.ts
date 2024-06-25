@@ -73,7 +73,6 @@ export class HomeComponent {
             }
           }
           
-    
           if (!assessmentExistsInCart) {
             data.arrAssessments.push(newAssessmentForCart);
             data.quantity.push(1);
@@ -87,7 +86,7 @@ export class HomeComponent {
       else{
         console.log("Cart doesnt exist with this userid") ; 
         let id = Number(this.loggedUserId) ; 
-        let newCart = new Cart(id , id , [newAssessmentForCart] , [1] , newAssessmentForCart.price) ; 
+        // let newCart = new Cart(id , id , [newAssessmentForCart] , [1] , newAssessmentForCart.price) ; 
         let obj = {
           id:this.loggedUserId ,
           userId:this.loggedUserId , 
@@ -95,20 +94,11 @@ export class HomeComponent {
           total:newAssessmentForCart.price,
           arrAssessments:[newAssessmentForCart]
         }
-        console.log(newCart) ; 
+        // console.log(newCart) ; 
         this.cartService.addNewCart(obj).subscribe(data => {
           console.log("added cart")
         })
       }
-    
-    
-    
-    
-    
-    
-    
     })
-
-    
   }
 }
