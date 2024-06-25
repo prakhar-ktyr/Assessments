@@ -31,8 +31,8 @@ export class TraineeService {
     return this.httpClient.get<AssessmentTrainees[]>(this.baseUrl + "/assessmentTrainees", this.httpHeader).pipe(catchError(this.httpError));
   }
 
-  updateAssessmentTrainees(arrAssessmentTrainees:AssessmentTrainees[]){
-    return this.httpClient.put<AssessmentTrainees[]>(this.baseUrl + "/assessmentTrainees" , JSON.stringify(arrAssessmentTrainees) , this.httpHeader).pipe(catchError(this.httpError));
+  updateAssessmentTrainees(arrAssessmentTrainees:AssessmentTrainees){
+    return this.httpClient.post<AssessmentTrainees[]>(this.baseUrl + "/assessmentTrainees/", JSON.stringify(arrAssessmentTrainees), this.httpHeader).pipe(catchError(this.httpError));
   }
   private httpError(error: HttpErrorResponse) {
     let msg = '';

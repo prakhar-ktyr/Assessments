@@ -65,15 +65,20 @@ export class CartComponent {
         let id = String(currentId) ; 
         let q = String(this.currentUserCart.quantity[i]) ; 
         // let obj:AssessmentTrainees = new AssessmentTrainees(id , aid , this.loggedUserId , q) ; 
-        // arr.push(obj) ; 
-
+        // arr.push(obj) ;
+        
+        let obj = {
+          assessmentId:aid ,
+          traineeId:this.loggedUserId , 
+          id:id ,
+          quantity:q
+        }
+        arr.push(obj) ; 
+        this.traineeService.updateAssessmentTrainees(obj).subscribe(data => {
+          console.log(data) ; 
+        })
         currentId += 1 ;
-      } 
-      //  this.traineeService.updateAssessmentTrainees(data).subscribe(data => {
-      //     console.log(data) ;
-      //   })
-      console.log(arr) ; 
-      
+      }       
     })
   }
 }
