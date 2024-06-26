@@ -38,7 +38,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { AttemptAssessmentComponent } from './components/attempt-assessment/attempt-assessment.component';
-import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -81,6 +80,7 @@ import { SearchPipe } from './pipes/search.pipe';
     MatIconModule,
     MatSelectModule,
     HttpClientModule,
+    MatRadioModule
   ],
   providers: [
     provideClientHydration(),

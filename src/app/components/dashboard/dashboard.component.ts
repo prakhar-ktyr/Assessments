@@ -77,7 +77,7 @@ export class DashboardComponent implements OnInit {
     this.router.navigate(["viewDetails/" + aid]);
   }
 
-  attemptAssessment(){
-    
+  attemptAssessment(id:number){
+    this.router.navigate(['/attemptAssessment/' + id])
   }
 }
