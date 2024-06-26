@@ -158,7 +158,19 @@
       "assessmentName": "Ruby on Rails",
       "assessmentDescription": "This assessment covers Ruby on Rails, a server-side web application framework. Test your skills in MVC architecture, routing, and more.",
       "assessmentImage": "/assets/images/ror.png",
-      "questions": [],
+      "questions": [{
+        "id": 1,
+        "text": "What is the capital of France?",
+        "type": "multiple-choice",
+        "choices": ["Paris", "London", "Berlin", "Madrid"],
+        "correctAnswer": "Paris"
+      },
+      {
+        "id": 2,
+        "text": "The Earth is flat.",
+        "type": "true-false",
+        "correctAnswer": false
+      }],
       "price": 1999,
       "facultyId": "1"
     },
@@ -401,15 +413,7 @@
     {
       "id": "1",
       "userId": "1",
-      "quantity": [
-        6,
-        15,
-        5,
-        2,
-        8,
-        1,
-        1
-      ],
+      "quantity": [6, 15, 5, 2, 8, 1, 1],
       "total": 46190,
       "arrAssessments": [
         {
@@ -417,7 +421,10 @@
           "assessmentName": "Ruby on Rails",
           "assessmentDescription": "This assessment covers Ruby on Rails, a server-side web application framework. Test your skills in MVC architecture, routing, and more.",
           "assessmentImage": "/assets/images/ror.png",
-          "questions": [],
+          "questions": 
+            [
+            ]
+          ,
           "price": 1200
         },
         {

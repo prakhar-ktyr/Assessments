@@ -38,6 +38,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { AttemptAssessmentComponent } from './components/attempt-assessment/attempt-assessment.component';
+import { MatRadioModule } from '@angular/material/radio';
 
 @NgModule({
   declarations: [
@@ -79,6 +80,7 @@ import { AttemptAssessmentComponent } from './components/attempt-assessment/atte
     MatIconModule,
     MatSelectModule,
     HttpClientModule,
+    MatRadioModule
   ],
   providers: [
     provideClientHydration(),
