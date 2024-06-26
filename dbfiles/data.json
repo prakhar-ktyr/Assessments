@@ -276,7 +276,7 @@
       ],
       "price": 1999,
       "facultyId": "1",
-      "time": "3600"
+      "time": "8"
     },
     {
       "id": "2",
@@ -3805,29 +3805,71 @@
       "userId": "2",
       "date": "2024-06-26T16:34:26.507Z",
       "status": "success"
+    },
+    {
+      "id": "10",
+      "userId": "2",
+      "date": "2024-06-26T16:44:39.533Z",
+      "status": "success"
+    },
+    {
+      "id": "11",
+      "userId": "2",
+      "date": "2024-06-26T16:54:52.603Z",
+      "status": "success"
+    },
+    {
+      "id": "12",
+      "userId": "2",
+      "date": "2024-06-26T16:55:21.650Z",
+      "status": "success"
+    },
+    {
+      "id": "13",
+      "userId": "2",
+      "date": "2024-06-26T16:59:11.461Z",
+      "status": "success"
+    },
+    {
+      "id": "14",
+      "userId": "2",
+      "date": "2024-06-26T16:59:45.789Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
     {
-      "id": 1,
+      "id": "1",
       "assessmentId": "8",
       "traineeId": 2,
       "score": 4
     },
     {
-      "id": 2,
+      "id": "2",
       "assessmentId": "1",
       "traineeId": 2,
       "score": 0
     },
     {
-      "id": 3,
+      "id": "3",
       "assessmentId": "1",
       "traineeId": 2,
       "score": 7
     },
     {
-      "id": 4,
+      "id": "4",
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "5",
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 2
+    },
+    {
+      "id": 6,
       "assessmentId": "1",
       "traineeId": 2,
       "score": 0
