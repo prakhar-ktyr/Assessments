@@ -3,20 +3,27 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { LocalStorageService } from '../../services/local-storage.service';
 import { User } from '../../models/user';
+import { Router } from '@angular/router';
+import { AssessmentService } from '../../services/assessment.service';
+import { Assessment } from '../../models/assessment';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrls: ['./navbar.component.scss']
 })
-
 export class NavbarComponent implements OnInit {
   loginForm: FormGroup;
   isLoggedIn: boolean = false;
+  searchTerm: string = '';
+  arrAssessments: Assessment[] = [];
+
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private router: Router,
+    private assessmentService: AssessmentService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -26,6 +33,9 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.localStorageService.getItem('username');
+    this.assessmentService.getAssessments().subscribe((assessments: Assessment[]) => {
+      this.arrAssessments = assessments;
+    });
   }
 
   onSubmit(): void {
@@ -51,5 +61,16 @@ export class NavbarComponent implements OnInit {
     this.localStorageService.clear();
     this.isLoggedIn = false;
     console.log('Logout successful');
+  }
+
+  onSearch(): void {
+    const filteredAssessments = this.arrAssessments.filter(assessment =>
+      assessment.assessmentName.toLowerCase().includes(this.searchTerm.toLowerCase())
+    );
+    if (filteredAssessments.length > 0) {
+      this.router.navigate([`viewDetails/${filteredAssessments[0].id}`]);
+    } else {
+      console.log('Assessment not found');
+    }
   }
 }
