@@ -3835,6 +3835,18 @@
       "userId": "2",
       "date": "2024-06-26T16:59:45.789Z",
       "status": "success"
+    },
+    {
+      "id": "15",
+      "userId": "2",
+      "date": "2024-06-26T17:00:37.262Z",
+      "status": "success"
+    },
+    {
+      "id": "16",
+      "userId": "2",
+      "date": "2024-06-26T17:01:50.606Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -3870,6 +3882,36 @@
     },
     {
       "id": 6,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 7,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 8,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 9,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 10,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 10,
       "assessmentId": "1",
       "traineeId": 2,
       "score": 0

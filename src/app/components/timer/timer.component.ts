@@ -20,6 +20,7 @@ export class TimerComponent implements OnInit {
     this.remainingTime = this.duration;
     this.timerInterval = setInterval(() => {
       if(this.assessmentSubmitted){
+        this.remainingTime = 0 ; 
         this.timeUp.emit() ; 
         clearInterval(this.timerInterval);
       }
