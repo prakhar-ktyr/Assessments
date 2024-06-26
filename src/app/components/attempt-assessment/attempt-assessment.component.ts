@@ -6,6 +6,8 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Attendance } from '../../models/attendance';
 import { AttendanceService } from '../../services/attendance.service';
 import { LocalStorageService } from '../../services/local-storage.service';
+import { AssessmentScoreService } from '../../services/assessment-score.service';
+import { AssessmentScore } from '../../models/assessmentScore';
 
 @Component({
   selector: 'app-attempt-assessment',
@@ -26,7 +28,8 @@ export class AttemptAssessmentComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private assessmentService: AssessmentService,
-    private attendanceService: AttendanceService
+    private attendanceService: AttendanceService,
+    private assessmentScoreService:AssessmentScoreService
   ) {
     this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
 
@@ -54,6 +57,15 @@ export class AttemptAssessmentComponent implements OnInit {
     const answers = this.questionForm.value;
     console.log('Submitted answers:', answers);
     this.finalScore = this.getScore(answers);
+
+    this.assessmentScoreService.getAssessmentScore().subscribe(data => {
+      let totalAssessmentScore = data.length ; 
+      let as = new AssessmentScore(totalAssessmentScore + 1 , this.assessmentId , parseInt(this.loggedUserId) , this.finalScore) ; 
+      this.assessmentScoreService.postAssessmentScore(as).subscribe(data =>{
+        console.log("Added assessment score") ; 
+      })
+    })
+    // this.assessmentScoreService.po
     // Handle the submission logic here
   }
 
