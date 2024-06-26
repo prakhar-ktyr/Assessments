@@ -3753,21 +3753,39 @@
   ],
   "attendance": [
     {
-      "id": 1,
-      "userId": 2,
-      "date": "2024-06-26T10:08:58.517Z",
+      "id": "1",
+      "userId": "2",
+      "date": "2024-06-15T21:43",
       "status": "success"
     },
     {
-      "id": 2,
-      "userId": 2,
-      "date": "2024-06-26T10:13:14.618Z",
+      "id": "2",
+      "userId": "2",
+      "date": "2024-06-07T21:43",
       "status": "success"
     },
     {
-      "id": 3,
+      "id": "3",
+      "userId": "2",
+      "date": "2024-06-07T02:24",
+      "status": "success"
+    },
+    {
+      "id": "4",
       "userId": 2,
-      "date": "2024-06-26T10:31:30.698Z",
+      "date": "2024-06-26T14:49:28.218Z",
+      "status": "success"
+    },
+    {
+      "id": "5",
+      "userId": "2",
+      "date": "2024-06-26T16:16:43.510Z",
+      "status": "success"
+    },
+    {
+      "id": "6",
+      "userId": "2",
+      "date": "2024-06-26T16:17:26.299Z",
       "status": "success"
     }
   ],
@@ -3777,6 +3795,12 @@
       "assessmentId": "8",
       "traineeId": 2,
       "score": 4
+    },
+    {
+      "id": 2,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
     }
   ]
 }

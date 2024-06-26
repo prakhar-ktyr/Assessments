@@ -96,7 +96,7 @@ export class AttemptAssessmentComponent implements OnInit {
     this.attendanceService.getAttendance().subscribe((data) => {
       let totalAttendance = data.length;
       console.log(totalAttendance) ; 
-      let newAttendance = new Attendance(totalAttendance + 1, parseInt(this.loggedUserId) , new Date() , "success");
+      let newAttendance = new Attendance(String(totalAttendance + 1), this.loggedUserId , new Date() , "success");
       this.attendanceService.addAttendance(newAttendance).subscribe(data => {
         console.log("attendance added")
       })

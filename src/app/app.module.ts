@@ -42,6 +42,8 @@ import { SearchPipe } from './pipes/search.pipe';
 import { MatRadioModule } from '@angular/material/radio';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TimerComponent } from './components/timer/timer.component';
+import { ViewAttendanceComponent } from './components/view-attendance/view-attendance.component';
+import { UpdateAttendanceComponent } from './components/update-attendance/update-attendance.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,9 @@ import { TimerComponent } from './components/timer/timer.component';
     AttemptAssessmentComponent,
     SearchPipe,
     NotFoundComponent,
-    TimerComponent
+    TimerComponent,
+    ViewAttendanceComponent,
+    UpdateAttendanceComponent
   ],
   imports: [
     ReactiveFormsModule,
