@@ -1,36 +1,38 @@
 <mat-horizontal-stepper linear>
-    <ng-container *ngFor="let question of arrQuestions; let i = index">
-      <mat-step [stepControl]="getFormGroup(i)">
-        <form [formGroup]="getFormGroup(i)">
-          <ng-template matStepLabel>Question {{i + 1}}</ng-template>
-          <p>{{question.text}}</p>
-          <ng-container [ngSwitch]="question.type">
-            <ng-container *ngSwitchCase="'multiple-choice'">
-              <mat-radio-group formControlName="answer">
-                <mat-radio-button *ngFor="let choice of question.choices" [value]="choice">
-                  {{choice}}
-                </mat-radio-button>
-              </mat-radio-group>
-            </ng-container>
-            <ng-container *ngSwitchCase="'true-false'">
-              <mat-radio-group formControlName="answer">
-                <mat-radio-button [value]="true">True</mat-radio-button>
-                <mat-radio-button [value]="false">False</mat-radio-button>
-              </mat-radio-group>
-            </ng-container>
+  <ng-container *ngFor="let question of arrQuestions; let i = index">
+    <mat-step [stepControl]="getFormGroup(i)">
+      <form [formGroup]="getFormGroup(i)">
+        <ng-template matStepLabel>Question {{i + 1}}</ng-template>
+        <p>{{question.text}}</p>
+        <ng-container [ngSwitch]="question.type">
+          <ng-container *ngSwitchCase="'multiple-choice'">
+            <mat-radio-group formControlName="answer">
+              <mat-radio-button *ngFor="let choice of question.choices" [value]="choice">
+                {{choice}}
+              </mat-radio-button>
+            </mat-radio-group>
           </ng-container>
-          <div>
-            <button mat-button matStepperPrevious *ngIf="i !== 0">Back</button>
-            <button mat-button matStepperNext>Next</button>
-          </div>
-        </form>
-      </mat-step>
-    </ng-container>
-    <mat-step>
-      <ng-template matStepLabel>Submit</ng-template>
-      <p>Review your answers and submit</p>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="submitAnswers()">Submit</button>
+          <ng-container *ngSwitchCase="'true-false'">
+            <mat-radio-group formControlName="answer">
+              <mat-radio-button [value]="true">True</mat-radio-button>
+              <mat-radio-button [value]="false">False</mat-radio-button>
+            </mat-radio-group>
+          </ng-container>
+        </ng-container>
+        <div>
+          <button mat-button matStepperPrevious *ngIf="i !== 0">Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
     </mat-step>
-  </mat-horizontal-stepper>
-  
+  </ng-container>
+  <mat-step>
+    <ng-template matStepLabel>Submit</ng-template>
+    <p>Review your answers and submit</p>
+    <button mat-button matStepperPrevious>Back</button>
+    <button mat-button (click)="submitAnswers()">Submit</button>
+    <div *ngIf="finalScore !== -1">
+      <p>Your final score is: {{finalScore}} / {{arrQuestions.length}}</p>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
