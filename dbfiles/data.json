@@ -161,43 +161,244 @@
       "questions": [
         {
           "id": 1,
-          "text": "What is the capital of France?",
+          "text": "Which design pattern does Ruby on Rails use?",
           "type": "multiple-choice",
-          "choices": ["Paris", "London", "Berlin", "Madrid"],
-          "correctAnswer": "Paris"
+          "choices": ["MVC", "MVVM", "Singleton", "Observer"],
+          "correctAnswer": "MVC"
         },
         {
           "id": 2,
-          "text": "The Earth is flat.",
+          "text": "Rails is a server-side web application framework written in Ruby.",
           "type": "true-false",
           "choices": ["true", "false"],
-          "correctAnswer": "false"
+          "correctAnswer": "true"
+        },
+        {
+          "id": 3,
+          "text": "Which command is used to generate a new Rails application?",
+          "type": "multiple-choice",
+          "choices": ["rails new", "rails generate app", "rails create", "rails init"],
+          "correctAnswer": "rails new"
+        },
+        {
+          "id": 4,
+          "text": "Which file is used to configure the database in a Rails application?",
+          "type": "multiple-choice",
+          "choices": ["database.yml", "config.rb", "database.rb", "config.yml"],
+          "correctAnswer": "database.yml"
+        },
+        {
+          "id": 5,
+          "text": "Rails uses Active Record as its ORM.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 6,
+          "text": "Which command is used to start the Rails server?",
+          "type": "multiple-choice",
+          "choices": ["rails server", "rails s", "start server", "server start"],
+          "correctAnswer": "rails s"
+        },
+        {
+          "id": 7,
+          "text": "What is the default web server for Rails?",
+          "type": "multiple-choice",
+          "choices": ["Puma", "Unicorn", "Thin", "WEBrick"],
+          "correctAnswer": "Puma"
+        },
+        {
+          "id": 8,
+          "text": "Rails supports RESTful architecture.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 9,
+          "text": "What is the command to generate a new controller in Rails?",
+          "type": "multiple-choice",
+          "choices": ["rails generate controller", "rails create controller", "rails new controller", "rails g controller"],
+          "correctAnswer": "rails generate controller"
+        },
+        {
+          "id": 10,
+          "text": "Which of the following is a valid Ruby on Rails callback?",
+          "type": "multiple-choice",
+          "choices": ["before_save", "after_create", "around_destroy", "all of the above"],
+          "correctAnswer": "all of the above"
         }
       ],
       "price": 1999,
       "facultyId": "1",
       "time": 3600
-    },
+    }
+    ,
     {
       "id": "2",
       "assessmentName": "Angular",
       "assessmentDescription": "This assessment covers Angular, a front-end web application framework. Test your skills in TypeScript, components, and more.",
       "assessmentImage": "/assets/images/angular.png",
-      "questions": [],
+      "questions": [
+        {
+          "id": 1,
+          "text": "Angular is a framework for building client applications in:",
+          "type": "multiple-choice",
+          "choices": ["JavaScript", "TypeScript", "Java", "C#"],
+          "correctAnswer": "TypeScript"
+        },
+        {
+          "id": 2,
+          "text": "Angular components are the basic building blocks of Angular applications.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 3,
+          "text": "Which directive is used to bind the application state to the view in Angular?",
+          "type": "multiple-choice",
+          "choices": ["ngBind", "ngModel", "ngClass", "ngStyle"],
+          "correctAnswer": "ngModel"
+        },
+        {
+          "id": 4,
+          "text": "Which lifecycle hook is called after Angular has initialized all data-bound properties?",
+          "type": "multiple-choice",
+          "choices": ["ngOnInit", "ngAfterContentInit", "ngAfterViewInit", "ngDoCheck"],
+          "correctAnswer": "ngAfterContentInit"
+        },
+        {
+          "id": 5,
+          "text": "Angular applications are structured as a tree of modules, components, and services.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 6,
+          "text": "Which service is used to make HTTP requests in Angular?",
+          "type": "multiple-choice",
+          "choices": ["HttpClient", "Http", "HttpService", "HttpModule"],
+          "correctAnswer": "HttpClient"
+        },
+        {
+          "id": 7,
+          "text": "What is the command to create a new Angular project?",
+          "type": "multiple-choice",
+          "choices": ["ng new", "ng create", "ng generate", "ng init"],
+          "correctAnswer": "ng new"
+        },
+        {
+          "id": 8,
+          "text": "Angular uses the RxJS library for reactive programming.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 9,
+          "text": "Which decorator is used to define a component in Angular?",
+          "type": "multiple-choice",
+          "choices": ["@Component", "@NgModule", "@Injectable", "@Directive"],
+          "correctAnswer": "@Component"
+        },
+        {
+          "id": 10,
+          "text": "Which file is the entry point for an Angular application?",
+          "type": "multiple-choice",
+          "choices": ["main.ts", "index.html", "app.module.ts", "angular.json"],
+          "correctAnswer": "main.ts"
+        }
+      ],
       "price": 2499,
       "facultyId": "2",
       "time": 3600
-    },
+    }
+    ,
     {
       "id": "3",
       "assessmentName": "React",
       "assessmentDescription": "This assessment covers React, a front-end web application framework. Test your skills in JSX, components, and more.",
       "assessmentImage": "/assets/images/react.webp",
-      "questions": [],
+      "questions": [
+        {
+          "id": 1,
+          "text": "In React, what is used to pass data to a component from outside?",
+          "type": "multiple-choice",
+          "choices": ["setState", "render with arguments", "props", "propTypes"],
+          "correctAnswer": "props"
+        },
+        {
+          "id": 2,
+          "text": "JSX stands for JavaScript XML.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 3,
+          "text": "Which method is used to handle state in a functional component?",
+          "type": "multiple-choice",
+          "choices": ["this.setState", "useState", "setState", "setReactState"],
+          "correctAnswer": "useState"
+        },
+        {
+          "id": 4,
+          "text": "React components can be defined as classes or functions.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 5,
+          "text": "Which lifecycle method is invoked immediately after a component is mounted?",
+          "type": "multiple-choice",
+          "choices": ["componentDidMount", "componentWillMount", "componentDidUpdate", "componentWillUpdate"],
+          "correctAnswer": "componentDidMount"
+        },
+        {
+          "id": 6,
+          "text": "React uses a virtual DOM to improve performance.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 7,
+          "text": "Which command is used to create a new React app?",
+          "type": "multiple-choice",
+          "choices": ["npx create-react-app", "npm create-react-app", "create-react-app new", "npm new-react-app"],
+          "correctAnswer": "npx create-react-app"
+        },
+        {
+          "id": 8,
+          "text": "State in React can be updated using the setState method in class components.",
+          "type": "true-false",
+          "choices": ["true", "false"],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 9,
+          "text": "Which hook is used to perform side effects in functional components?",
+          "type": "multiple-choice",
+          "choices": ["useState", "useEffect", "useContext", "useReducer"],
+          "correctAnswer": "useEffect"
+        },
+        {
+          "id": 10,
+          "text": "Which tool is used to take a snapshot of the DOM tree in React?",
+          "type": "multiple-choice",
+          "choices": ["ReactDevTools", "ReactTestUtils", "Jest", "Enzyme"],
+          "correctAnswer": "ReactTestUtils"
+        }
+      ],
       "price": 2299,
       "facultyId": "3",
       "time": 3600
-    },
+    }
+    ,
     {
       "id": "4",
       "assessmentName": "Node.js",
