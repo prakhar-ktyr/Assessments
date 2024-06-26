@@ -10,10 +10,12 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrl: './attempt-assessment.component.scss'
 })
 export class AttemptAssessmentComponent implements OnInit {
+  hasStarted:boolean= false ;
   assessmentId : number = 0 ; 
   arrQuestions : Question[] = [] ; 
   questionForm!: FormArray ;
   finalScore:number = -1; 
+  startTime : Date = new Date(); 
   constructor(private fb:FormBuilder , private router : Router, private activatedRoute: ActivatedRoute , private assessmentService:AssessmentService){
     this.activatedRoute.params.subscribe(params => {
       this.assessmentId = params['id'] ;
@@ -58,5 +60,10 @@ export class AttemptAssessmentComponent implements OnInit {
   }
   getFormGroup(index: number): FormGroup {
     return this.questionForm.at(index) as FormGroup;
+  }
+
+  startAssessment(){
+    this.hasStarted = true;
+    this.startTime = new Date(); 
   }
 }
