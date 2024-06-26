@@ -14,7 +14,7 @@
   <ng-container *ngFor="let question of arrQuestions; let i = index">
     <mat-step [stepControl]="getFormGroup(i)" [completed]="hasStarted">
       <form [formGroup]="getFormGroup(i)">
-        <ng-template matStepLabel>Question {{i + 1}}</ng-template>
+        <ng-template matStepLabel>Q{{i + 1}}</ng-template>
         <p>{{question.text}}</p>
         <ng-container [ngSwitch]="question.type">
           <ng-container *ngSwitchCase="'multiple-choice'">

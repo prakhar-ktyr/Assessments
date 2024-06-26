@@ -163,78 +163,121 @@
           "id": 1,
           "text": "Which design pattern does Ruby on Rails use?",
           "type": "multiple-choice",
-          "choices": ["MVC", "MVVM", "Singleton", "Observer"],
+          "choices": [
+            "MVC",
+            "MVVM",
+            "Singleton",
+            "Observer"
+          ],
           "correctAnswer": "MVC"
         },
         {
           "id": 2,
           "text": "Rails is a server-side web application framework written in Ruby.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which command is used to generate a new Rails application?",
           "type": "multiple-choice",
-          "choices": ["rails new", "rails generate app", "rails create", "rails init"],
+          "choices": [
+            "rails new",
+            "rails generate app",
+            "rails create",
+            "rails init"
+          ],
           "correctAnswer": "rails new"
         },
         {
           "id": 4,
           "text": "Which file is used to configure the database in a Rails application?",
           "type": "multiple-choice",
-          "choices": ["database.yml", "config.rb", "database.rb", "config.yml"],
+          "choices": [
+            "database.yml",
+            "config.rb",
+            "database.rb",
+            "config.yml"
+          ],
           "correctAnswer": "database.yml"
         },
         {
           "id": 5,
           "text": "Rails uses Active Record as its ORM.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which command is used to start the Rails server?",
           "type": "multiple-choice",
-          "choices": ["rails server", "rails s", "start server", "server start"],
+          "choices": [
+            "rails server",
+            "rails s",
+            "start server",
+            "server start"
+          ],
           "correctAnswer": "rails s"
         },
         {
           "id": 7,
           "text": "What is the default web server for Rails?",
           "type": "multiple-choice",
-          "choices": ["Puma", "Unicorn", "Thin", "WEBrick"],
+          "choices": [
+            "Puma",
+            "Unicorn",
+            "Thin",
+            "WEBrick"
+          ],
           "correctAnswer": "Puma"
         },
         {
           "id": 8,
           "text": "Rails supports RESTful architecture.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "What is the command to generate a new controller in Rails?",
           "type": "multiple-choice",
-          "choices": ["rails generate controller", "rails create controller", "rails new controller", "rails g controller"],
+          "choices": [
+            "rails generate controller",
+            "rails create controller",
+            "rails new controller",
+            "rails g controller"
+          ],
           "correctAnswer": "rails generate controller"
         },
         {
           "id": 10,
           "text": "Which of the following is a valid Ruby on Rails callback?",
           "type": "multiple-choice",
-          "choices": ["before_save", "after_create", "around_destroy", "all of the above"],
+          "choices": [
+            "before_save",
+            "after_create",
+            "around_destroy",
+            "all of the above"
+          ],
           "correctAnswer": "all of the above"
         }
       ],
       "price": 1999,
       "facultyId": "1",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "2",
       "assessmentName": "Angular",
@@ -245,78 +288,121 @@
           "id": 1,
           "text": "Angular is a framework for building client applications in:",
           "type": "multiple-choice",
-          "choices": ["JavaScript", "TypeScript", "Java", "C#"],
+          "choices": [
+            "JavaScript",
+            "TypeScript",
+            "Java",
+            "C#"
+          ],
           "correctAnswer": "TypeScript"
         },
         {
           "id": 2,
           "text": "Angular components are the basic building blocks of Angular applications.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which directive is used to bind the application state to the view in Angular?",
           "type": "multiple-choice",
-          "choices": ["ngBind", "ngModel", "ngClass", "ngStyle"],
+          "choices": [
+            "ngBind",
+            "ngModel",
+            "ngClass",
+            "ngStyle"
+          ],
           "correctAnswer": "ngModel"
         },
         {
           "id": 4,
           "text": "Which lifecycle hook is called after Angular has initialized all data-bound properties?",
           "type": "multiple-choice",
-          "choices": ["ngOnInit", "ngAfterContentInit", "ngAfterViewInit", "ngDoCheck"],
+          "choices": [
+            "ngOnInit",
+            "ngAfterContentInit",
+            "ngAfterViewInit",
+            "ngDoCheck"
+          ],
           "correctAnswer": "ngAfterContentInit"
         },
         {
           "id": 5,
           "text": "Angular applications are structured as a tree of modules, components, and services.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which service is used to make HTTP requests in Angular?",
           "type": "multiple-choice",
-          "choices": ["HttpClient", "Http", "HttpService", "HttpModule"],
+          "choices": [
+            "HttpClient",
+            "Http",
+            "HttpService",
+            "HttpModule"
+          ],
           "correctAnswer": "HttpClient"
         },
         {
           "id": 7,
           "text": "What is the command to create a new Angular project?",
           "type": "multiple-choice",
-          "choices": ["ng new", "ng create", "ng generate", "ng init"],
+          "choices": [
+            "ng new",
+            "ng create",
+            "ng generate",
+            "ng init"
+          ],
           "correctAnswer": "ng new"
         },
         {
           "id": 8,
           "text": "Angular uses the RxJS library for reactive programming.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which decorator is used to define a component in Angular?",
           "type": "multiple-choice",
-          "choices": ["@Component", "@NgModule", "@Injectable", "@Directive"],
+          "choices": [
+            "@Component",
+            "@NgModule",
+            "@Injectable",
+            "@Directive"
+          ],
           "correctAnswer": "@Component"
         },
         {
           "id": 10,
           "text": "Which file is the entry point for an Angular application?",
           "type": "multiple-choice",
-          "choices": ["main.ts", "index.html", "app.module.ts", "angular.json"],
+          "choices": [
+            "main.ts",
+            "index.html",
+            "app.module.ts",
+            "angular.json"
+          ],
           "correctAnswer": "main.ts"
         }
       ],
       "price": 2499,
       "facultyId": "2",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "3",
       "assessmentName": "React",
@@ -327,78 +413,119 @@
           "id": 1,
           "text": "In React, what is used to pass data to a component from outside?",
           "type": "multiple-choice",
-          "choices": ["setState", "render with arguments", "props", "propTypes"],
+          "choices": [
+            "setState",
+            "render with arguments",
+            "props",
+            "propTypes"
+          ],
           "correctAnswer": "props"
         },
         {
           "id": 2,
           "text": "JSX stands for JavaScript XML.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which method is used to handle state in a functional component?",
           "type": "multiple-choice",
-          "choices": ["this.setState", "useState", "setState", "setReactState"],
+          "choices": [
+            "this.setState",
+            "useState",
+            "setState",
+            "setReactState"
+          ],
           "correctAnswer": "useState"
         },
         {
           "id": 4,
           "text": "React components can be defined as classes or functions.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 5,
           "text": "Which lifecycle method is invoked immediately after a component is mounted?",
           "type": "multiple-choice",
-          "choices": ["componentDidMount", "componentWillMount", "componentDidUpdate", "componentWillUpdate"],
+          "choices": [
+            "componentDidMount",
+            "componentWillMount",
+            "componentDidUpdate",
+            "componentWillUpdate"
+          ],
           "correctAnswer": "componentDidMount"
         },
         {
           "id": 6,
           "text": "React uses a virtual DOM to improve performance.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which command is used to create a new React app?",
           "type": "multiple-choice",
-          "choices": ["npx create-react-app", "npm create-react-app", "create-react-app new", "npm new-react-app"],
+          "choices": [
+            "npx create-react-app",
+            "npm create-react-app",
+            "create-react-app new",
+            "npm new-react-app"
+          ],
           "correctAnswer": "npx create-react-app"
         },
         {
           "id": 8,
           "text": "State in React can be updated using the setState method in class components.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which hook is used to perform side effects in functional components?",
           "type": "multiple-choice",
-          "choices": ["useState", "useEffect", "useContext", "useReducer"],
+          "choices": [
+            "useState",
+            "useEffect",
+            "useContext",
+            "useReducer"
+          ],
           "correctAnswer": "useEffect"
         },
         {
           "id": 10,
           "text": "Which tool is used to take a snapshot of the DOM tree in React?",
           "type": "multiple-choice",
-          "choices": ["ReactDevTools", "ReactTestUtils", "Jest", "Enzyme"],
+          "choices": [
+            "ReactDevTools",
+            "ReactTestUtils",
+            "Jest",
+            "Enzyme"
+          ],
           "correctAnswer": "ReactTestUtils"
         }
       ],
       "price": 2299,
       "facultyId": "3",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "4",
       "assessmentName": "Node.js",
@@ -409,78 +536,121 @@
           "id": 1,
           "text": "Node.js is built on which JavaScript engine?",
           "type": "multiple-choice",
-          "choices": ["SpiderMonkey", "JavaScriptCore", "V8", "Nashorn"],
+          "choices": [
+            "SpiderMonkey",
+            "JavaScriptCore",
+            "V8",
+            "Nashorn"
+          ],
           "correctAnswer": "V8"
         },
         {
           "id": 2,
           "text": "Node.js is single-threaded.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which module in Node.js is used for handling file system operations?",
           "type": "multiple-choice",
-          "choices": ["fs", "http", "path", "url"],
+          "choices": [
+            "fs",
+            "http",
+            "path",
+            "url"
+          ],
           "correctAnswer": "fs"
         },
         {
           "id": 4,
           "text": "Which of the following is a core module in Node.js?",
           "type": "multiple-choice",
-          "choices": ["events", "express", "lodash", "request"],
+          "choices": [
+            "events",
+            "express",
+            "lodash",
+            "request"
+          ],
           "correctAnswer": "events"
         },
         {
           "id": 5,
           "text": "Node.js supports non-blocking I/O operations.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which command is used to install a package globally in Node.js?",
           "type": "multiple-choice",
-          "choices": ["npm install", "npm install -g", "npm add", "npm add -g"],
+          "choices": [
+            "npm install",
+            "npm install -g",
+            "npm add",
+            "npm add -g"
+          ],
           "correctAnswer": "npm install -g"
         },
         {
           "id": 7,
           "text": "Which module is used to create a web server in Node.js?",
           "type": "multiple-choice",
-          "choices": ["http", "fs", "web", "server"],
+          "choices": [
+            "http",
+            "fs",
+            "web",
+            "server"
+          ],
           "correctAnswer": "http"
         },
         {
           "id": 8,
           "text": "Node.js can be used for both frontend and backend development.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "false"
         },
         {
           "id": 9,
           "text": "Which method is used to read the contents of a file in Node.js?",
           "type": "multiple-choice",
-          "choices": ["fs.readFile", "fs.read", "fs.readContents", "fs.readFileSync"],
+          "choices": [
+            "fs.readFile",
+            "fs.read",
+            "fs.readContents",
+            "fs.readFileSync"
+          ],
           "correctAnswer": "fs.readFileSync"
         },
         {
           "id": 10,
           "text": "Which of the following is a popular framework for Node.js?",
           "type": "multiple-choice",
-          "choices": ["Django", "Flask", "Spring", "Express"],
+          "choices": [
+            "Django",
+            "Flask",
+            "Spring",
+            "Express"
+          ],
           "correctAnswer": "Express"
         }
       ],
       "price": 2099,
       "facultyId": "4",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "5",
       "assessmentName": "Python",
@@ -491,78 +661,121 @@
           "id": 1,
           "text": "Which of the following is a mutable data type in Python?",
           "type": "multiple-choice",
-          "choices": ["Tuple", "List", "String", "Integer"],
+          "choices": [
+            "Tuple",
+            "List",
+            "String",
+            "Integer"
+          ],
           "correctAnswer": "List"
         },
         {
           "id": 2,
           "text": "Python supports both procedural and object-oriented programming.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which keyword is used to create a function in Python?",
           "type": "multiple-choice",
-          "choices": ["function", "def", "fun", "define"],
+          "choices": [
+            "function",
+            "def",
+            "fun",
+            "define"
+          ],
           "correctAnswer": "def"
         },
         {
           "id": 4,
           "text": "Which of the following is used to define a block of code in Python?",
           "type": "multiple-choice",
-          "choices": ["Braces", "Parentheses", "Indentation", "Quotation"],
+          "choices": [
+            "Braces",
+            "Parentheses",
+            "Indentation",
+            "Quotation"
+          ],
           "correctAnswer": "Indentation"
         },
         {
           "id": 5,
           "text": "Python is a dynamically-typed language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which method is used to add an element to the end of a list in Python?",
           "type": "multiple-choice",
-          "choices": ["append()", "add()", "insert()", "extend()"],
+          "choices": [
+            "append()",
+            "add()",
+            "insert()",
+            "extend()"
+          ],
           "correctAnswer": "append()"
         },
         {
           "id": 7,
           "text": "Which of the following is not a built-in data type in Python?",
           "type": "multiple-choice",
-          "choices": ["List", "Dictionary", "Array", "Tuple"],
+          "choices": [
+            "List",
+            "Dictionary",
+            "Array",
+            "Tuple"
+          ],
           "correctAnswer": "Array"
         },
         {
           "id": 8,
           "text": "Python uses indentation to define code blocks.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which module in Python is used for regular expressions?",
           "type": "multiple-choice",
-          "choices": ["re", "regex", "regexp", "pyre"],
+          "choices": [
+            "re",
+            "regex",
+            "regexp",
+            "pyre"
+          ],
           "correctAnswer": "re"
         },
         {
           "id": 10,
           "text": "Which of the following is the correct file extension for Python files?",
           "type": "multiple-choice",
-          "choices": [".python", ".pyth", ".pyt", ".py"],
+          "choices": [
+            ".python",
+            ".pyth",
+            ".pyt",
+            ".py"
+          ],
           "correctAnswer": ".py"
         }
       ],
       "price": 1899,
       "facultyId": "5",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "6",
       "assessmentName": "Java",
@@ -573,78 +786,123 @@
           "id": 1,
           "text": "Which of the following is not a Java feature?",
           "type": "multiple-choice",
-          "choices": ["Object-oriented", "Use of pointers", "Platform-independent", "Portable"],
+          "choices": [
+            "Object-oriented",
+            "Use of pointers",
+            "Platform-independent",
+            "Portable"
+          ],
           "correctAnswer": "Use of pointers"
         },
         {
           "id": 2,
           "text": "Java is a platform-independent language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which keyword is used to define a subclass in Java?",
           "type": "multiple-choice",
-          "choices": ["extends", "implements", "inherits", "subclass"],
+          "choices": [
+            "extends",
+            "implements",
+            "inherits",
+            "subclass"
+          ],
           "correctAnswer": "extends"
         },
         {
           "id": 4,
           "text": "Which method is the entry point for a Java application?",
           "type": "multiple-choice",
-          "choices": ["main", "start", "run", "begin"],
+          "choices": [
+            "main",
+            "start",
+            "run",
+            "begin"
+          ],
           "correctAnswer": "main"
         },
         {
           "id": 5,
           "text": "Java supports multiple inheritance through interfaces.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which of the following is not an access modifier in Java?",
           "type": "multiple-choice",
-          "choices": ["public", "private", "protected", "package"],
+          "choices": [
+            "public",
+            "private",
+            "protected",
+            "package"
+          ],
           "correctAnswer": "package"
         },
         {
           "id": 7,
           "text": "Which of the following is used to handle exceptions in Java?",
           "type": "multiple-choice",
-          "choices": ["try-catch", "if-else", "for loop", "switch-case"],
+          "choices": [
+            "try-catch",
+            "if-else",
+            "for loop",
+            "switch-case"
+          ],
           "correctAnswer": "try-catch"
         },
         {
           "id": 8,
           "text": "Which of the following is not a valid keyword in Java?",
           "type": "multiple-choice",
-          "choices": ["final", "static", "abstract", "const"],
+          "choices": [
+            "final",
+            "static",
+            "abstract",
+            "const"
+          ],
           "correctAnswer": "const"
         },
         {
           "id": 9,
           "text": "Which of the following is used to create an object in Java?",
           "type": "multiple-choice",
-          "choices": ["constructor", "method", "class", "interface"],
+          "choices": [
+            "constructor",
+            "method",
+            "class",
+            "interface"
+          ],
           "correctAnswer": "constructor"
         },
         {
           "id": 10,
           "text": "Which of the following is the correct syntax to create an array in Java?",
           "type": "multiple-choice",
-          "choices": ["int[] arr = new int[5];", "int arr = new int[5];", "int[] arr = new int(5);", "int arr[] = new int[5];"],
+          "choices": [
+            "int[] arr = new int[5];",
+            "int arr = new int[5];",
+            "int[] arr = new int(5);",
+            "int arr[] = new int[5];"
+          ],
           "correctAnswer": "int[] arr = new int[5];"
         }
       ],
       "price": 2199,
       "facultyId": "6",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "7",
       "assessmentName": "C#",
@@ -655,78 +913,121 @@
           "id": 1,
           "text": "Which of the following is the correct syntax to declare a class in C#?",
           "type": "multiple-choice",
-          "choices": ["class MyClass {}", "MyClass class {}", "class: MyClass {}", "def class MyClass {}"],
+          "choices": [
+            "class MyClass {}",
+            "MyClass class {}",
+            "class: MyClass {}",
+            "def class MyClass {}"
+          ],
           "correctAnswer": "class MyClass {}"
         },
         {
           "id": 2,
           "text": "C# is a statically-typed language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which of the following is not a data type in C#?",
           "type": "multiple-choice",
-          "choices": ["int", "float", "boolean", "decimal"],
+          "choices": [
+            "int",
+            "float",
+            "boolean",
+            "decimal"
+          ],
           "correctAnswer": "boolean"
         },
         {
           "id": 4,
           "text": "Which method is used to read a line of text from the console in C#?",
           "type": "multiple-choice",
-          "choices": ["ReadLine()", "Read()", "ReadText()", "ReadInput()"],
+          "choices": [
+            "ReadLine()",
+            "Read()",
+            "ReadText()",
+            "ReadInput()"
+          ],
           "correctAnswer": "ReadLine()"
         },
         {
           "id": 5,
           "text": "C# supports operator overloading.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which keyword is used to inherit a class in C#?",
           "type": "multiple-choice",
-          "choices": ["inherits", "extends", "base", "super"],
+          "choices": [
+            "inherits",
+            "extends",
+            "base",
+            "super"
+          ],
           "correctAnswer": "extends"
         },
         {
           "id": 7,
           "text": "Which of the following is used to handle exceptions in C#?",
           "type": "multiple-choice",
-          "choices": ["try-catch", "if-else", "for loop", "switch-case"],
+          "choices": [
+            "try-catch",
+            "if-else",
+            "for loop",
+            "switch-case"
+          ],
           "correctAnswer": "try-catch"
         },
         {
           "id": 8,
           "text": "C# is part of the .NET framework.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which of the following is the correct way to declare an array in C#?",
           "type": "multiple-choice",
-          "choices": ["int[] arr = new int[5];", "int arr = new int[5];", "int[] arr = new int(5);", "int arr[] = new int[5];"],
+          "choices": [
+            "int[] arr = new int[5];",
+            "int arr = new int[5];",
+            "int[] arr = new int(5);",
+            "int arr[] = new int[5];"
+          ],
           "correctAnswer": "int[] arr = new int[5];"
         },
         {
           "id": 10,
           "text": "Which method is used to start a thread in C#?",
           "type": "multiple-choice",
-          "choices": ["start()", "run()", "begin()", "init()"],
+          "choices": [
+            "start()",
+            "run()",
+            "begin()",
+            "init()"
+          ],
           "correctAnswer": "start()"
         }
       ],
       "price": 2399,
       "facultyId": "7",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "8",
       "assessmentName": "PHP",
@@ -737,78 +1038,121 @@
           "id": 1,
           "text": "Which of the following is the correct way to start a PHP tag?",
           "type": "multiple-choice",
-          "choices": ["<php>", "<?php>", "<?php", "<php?"],
+          "choices": [
+            "<php>",
+            "<?php>",
+            "<?php",
+            "<php?"
+          ],
           "correctAnswer": "<?php>"
         },
         {
           "id": 2,
           "text": "PHP scripts are executed on the client side.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "false"
         },
         {
           "id": 3,
           "text": "Which function is used to include a file in PHP?",
           "type": "multiple-choice",
-          "choices": ["includeFile()", "requireFile()", "include()", "insertFile()"],
+          "choices": [
+            "includeFile()",
+            "requireFile()",
+            "include()",
+            "insertFile()"
+          ],
           "correctAnswer": "include()"
         },
         {
           "id": 4,
           "text": "Which function is used to get the length of a string in PHP?",
           "type": "multiple-choice",
-          "choices": ["strlen()", "length()", "size()", "count()"],
+          "choices": [
+            "strlen()",
+            "length()",
+            "size()",
+            "count()"
+          ],
           "correctAnswer": "strlen()"
         },
         {
           "id": 5,
           "text": "PHP stands for Hypertext Preprocessor.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which of the following is not a valid PHP variable name?",
           "type": "multiple-choice",
-          "choices": ["$var_name", "$2nd_variable", "$variableName", "$varName123"],
+          "choices": [
+            "$var_name",
+            "$2nd_variable",
+            "$variableName",
+            "$varName123"
+          ],
           "correctAnswer": "$2nd_variable"
         },
         {
           "id": 7,
           "text": "Which function is used to open a file in PHP?",
           "type": "multiple-choice",
-          "choices": ["fopen()", "open()", "fileOpen()", "openFile()"],
+          "choices": [
+            "fopen()",
+            "open()",
+            "fileOpen()",
+            "openFile()"
+          ],
           "correctAnswer": "fopen()"
         },
         {
           "id": 8,
           "text": "PHP supports both procedural and object-oriented programming.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which of the following is used to connect to a MySQL database in PHP?",
           "type": "multiple-choice",
-          "choices": ["mysql_connect()", "mysqlConnection()", "connect_mysql()", "connect()"],
+          "choices": [
+            "mysql_connect()",
+            "mysqlConnection()",
+            "connect_mysql()",
+            "connect()"
+          ],
           "correctAnswer": "mysql_connect()"
         },
         {
           "id": 10,
           "text": "Which of the following is a superglobal array in PHP?",
           "type": "multiple-choice",
-          "choices": ["$_GET", "$GLOBALS", "$_POST", "All of the above"],
+          "choices": [
+            "$_GET",
+            "$GLOBALS",
+            "$_POST",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         }
       ],
       "price": 1999,
       "facultyId": "8",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "9",
       "assessmentName": "Swift",
@@ -819,78 +1163,121 @@
           "id": 1,
           "text": "Which keyword is used to define a constant in Swift?",
           "type": "multiple-choice",
-          "choices": ["const", "let", "var", "constant"],
+          "choices": [
+            "const",
+            "let",
+            "var",
+            "constant"
+          ],
           "correctAnswer": "let"
         },
         {
           "id": 2,
           "text": "Swift is a type-safe language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which function is used to print output to the console in Swift?",
           "type": "multiple-choice",
-          "choices": ["console.log()", "print()", "echo()", "println()"],
+          "choices": [
+            "console.log()",
+            "print()",
+            "echo()",
+            "println()"
+          ],
           "correctAnswer": "print()"
         },
         {
           "id": 4,
           "text": "Which of the following is the correct way to declare an optional in Swift?",
           "type": "multiple-choice",
-          "choices": ["var name: String?", "var name: String!", "var name: Optional<String>", "All of the above"],
+          "choices": [
+            "var name: String?",
+            "var name: String!",
+            "var name: Optional<String>",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 5,
           "text": "Swift uses automatic reference counting (ARC) for memory management.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which keyword is used to declare a structure in Swift?",
           "type": "multiple-choice",
-          "choices": ["struct", "class", "enum", "interface"],
+          "choices": [
+            "struct",
+            "class",
+            "enum",
+            "interface"
+          ],
           "correctAnswer": "struct"
         },
         {
           "id": 7,
           "text": "Which of the following is used to handle errors in Swift?",
           "type": "multiple-choice",
-          "choices": ["try-catch", "do-try-catch", "if-else", "switch-case"],
+          "choices": [
+            "try-catch",
+            "do-try-catch",
+            "if-else",
+            "switch-case"
+          ],
           "correctAnswer": "do-try-catch"
         },
         {
           "id": 8,
           "text": "Swift supports both classes and structures.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which of the following is the correct way to declare an array in Swift?",
           "type": "multiple-choice",
-          "choices": ["var arr: [Int] = []", "var arr = [Int]()", "var arr: Array<Int> = []", "All of the above"],
+          "choices": [
+            "var arr: [Int] = []",
+            "var arr = [Int]()",
+            "var arr: Array<Int> = []",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 10,
           "text": "Which of the following is used to define a method in a Swift class?",
           "type": "multiple-choice",
-          "choices": ["func", "method", "function", "define"],
+          "choices": [
+            "func",
+            "method",
+            "function",
+            "define"
+          ],
           "correctAnswer": "func"
         }
       ],
       "price": 2499,
       "facultyId": "9",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "10",
       "assessmentName": "Kotlin",
@@ -901,78 +1288,121 @@
           "id": 1,
           "text": "Which keyword is used to define a function in Kotlin?",
           "type": "multiple-choice",
-          "choices": ["func", "function", "fun", "def"],
+          "choices": [
+            "func",
+            "function",
+            "fun",
+            "def"
+          ],
           "correctAnswer": "fun"
         },
         {
           "id": 2,
           "text": "Kotlin is fully interoperable with Java.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which extension is used for Kotlin files?",
           "type": "multiple-choice",
-          "choices": [".kot", ".kotlin", ".kt", ".kts"],
+          "choices": [
+            ".kot",
+            ".kotlin",
+            ".kt",
+            ".kts"
+          ],
           "correctAnswer": ".kt"
         },
         {
           "id": 4,
           "text": "In Kotlin, which keyword is used to declare a mutable variable?",
           "type": "multiple-choice",
-          "choices": ["var", "val", "let", "mut"],
+          "choices": [
+            "var",
+            "val",
+            "let",
+            "mut"
+          ],
           "correctAnswer": "var"
         },
         {
           "id": 5,
           "text": "Kotlin supports both object-oriented and functional programming.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which function is used to print output to the console in Kotlin?",
           "type": "multiple-choice",
-          "choices": ["print()", "println()", "console.log()", "echo()"],
+          "choices": [
+            "print()",
+            "println()",
+            "console.log()",
+            "echo()"
+          ],
           "correctAnswer": "println()"
         },
         {
           "id": 7,
           "text": "Which keyword is used to create a class in Kotlin?",
           "type": "multiple-choice",
-          "choices": ["class", "struct", "object", "type"],
+          "choices": [
+            "class",
+            "struct",
+            "object",
+            "type"
+          ],
           "correctAnswer": "class"
         },
         {
           "id": 8,
           "text": "Which of the following is the correct way to define an extension function in Kotlin?",
           "type": "multiple-choice",
-          "choices": ["fun String.reverse()", "ext String.reverse()", "def String.reverse()", "fun String.reverse{}"],
+          "choices": [
+            "fun String.reverse()",
+            "ext String.reverse()",
+            "def String.reverse()",
+            "fun String.reverse{}"
+          ],
           "correctAnswer": "fun String.reverse()"
         },
         {
           "id": 9,
           "text": "Kotlin is a statically-typed language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 10,
           "text": "Which of the following is used to handle null safety in Kotlin?",
           "type": "multiple-choice",
-          "choices": ["Optional", "Nullable", "Option", "SafeCall"],
+          "choices": [
+            "Optional",
+            "Nullable",
+            "Option",
+            "SafeCall"
+          ],
           "correctAnswer": "Nullable"
         }
       ],
       "price": 2299,
       "facultyId": "10",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "11",
       "assessmentName": "HTML & CSS",
@@ -2372,7 +2802,15 @@
     {
       "id": "1",
       "userId": "1",
-      "quantity": [6, 15, 5, 2, 8, 1, 1],
+      "quantity": [
+        6,
+        15,
+        5,
+        2,
+        8,
+        1,
+        1
+      ],
       "total": 46190,
       "arrAssessments": [
         {
@@ -2380,10 +2818,7 @@
           "assessmentName": "Ruby on Rails",
           "assessmentDescription": "This assessment covers Ruby on Rails, a server-side web application framework. Test your skills in MVC architecture, routing, and more.",
           "assessmentImage": "/assets/images/ror.png",
-          "questions": 
-            [
-            ]
-          ,
+          "questions": [],
           "price": 1200
         },
         {
@@ -2577,8 +3012,19 @@
       "quantity": "6"
     }
   ],
-
   "attendance": [
-
-  ]
+    {
+      "id": 1,
+      "userId": 2,
+      "date": "2024-06-26T10:08:58.517Z",
+      "status": "success"
+    },
+    {
+      "id": 2,
+      "userId": 2,
+      "date": "2024-06-26T10:13:14.618Z",
+      "status": "success"
+    }
+  ],
+  "assessmentScore": []
 }
