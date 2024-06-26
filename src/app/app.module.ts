@@ -40,6 +40,7 @@ import { TruncatePipe } from './pipes/truncate.pipe';
 import { AttemptAssessmentComponent } from './components/attempt-assessment/attempt-assessment.component';
 import { SearchPipe } from './pipes/search.pipe';
 import { MatRadioModule } from '@angular/material/radio';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -63,7 +64,8 @@ import { MatRadioModule } from '@angular/material/radio';
     ViewDetailsComponent,
     TruncatePipe,
     AttemptAssessmentComponent,
-    SearchPipe
+    SearchPipe,
+    NotFoundComponent
   ],
   imports: [
     ReactiveFormsModule,
