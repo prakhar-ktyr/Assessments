@@ -169,7 +169,8 @@
         "id": 2,
         "text": "The Earth is flat.",
         "type": "true-false",
-        "correctAnswer": false
+        "choices":["true" , "false"] ,
+        "correctAnswer": "false"
       }],
       "price": 1999,
       "facultyId": "1"

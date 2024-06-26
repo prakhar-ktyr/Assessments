@@ -1,11 +1,11 @@
 export class Question {
     id: number;
     text: string;
-    type: 'multiple-choice' | 'true-false';
-    choices?: string[];
-    correctAnswer: string | boolean;
+    type: string;
+    choices: string[];
+    correctAnswer: string;
 
-    constructor(id: number, text: string, type: 'multiple-choice' | 'true-false', correctAnswer: string | boolean, choices?: string[]) {
+    constructor(id: number, text: string, type: string, correctAnswer: string , choices: string[]) {
         this.id = id;
         this.text = text;
         this.type = type;
