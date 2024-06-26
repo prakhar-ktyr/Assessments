@@ -8,7 +8,8 @@ export class Assessment {
     questions: Question[];
     price: number; 
     facultyId: number;
-    constructor(id: number, name: string, description: string, assessmentImage: string, questions: Question[], price: number , facultyId:number) {
+    time: string;
+    constructor(id: number, name: string, description: string, assessmentImage: string, questions: Question[], price: number , facultyId:number, time: string) {
         this.id = id;
         this.assessmentName = name;
         this.assessmentDescription = description;
@@ -16,5 +17,6 @@ export class Assessment {
         this.questions = questions;
         this.price = price; 
         this.facultyId = facultyId ; 
+        this.time = time;
     }
 }

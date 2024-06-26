@@ -70,7 +70,8 @@ export class CreateAssessmentComponent implements OnInit {
       assessmentData.assessmentImage,
       questionsData,
       0,
-      0
+      0,
+      '' 
     );
 
     this.assessmentService.addAssessment(newAssessment).subscribe(
