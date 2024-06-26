@@ -3787,6 +3787,24 @@
       "userId": "2",
       "date": "2024-06-26T16:17:26.299Z",
       "status": "success"
+    },
+    {
+      "id": "7",
+      "userId": "2",
+      "date": "2024-06-26T16:25:32.739Z",
+      "status": "success"
+    },
+    {
+      "id": "8",
+      "userId": "2",
+      "date": "2024-06-26T16:32:58.317Z",
+      "status": "success"
+    },
+    {
+      "id": "9",
+      "userId": "2",
+      "date": "2024-06-26T16:34:26.507Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -3798,6 +3816,18 @@
     },
     {
       "id": 2,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 3,
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 7
+    },
+    {
+      "id": 4,
       "assessmentId": "1",
       "traineeId": 2,
       "score": 0

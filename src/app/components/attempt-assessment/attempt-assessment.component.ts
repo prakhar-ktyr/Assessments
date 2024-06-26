@@ -15,6 +15,7 @@ import { AssessmentScore } from '../../models/assessmentScore';
   styleUrl: './attempt-assessment.component.scss',
 })
 export class AttemptAssessmentComponent implements OnInit {
+  hasFinished:boolean = false ; 
   hasStarted: boolean = false;
   assessmentId: number = 0;
   arrQuestions: Question[] = [];
@@ -22,6 +23,7 @@ export class AttemptAssessmentComponent implements OnInit {
   finalScore: number = -1;
   startTime: Date = new Date();
   loggedUserId: string = '';
+  assessmentDuration:number = 0 ; 
   constructor(
     private localStorageService: LocalStorageService,
     private fb: FormBuilder,
@@ -32,7 +34,7 @@ export class AttemptAssessmentComponent implements OnInit {
     private assessmentScoreService:AssessmentScoreService
   ) {
     this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
-
+    
     this.activatedRoute.params.subscribe((params) => {
       this.assessmentId = params['id'];
     });
@@ -40,6 +42,7 @@ export class AttemptAssessmentComponent implements OnInit {
       .getAssessmentById(this.assessmentId)
       .subscribe((data) => {
         this.arrQuestions = data.questions;
+        this.assessmentDuration = Number(data.time) ; 
         // console.log(data.questions) ;
         console.log(this.arrQuestions);
         this.questionForm = this.fb.array(
@@ -54,6 +57,7 @@ export class AttemptAssessmentComponent implements OnInit {
   ngOnInit(): void {}
 
   submitAnswers(): void {
+    this.hasFinished = true; 
     const answers = this.questionForm.value;
     console.log('Submitted answers:', answers);
     this.finalScore = this.getScore(answers);

@@ -1,3 +1,7 @@
+<ng-container *ngIf="hasStarted && !hasFinished">
+  <app-timer [duration]="assessmentDuration"></app-timer>
+</ng-container>
+
 <mat-horizontal-stepper linear>
   <mat-step [editable]="false">
     <ng-template matStepLabel>Start assessment</ng-template>
