@@ -38,7 +38,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { TruncatePipe } from './pipes/truncate.pipe';
 import { AttemptAssessmentComponent } from './components/attempt-assessment/attempt-assessment.component';
+import { SearchPipe } from './pipes/search.pipe';
 import { MatRadioModule } from '@angular/material/radio';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +63,9 @@ import { MatRadioModule } from '@angular/material/radio';
     DashboardComponent,
     ViewDetailsComponent,
     TruncatePipe,
-    AttemptAssessmentComponent
+    AttemptAssessmentComponent,
+    SearchPipe,
+    NotFoundComponent
   ],
   imports: [
     ReactiveFormsModule,

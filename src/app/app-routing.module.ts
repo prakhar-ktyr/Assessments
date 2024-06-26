@@ -10,6 +10,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { AttemptAssessmentComponent } from './components/attempt-assessment/attempt-assessment.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -20,8 +21,9 @@ const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [AdminGuard] },
   { path: 'cart', component: CartComponent },
   { path: 'dashboard', component: DashboardComponent },
-  {path : 'viewDetails/:id' , component:ViewDetailsComponent},
-  {path:'attemptAssessment/:id' , component:AttemptAssessmentComponent}
+  { path: 'viewDetails/:id' , component:ViewDetailsComponent },
+  { path: 'attemptAssessment/:id' , component:AttemptAssessmentComponent },
+  { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
