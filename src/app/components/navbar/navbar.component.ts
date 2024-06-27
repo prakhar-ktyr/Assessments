@@ -21,6 +21,7 @@ export class NavbarComponent implements OnInit {
   arrAssessments: Assessment[] = [];
   arrUsers: User[] = [];
   userRole: string = '';
+  today: string = new Date().toISOString().split('T')[0];
 
   constructor(
     private fb: FormBuilder,
@@ -39,11 +40,11 @@ export class NavbarComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       phone: ['', Validators.required],
-      dob: ['', Validators.required],
+      dob: ['', [Validators.required, this.dateValidator]],
       password: ['', Validators.required],
       confirmPassword: ['', Validators.required],
       address: this.fb.array([this.createAddress()])
-    });
+    }, { validators: this.passwordMatchValidator });
   }
 
   ngOnInit(): void {
@@ -89,6 +90,21 @@ export class NavbarComponent implements OnInit {
     return (this.registerForm.get('address') as FormArray).controls;
   }
 
+  isInvalid(controlName: string): boolean {
+    const control = this.loginForm.get(controlName);
+    return control!.invalid && (control!.touched || !control!.pristine);
+  }
+
+  isRegisterInvalid(controlName: string): boolean {
+    const control = this.registerForm.get(controlName);
+    return control!.invalid && (control!.touched || !control!.pristine);
+  }
+
+  isAddressInvalid(index: number, controlName: string): boolean {
+    const control = (this.registerForm.get('address') as FormArray).at(index).get(controlName);
+    return control!.invalid && (control!.touched || !control!.pristine);
+  }
+
   onSubmit(): void {
     const email = this.loginForm.value.email;
     const password = this.loginForm.value.password;
@@ -131,8 +147,23 @@ export class NavbarComponent implements OnInit {
     return users.reduce((max, user) => (parseInt(user.id) > max ? parseInt(user.id) : max), 0);
   }
 
+  dateValidator(control: any): { [key: string]: boolean } | null {
+    if (control.value && new Date(control.value) > new Date()) {
+      return { 'invalidDate': true };
+    }
+    return null;
+  }
+
+  passwordMatchValidator(group: FormGroup): { [key: string]: boolean } | null {
+    if (group.get('password')?.value !== group.get('confirmPassword')?.value) {
+      return { 'mismatch': true };
+    }
+    return null;
+  }
+
   onRegister(): void {
     if (this.registerForm.invalid) {
+      this.registerForm.markAllAsTouched();
       return;
     }
 
