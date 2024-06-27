@@ -129,26 +129,23 @@
       "courseName": "Data Structures and Algorithms",
       "courseDescription": "Learn about common data structures and algorithms",
       "categoryId": 1
-    },
-    {
-      "id": "",
-      "courseName": "fe",
-      "courseDescription": "gf\ng\ndgdgdg\ndgdg\nrtet",
-      "categoryId": 2
     }
   ],
   "coursecategories": [
     {
       "id": "1",
-      "category": "Engineering"
+      "category": "Engineering",
+      "categoryDescription": "Courses related to engineering subjects"
     },
     {
       "id": "2",
-      "category": "Medical"
+      "category": "Medical",
+      "categoryDescription": "Courses related to medical subjects."
     },
     {
       "id": "3",
-      "category": "Management"
+      "category": "Management",
+      "categoryDescription": "Courses related to management subjects"
     }
   ],
   "questions": [],
@@ -4177,7 +4174,7 @@
     {
       "id": "41",
       "userId": "2",
-      "date": "2024-06-27T06:39:28.626Z",
+      "date": "2024-06-27T05:24:42.402Z",
       "status": "success"
     }
   ],
@@ -4406,7 +4403,13 @@
     },
     {
       "id": 38,
-      "assessmentId": "4",
+      "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 39,
+      "assessmentId": "1",
       "traineeId": 2,
       "score": 0
     }

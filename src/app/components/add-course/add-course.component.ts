@@ -11,6 +11,7 @@ import { Course } from '../../models/course';
 export class AddCourseComponent implements OnInit {
 
   courseAddForm: FormGroup;
+  courses: Course[] = [];
 
   constructor(private fb: FormBuilder, private courseService: CourseService) {
     this.courseAddForm = this.fb.group({
@@ -20,18 +21,33 @@ export class AddCourseComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loadCourses();
+  }
+
+  loadCourses(): void {
+    this.courseService.getCourses().subscribe((courses: Course[]) => {
+      this.courses = courses;
+      console.log('Courses Loaded:', this.courses);
+    });
+  }
 
   isInvalid(controlName: string): boolean {
     const control = this.courseAddForm.get(controlName);
     return control?.invalid && (control?.touched || !control?.pristine) || false;
   }
 
+  getMaxId(courses: Course[]): number {
+    return courses.reduce((max, course) => (parseInt(course.id) > max ? parseInt(course.id) : max), 0);
+  }
+
   onSubmit(frmValue: any): void {
     console.log('Form Value:', frmValue);
 
+    const newCourseId = this.getMaxId(this.courses) + 1;
+
     const newCourse: Course = {
-      id: '', // Ensure to provide a unique id if necessary
+      id: newCourseId.toString(), 
       courseName: frmValue.courseName,
       courseDescription: frmValue.courseDescription,
       categoryId: frmValue.categoryId
@@ -40,6 +56,7 @@ export class AddCourseComponent implements OnInit {
     this.courseService.addCourse(newCourse).subscribe(
       (response: Course[]) => {
         console.log('Course added successfully', response);
+        this.loadCourses(); // Reload courses to update the list
       },
       (error: any) => {
         console.error('Error adding course', error);
