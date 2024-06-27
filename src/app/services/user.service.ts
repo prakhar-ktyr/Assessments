@@ -47,12 +47,6 @@ export class UserService {
     return new User("", "", "", "", "", [new Address(0, 0, "", "", "", "", "", "")], "", "", "");
   }
 
-  // addUser(user: User): Observable<User[]> {
-  //   this.arrUsers.push(user);
-  //   console.log(this.arrUsers);
-  //   return of(this.arrUsers);
-  // }
-
   addUser(u: User): Observable<User[]> {
     return this.httpClient.post<User[]>(this.baseUrl + '/users', JSON.stringify(u), this.httpHeader)
     .pipe(catchError(this.httpError));
