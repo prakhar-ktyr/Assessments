@@ -5,7 +5,6 @@ import { Assessment } from '../../models/assessment';
 import { Question } from '../../models/questions';
 import { LocalStorageService } from '../../services/local-storage.service';
 
-
 @Component({
   selector: 'app-create-assessment',
   templateUrl: './create-assessment.component.html',
@@ -15,8 +14,9 @@ export class CreateAssessmentComponent implements OnInit {
   assessmentForm: FormGroup;
   questionsForm: FormGroup;
   loggedUserId: string = '';
+  assessments: Assessment[] = [];
 
-  constructor(private localStorageService: LocalStorageService,private fb: FormBuilder, private assessmentService: AssessmentService) {
+  constructor(private localStorageService: LocalStorageService, private fb: FormBuilder, private assessmentService: AssessmentService) {
     this.assessmentForm = this.fb.group({
       assessmentName: ['', Validators.required],
       assessmentDescription: ['', Validators.required],
@@ -32,7 +32,16 @@ export class CreateAssessmentComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.loadAssessments();
+  }
+
+  loadAssessments(): void {
+    this.assessmentService.getAssessments().subscribe((assessments: Assessment[]) => {
+      this.assessments = assessments;
+      console.log('Assessments Loaded:', this.assessments);
+    });
+  }
 
   createQuestion(id: number): FormGroup {
     return this.fb.group({
@@ -83,6 +92,10 @@ export class CreateAssessmentComponent implements OnInit {
     }
   }
 
+  getMaxId(assessments: Assessment[]): number {
+    return assessments.reduce((max, assessment) => (assessment.id > max ? assessment.id : max), 0);
+  }
+
   submitAssessment(): void {
     const assessmentData = this.assessmentForm.value;
     const questionsData = this.questionsForm.value.questions.map((question: any, index: number) => ({
@@ -91,14 +104,16 @@ export class CreateAssessmentComponent implements OnInit {
       choices: question.type === 'true-false' ? ['true', 'false'] : question.choices.map((choice: any) => choice.choiceText)
     }));
 
+    const newAssessmentId = this.getMaxId(this.assessments) + 1;
+
     const newAssessment = new Assessment(
-      0, // ID will be generated
+      newAssessmentId,
       assessmentData.assessmentName,
       assessmentData.assessmentDescription,
       assessmentData.assessmentImage,
       questionsData,
       assessmentData.price,
-      parseInt(this.loggedUserId), // Default faculty ID, update as necessary
+      parseInt(this.loggedUserId),
       assessmentData.time,
       true
     );
@@ -106,6 +121,7 @@ export class CreateAssessmentComponent implements OnInit {
     this.assessmentService.addAssessment(newAssessment).subscribe(
       response => {
         console.log('Assessment created successfully:', response);
+        this.loadAssessments(); // Reload assessments to update the list
       },
       error => {
         console.error('Error creating assessment:', error);
