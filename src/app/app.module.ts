@@ -109,7 +109,7 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     HttpClientModule,
     MatRadioModule , 
     MatSlideToggleModule,
-    CanvasJSAngularChartsModule 
+    CanvasJSAngularChartsModule
   ],
   providers: [
     provideClientHydration(),

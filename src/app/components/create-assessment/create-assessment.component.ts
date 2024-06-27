@@ -13,8 +13,8 @@ import { LocalStorageService } from '../../services/local-storage.service';
 export class CreateAssessmentComponent implements OnInit {
   assessmentForm: FormGroup;
   questionsForm: FormGroup;
-  loggedUserId: string = '';
   assessments: Assessment[] = [];
+  loggedUserId: string = '';
 
   constructor(private localStorageService: LocalStorageService, private fb: FormBuilder, private assessmentService: AssessmentService) {
     this.assessmentForm = this.fb.group({
@@ -39,7 +39,6 @@ export class CreateAssessmentComponent implements OnInit {
   loadAssessments(): void {
     this.assessmentService.getAssessments().subscribe((assessments: Assessment[]) => {
       this.assessments = assessments;
-      console.log('Assessments Loaded:', this.assessments);
     });
   }
 
@@ -97,14 +96,16 @@ export class CreateAssessmentComponent implements OnInit {
   }
 
   submitAssessment(): void {
+    console.log('Form Value:', this.assessmentForm.value);
+
+    const newAssessmentId = this.getMaxId(this.assessments) + 1;
+
     const assessmentData = this.assessmentForm.value;
     const questionsData = this.questionsForm.value.questions.map((question: any, index: number) => ({
       ...question,
       id: index + 1,
       choices: question.type === 'true-false' ? ['true', 'false'] : question.choices.map((choice: any) => choice.choiceText)
     }));
-
-    const newAssessmentId = this.getMaxId(this.assessments) + 1;
 
     const newAssessment = new Assessment(
       newAssessmentId,
@@ -121,7 +122,7 @@ export class CreateAssessmentComponent implements OnInit {
     this.assessmentService.addAssessment(newAssessment).subscribe(
       response => {
         console.log('Assessment created successfully:', response);
-        this.loadAssessments(); // Reload assessments to update the list
+        this.loadAssessments();  // Reload assessments to get the latest list
       },
       error => {
         console.error('Error creating assessment:', error);
