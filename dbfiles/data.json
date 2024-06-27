@@ -109,6 +109,28 @@
           "pincode": "560003"
         }
       ]
+    },
+    {
+      "id": "6",
+      "firstName": "Prakhar",
+      "lastName": "Katiyar",
+      "email": "prakhar_katiyar@outlook.com",
+      "phone": "08299879259",
+      "dob": "2024-06-14",
+      "role": "Trainee",
+      "password": "password",
+      "address": [
+        {
+          "id": 1,
+          "houseNo": "201",
+          "street": "2nd Main",
+          "area": "jhbxas",
+          "city": "Kanpur Nagar",
+          "state": "Uttar Pradesh",
+          "country": "India",
+          "pincode": "208027"
+        }
+      ]
     }
   ],
   "courses": [
@@ -4189,6 +4211,12 @@
       "userId": "2",
       "date": "2024-06-27T14:08:28.188Z",
       "status": "success"
+    },
+    {
+      "id": "86",
+      "userId": "4",
+      "date": "2024-06-27T16:08:00.358Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -4245,6 +4273,12 @@
       "assessmentId": "4",
       "traineeId": 2,
       "score": 4
+    },
+    {
+      "id": "10",
+      "assessmentId": "2",
+      "traineeId": 4,
+      "score": 0
     }
   ],
   "reports": [
@@ -4283,6 +4317,24 @@
       "assessmentId": "4",
       "userId": "2",
       "score": "4/10"
+    },
+    {
+      "id": 1,
+      "marks": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "assessmentId": "2",
+      "userId": "4",
+      "score": "0/10"
     }
   ]
 }
