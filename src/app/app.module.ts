@@ -54,6 +54,9 @@ import { ViewAssessmentScoreComponent } from './components/view-assessment-score
 import { FacultyComponent } from './components/faculty/faculty.component';
 
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { ViewReportsComponent } from './components/view-reports/view-reports.component';
+import { UpdateReportsComponent } from './components/update-reports/update-reports.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +91,10 @@ import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
     ViewCourseComponent,
     ViewCategoryComponent,
     ViewAssessmentScoreComponent,
-    FacultyComponent
+    FacultyComponent,
+    BarChartComponent,
+    ViewReportsComponent,
+    UpdateReportsComponent
   ],
   imports: [
     ReactiveFormsModule,
