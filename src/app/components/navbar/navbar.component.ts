@@ -8,6 +8,8 @@ import { AssessmentService } from '../../services/assessment.service';
 import { Assessment } from '../../models/assessment';
 import { Address } from '../../models/address';
 import { CartService } from '../../services/cart.service';
+import { DarkModeService } from '../../services/dark-mode.service';
+import { Renderer2 } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
@@ -15,6 +17,7 @@ import { CartService } from '../../services/cart.service';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent implements OnInit {
+  isDarkMode: boolean = false;
   loginForm: FormGroup;
   registerForm: FormGroup;
   isLoggedIn: boolean = false;
@@ -30,7 +33,8 @@ export class NavbarComponent implements OnInit {
     private localStorageService: LocalStorageService,
     private router: Router,
     private assessmentService: AssessmentService ,
-    private cartService : CartService
+    private cartService : CartService,
+    private darkModeService: DarkModeService, private renderer: Renderer2
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -64,6 +68,8 @@ export class NavbarComponent implements OnInit {
       this.arrAssessments = assessments;
     });
     this.loadUsers();
+
+    this.isDarkMode = this.darkModeService.getDarkMode();
   }
 
   get isAdmin(): boolean {
@@ -90,6 +96,16 @@ export class NavbarComponent implements OnInit {
       country: ['', Validators.required],
       pincode: ['', Validators.required]
     });
+  }
+
+  toggleDarkMode(): void {
+    this.isDarkMode = !this.isDarkMode;
+    this.darkModeService.toggleDarkMode();
+    if (this.isDarkMode) {
+      this.renderer.addClass(document.body, 'dark-mode');
+    } else {
+      this.renderer.removeClass(document.body, 'dark-mode');
+    }
   }
 
   addAddress(): void {

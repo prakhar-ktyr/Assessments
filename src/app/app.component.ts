@@ -1,8 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UserService } from './services/user.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { User } from './models/user';
+import { DarkModeService } from './services/dark-mode.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ export class AppComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
-    private localStorageService: LocalStorageService
+    private localStorageService: LocalStorageService,
+    private renderer: Renderer2, private darkModeService: DarkModeService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -24,7 +26,11 @@ export class AppComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if (this.darkModeService.getDarkMode()) {
+      this.renderer.addClass(document.body, 'dark-mode');
+    }
+  }
 
   onSubmit(): void {
     const email = this.loginForm.value.email;
