@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AssessmentScore } from '../models/assessmentScore';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { catchError, throwError } from 'rxjs';
+import { catchError, Observable, throwError } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -13,20 +13,29 @@ export class AssessmentScoreService {
       'content-type': 'application/json',
     }),
   };
- 
-  constructor(private httpClient:HttpClient) { 
-    
+
+  constructor(private httpClient: HttpClient) {}
+
+  getAssessmentScore(): Observable<AssessmentScore[]> { 
+    return this.httpClient.get<AssessmentScore[]>(this.baseUrl + '/assessmentScore', this.httpHeader)
+      .pipe(catchError(this.httpError));
   }
 
-  getAssessmentScore(){
-    return this.httpClient.get<AssessmentScore[]>(this.baseUrl + "/assessmentScore/" , this.httpHeader).pipe(catchError(this.httpError)) ; 
+  postAssessmentScore(a: AssessmentScore): Observable<AssessmentScore> {
+    return this.httpClient.post<AssessmentScore>(this.baseUrl + '/assessmentScore', a, this.httpHeader)
+      .pipe(catchError(this.httpError));
   }
-  postAssessmentScore(a:AssessmentScore){
-    return this.httpClient.post<AssessmentScore>(this.baseUrl + "/assessmentScore/" , a , this.httpHeader).pipe(catchError(this.httpError)) ; 
+
+  getAssessmentScoreById(id: string): Observable<AssessmentScore> {
+    return this.httpClient.get<AssessmentScore>(`${this.baseUrl}/assessmentScore/${id}`, this.httpHeader)
+      .pipe(catchError(this.httpError));
   }
-  getAssessmentScoreByID(id:number){
-    // return this.arrAssessmentScore[id] ; 
+
+  updateAssessmentScore(a: AssessmentScore): Observable<AssessmentScore> { 
+    return this.httpClient.put<AssessmentScore>(`${this.baseUrl}/assessmentScore/${a.id}`, a, this.httpHeader)
+      .pipe(catchError(this.httpError));
   }
+
   private httpError(error: HttpErrorResponse) {
     let msg = '';
     if (error.error instanceof ErrorEvent) {
