@@ -47,6 +47,7 @@ import { UpdateAttendanceComponent } from './components/update-attendance/update
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CreateCategoryComponent } from './components/create-category/create-category.component';
 import { UpdateCategoryComponent } from './components/update-category/update-category.component';
+import { UpdateAssessmentScoreComponent } from './components/update-assessment-score/update-assessment-score.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { UpdateCategoryComponent } from './components/update-category/update-cat
     ViewAttendanceComponent,
     UpdateAttendanceComponent,
     CreateCategoryComponent,
-    UpdateCategoryComponent
+    UpdateCategoryComponent,
+    UpdateAssessmentScoreComponent
   ],
   imports: [
     ReactiveFormsModule,
