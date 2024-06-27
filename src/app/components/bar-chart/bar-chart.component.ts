@@ -13,10 +13,6 @@ export class BarChartComponent implements OnInit{
   }
   ngOnInit(): void {
     let options =  {
-      innerWidth:100,
-      outerWidth:100,
-      innerHeight:10,
-      outerHeight:10,
       title: {
         text: 'Marks distribution',
       },
