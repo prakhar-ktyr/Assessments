@@ -55,8 +55,11 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.isLoggedIn = !!this.localStorageService.getItem('username');
-    this.userRole = this.localStorageService.getItem('role') || '';
+    this.localStorageService.authStatus$.subscribe((status) => {
+      this.isLoggedIn = status;
+      this.userRole = this.localStorageService.getItem('role') || '';
+    });
+
     this.assessmentService.getAssessments().subscribe((assessments: Assessment[]) => {
       this.arrAssessments = assessments;
     });
@@ -126,6 +129,7 @@ export class NavbarComponent implements OnInit {
         this.isLoggedIn = true;
         this.userRole = user.role;
         console.log('Login successful');
+        this.router.navigate(['/dashboard']);
       } else {
         console.log('Invalid credentials');
       }
@@ -137,6 +141,7 @@ export class NavbarComponent implements OnInit {
     this.isLoggedIn = false;
     this.userRole = '';
     console.log('Logout successful');
+    this.router.navigate(['/home']);
   }
 
   onSearch(): void {

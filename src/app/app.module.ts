@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule, provideClientHydration } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -58,6 +58,8 @@ import { ViewReportsComponent } from './components/view-reports/view-reports.com
 import { UpdateReportsComponent } from './components/update-reports/update-reports.component';
 import { UpdateAssessmentComponent } from './components/update-assessment/update-assessment.component';
 import { ViewAssessmentComponent } from './components/view-assessment/view-assessment.component';
+import { LoginModalComponent } from './components/login-modal/login-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
@@ -98,7 +100,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     ViewReportsComponent,
     UpdateReportsComponent,
     UpdateAssessmentComponent,
-    ViewAssessmentComponent
+    ViewAssessmentComponent,
+    LoginModalComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -119,7 +122,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     HttpClientModule,
     MatRadioModule , 
     MatSlideToggleModule,
-    CanvasJSAngularChartsModule ,
+    CanvasJSAngularChartsModule,
+    MatDialogModule,
     MatBadgeModule
   ],
   providers: [

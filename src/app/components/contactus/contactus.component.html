@@ -7,18 +7,27 @@
     </div>
     <div class="col-md-6" id="enqForm">
         <h3>Enquiry Form</h3>
-        <form>
+        <form [formGroup]="enquiryForm" (ngSubmit)="onSubmit()">
             <div class="mb-3">
                 <label for="enquiryName" class="form-label">Name</label>
-                <input type="text" class="form-control" id="enquiryName">
+                <input type="text" class="form-control" id="enquiryName" formControlName="name">
+                <div *ngIf="isInvalid('name')" class="invalid-feedback d-block">
+                    Name is required.
+                </div>
             </div>
             <div class="mb-3">
                 <label for="enquiryEmail" class="form-label">Email</label>
-                <input type="email" class="form-control" id="enquiryEmail">
+                <input type="email" class="form-control" id="enquiryEmail" formControlName="email">
+                <div *ngIf="isInvalid('email')" class="invalid-feedback d-block">
+                    Valid email is required.
+                </div>
             </div>
             <div class="mb-3">
                 <label for="enquiryMessage" class="form-label">Message</label>
-                <textarea class="form-control" id="enquiryMessage" rows="4"></textarea>
+                <textarea class="form-control" id="enquiryMessage" rows="4" formControlName="message"></textarea>
+                <div *ngIf="isInvalid('message')" class="invalid-feedback d-block">
+                    Message is required.
+                </div>
             </div>
             <button type="submit" class="btn btn-primary btn-primary-custom">Submit</button>
         </form>
