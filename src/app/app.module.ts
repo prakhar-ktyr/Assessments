@@ -48,6 +48,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { CreateCategoryComponent } from './components/create-category/create-category.component';
 import { UpdateCategoryComponent } from './components/update-category/update-category.component';
 import { UpdateAssessmentScoreComponent } from './components/update-assessment-score/update-assessment-score.component';
+import { ViewCourseComponent } from './components/view-course/view-course.component';
+import { ViewCategoryComponent } from './components/view-category/view-category.component';
+import { ViewAssessmentScoreComponent } from './components/view-assessment-score/view-assessment-score.component';
 
 @NgModule({
   declarations: [
@@ -78,7 +81,10 @@ import { UpdateAssessmentScoreComponent } from './components/update-assessment-s
     UpdateAttendanceComponent,
     CreateCategoryComponent,
     UpdateCategoryComponent,
-    UpdateAssessmentScoreComponent
+    UpdateAssessmentScoreComponent,
+    ViewCourseComponent,
+    ViewCategoryComponent,
+    ViewAssessmentScoreComponent
   ],
   imports: [
     ReactiveFormsModule,
