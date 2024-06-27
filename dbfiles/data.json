@@ -1413,78 +1413,125 @@
           "id": 1,
           "text": "What does HTML stand for?",
           "type": "multiple-choice",
-          "choices": ["Hyper Trainer Marking Language", "Hyper Text Marketing Language", "Hyper Text Markup Language", "Hyper Text Markup Leveler"],
+          "choices": [
+            "Hyper Trainer Marking Language",
+            "Hyper Text Marketing Language",
+            "Hyper Text Markup Language",
+            "Hyper Text Markup Leveler"
+          ],
           "correctAnswer": "Hyper Text Markup Language"
         },
         {
           "id": 2,
           "text": "Which tag is used to define an unordered list in HTML?",
           "type": "multiple-choice",
-          "choices": ["<ul>", "<ol>", "<li>", "<list>"],
+          "choices": [
+            "<ul>",
+            "<ol>",
+            "<li>",
+            "<list>"
+          ],
           "correctAnswer": "<ul>"
         },
         {
           "id": 3,
           "text": "CSS stands for Cascading Style Sheets.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which property is used to change the background color in CSS?",
           "type": "multiple-choice",
-          "choices": ["background-color", "color", "bgcolor", "background"],
+          "choices": [
+            "background-color",
+            "color",
+            "bgcolor",
+            "background"
+          ],
           "correctAnswer": "background-color"
         },
         {
           "id": 5,
           "text": "What is the correct HTML tag for inserting a line break?",
           "type": "multiple-choice",
-          "choices": ["<break>", "<lb>", "<br>", "<line>"],
+          "choices": [
+            "<break>",
+            "<lb>",
+            "<br>",
+            "<line>"
+          ],
           "correctAnswer": "<br>"
         },
         {
           "id": 6,
           "text": "Which CSS property controls the text size?",
           "type": "multiple-choice",
-          "choices": ["font-style", "text-size", "font-size", "text-style"],
+          "choices": [
+            "font-style",
+            "text-size",
+            "font-size",
+            "text-style"
+          ],
           "correctAnswer": "font-size"
         },
         {
           "id": 7,
           "text": "Which HTML attribute is used to define inline styles?",
           "type": "multiple-choice",
-          "choices": ["styles", "style", "class", "font"],
+          "choices": [
+            "styles",
+            "style",
+            "class",
+            "font"
+          ],
           "correctAnswer": "style"
         },
         {
           "id": 8,
           "text": "In HTML, which attribute is used to specify that an input field must be filled out?",
           "type": "multiple-choice",
-          "choices": ["required", "validate", "placeholder", "formvalidate"],
+          "choices": [
+            "required",
+            "validate",
+            "placeholder",
+            "formvalidate"
+          ],
           "correctAnswer": "required"
         },
         {
           "id": 9,
           "text": "Which CSS property is used to change the text color of an element?",
           "type": "multiple-choice",
-          "choices": ["fgcolor", "color", "text-color", "font-color"],
+          "choices": [
+            "fgcolor",
+            "color",
+            "text-color",
+            "font-color"
+          ],
           "correctAnswer": "color"
         },
         {
           "id": 10,
           "text": "Which HTML element is used to specify a footer for a document or section?",
           "type": "multiple-choice",
-          "choices": ["<bottom>", "<footer>", "<foot>", "<section>"],
+          "choices": [
+            "<bottom>",
+            "<footer>",
+            "<foot>",
+            "<section>"
+          ],
           "correctAnswer": "<footer>"
         }
       ],
       "price": 1599,
       "facultyId": "11",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "12",
       "assessmentName": "JavaScript",
@@ -1495,78 +1542,121 @@
           "id": 1,
           "text": "Which of the following is a correct way to declare a variable in JavaScript?",
           "type": "multiple-choice",
-          "choices": ["var myVar;", "let myVar;", "const myVar;", "All of the above"],
+          "choices": [
+            "var myVar;",
+            "let myVar;",
+            "const myVar;",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 2,
           "text": "JavaScript is a loosely typed language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which method is used to select an element by its ID in JavaScript?",
           "type": "multiple-choice",
-          "choices": ["getElementById()", "querySelector()", "getElementByClass()", "getElementByTag()"],
+          "choices": [
+            "getElementById()",
+            "querySelector()",
+            "getElementByClass()",
+            "getElementByTag()"
+          ],
           "correctAnswer": "getElementById()"
         },
         {
           "id": 4,
           "text": "Which keyword is used to define a constant in JavaScript?",
           "type": "multiple-choice",
-          "choices": ["constant", "var", "let", "const"],
+          "choices": [
+            "constant",
+            "var",
+            "let",
+            "const"
+          ],
           "correctAnswer": "const"
         },
         {
           "id": 5,
           "text": "Which method is used to add an element to the end of an array in JavaScript?",
           "type": "multiple-choice",
-          "choices": ["push()", "pop()", "shift()", "unshift()"],
+          "choices": [
+            "push()",
+            "pop()",
+            "shift()",
+            "unshift()"
+          ],
           "correctAnswer": "push()"
         },
         {
           "id": 6,
           "text": "JavaScript supports both object-oriented and functional programming.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which method is used to convert a JSON string into a JavaScript object?",
           "type": "multiple-choice",
-          "choices": ["JSON.parse()", "JSON.stringify()", "JSON.convert()", "JSON.toObject()"],
+          "choices": [
+            "JSON.parse()",
+            "JSON.stringify()",
+            "JSON.convert()",
+            "JSON.toObject()"
+          ],
           "correctAnswer": "JSON.parse()"
         },
         {
           "id": 8,
           "text": "In JavaScript, '===' is used to compare both value and type.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which method is used to remove the last element from an array in JavaScript?",
           "type": "multiple-choice",
-          "choices": ["push()", "pop()", "shift()", "unshift()"],
+          "choices": [
+            "push()",
+            "pop()",
+            "shift()",
+            "unshift()"
+          ],
           "correctAnswer": "pop()"
         },
         {
           "id": 10,
           "text": "Which of the following is not a reserved word in JavaScript?",
           "type": "multiple-choice",
-          "choices": ["interface", "throws", "program", "short"],
+          "choices": [
+            "interface",
+            "throws",
+            "program",
+            "short"
+          ],
           "correctAnswer": "program"
         }
       ],
       "price": 1799,
       "facultyId": "12",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "13",
       "assessmentName": "SQL",
@@ -1577,78 +1667,123 @@
           "id": 1,
           "text": "Which SQL statement is used to extract data from a database?",
           "type": "multiple-choice",
-          "choices": ["GET", "OPEN", "EXTRACT", "SELECT"],
+          "choices": [
+            "GET",
+            "OPEN",
+            "EXTRACT",
+            "SELECT"
+          ],
           "correctAnswer": "SELECT"
         },
         {
           "id": 2,
           "text": "SQL stands for Structured Query Language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which SQL statement is used to update data in a database?",
           "type": "multiple-choice",
-          "choices": ["SAVE", "MODIFY", "UPDATE", "CHANGE"],
+          "choices": [
+            "SAVE",
+            "MODIFY",
+            "UPDATE",
+            "CHANGE"
+          ],
           "correctAnswer": "UPDATE"
         },
         {
           "id": 4,
           "text": "Which SQL clause is used to filter the results of a query?",
           "type": "multiple-choice",
-          "choices": ["FILTER", "WHERE", "SORT", "ORDER BY"],
+          "choices": [
+            "FILTER",
+            "WHERE",
+            "SORT",
+            "ORDER BY"
+          ],
           "correctAnswer": "WHERE"
         },
         {
           "id": 5,
           "text": "Which SQL keyword is used to sort the results of a query?",
           "type": "multiple-choice",
-          "choices": ["SORT BY", "ORDER", "SORT", "ORDER BY"],
+          "choices": [
+            "SORT BY",
+            "ORDER",
+            "SORT",
+            "ORDER BY"
+          ],
           "correctAnswer": "ORDER BY"
         },
         {
           "id": 6,
           "text": "SQL is case-insensitive.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which SQL function is used to count the number of rows in a result set?",
           "type": "multiple-choice",
-          "choices": ["COUNT()", "SUM()", "NUMBER()", "TOTAL()"],
+          "choices": [
+            "COUNT()",
+            "SUM()",
+            "NUMBER()",
+            "TOTAL()"
+          ],
           "correctAnswer": "COUNT()"
         },
         {
           "id": 8,
           "text": "Which SQL statement is used to delete data from a database?",
           "type": "multiple-choice",
-          "choices": ["REMOVE", "DELETE", "DROP", "CLEAR"],
+          "choices": [
+            "REMOVE",
+            "DELETE",
+            "DROP",
+            "CLEAR"
+          ],
           "correctAnswer": "DELETE"
         },
         {
           "id": 9,
           "text": "Which SQL keyword is used to retrieve a unique value?",
           "type": "multiple-choice",
-          "choices": ["ONLY", "UNIQUE", "DISTINCT", "SINGLE"],
+          "choices": [
+            "ONLY",
+            "UNIQUE",
+            "DISTINCT",
+            "SINGLE"
+          ],
           "correctAnswer": "DISTINCT"
         },
         {
           "id": 10,
           "text": "Which SQL statement is used to create a new table in a database?",
           "type": "multiple-choice",
-          "choices": ["MAKE TABLE", "CREATE TABLE", "ADD TABLE", "NEW TABLE"],
+          "choices": [
+            "MAKE TABLE",
+            "CREATE TABLE",
+            "ADD TABLE",
+            "NEW TABLE"
+          ],
           "correctAnswer": "CREATE TABLE"
         }
       ],
       "price": 1499,
       "facultyId": "13",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "14",
       "assessmentName": "TypeScript",
@@ -1659,78 +1794,123 @@
           "id": 1,
           "text": "TypeScript is a superset of which language?",
           "type": "multiple-choice",
-          "choices": ["Java", "JavaScript", "C#", "Python"],
+          "choices": [
+            "Java",
+            "JavaScript",
+            "C#",
+            "Python"
+          ],
           "correctAnswer": "JavaScript"
         },
         {
           "id": 2,
           "text": "Which keyword is used to declare a variable in TypeScript?",
           "type": "multiple-choice",
-          "choices": ["var", "let", "const", "All of the above"],
+          "choices": [
+            "var",
+            "let",
+            "const",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 3,
           "text": "TypeScript supports static typing.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which command is used to install TypeScript globally using npm?",
           "type": "multiple-choice",
-          "choices": ["npm install typescript", "npm install -g typescript", "npm add typescript", "npm get typescript"],
+          "choices": [
+            "npm install typescript",
+            "npm install -g typescript",
+            "npm add typescript",
+            "npm get typescript"
+          ],
           "correctAnswer": "npm install -g typescript"
         },
         {
           "id": 5,
           "text": "Which file extension is used for TypeScript files?",
           "type": "multiple-choice",
-          "choices": [".ts", ".js", ".jsx", ".tsx"],
+          "choices": [
+            ".ts",
+            ".js",
+            ".jsx",
+            ".tsx"
+          ],
           "correctAnswer": ".ts"
         },
         {
           "id": 6,
           "text": "Which keyword is used to define an interface in TypeScript?",
           "type": "multiple-choice",
-          "choices": ["class", "interface", "type", "module"],
+          "choices": [
+            "class",
+            "interface",
+            "type",
+            "module"
+          ],
           "correctAnswer": "interface"
         },
         {
           "id": 7,
           "text": "TypeScript code needs to be compiled to JavaScript.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 8,
           "text": "Which of the following is not a valid data type in TypeScript?",
           "type": "multiple-choice",
-          "choices": ["number", "string", "boolean", "char"],
+          "choices": [
+            "number",
+            "string",
+            "boolean",
+            "char"
+          ],
           "correctAnswer": "char"
         },
         {
           "id": 9,
           "text": "Which method is used to create a new instance of a class in TypeScript?",
           "type": "multiple-choice",
-          "choices": ["new()", "create()", "init()", "construct()"],
+          "choices": [
+            "new()",
+            "create()",
+            "init()",
+            "construct()"
+          ],
           "correctAnswer": "new()"
         },
         {
           "id": 10,
           "text": "Which feature of TypeScript allows you to specify the type of a variable?",
           "type": "multiple-choice",
-          "choices": ["Type inference", "Type declaration", "Type casting", "Type assertion"],
+          "choices": [
+            "Type inference",
+            "Type declaration",
+            "Type casting",
+            "Type assertion"
+          ],
           "correctAnswer": "Type declaration"
         }
       ],
       "price": 1899,
       "facultyId": "14",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "15",
       "assessmentName": "Go",
@@ -1741,78 +1921,121 @@
           "id": 1,
           "text": "Go is a statically typed programming language.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 2,
           "text": "Which keyword is used to declare a variable in Go?",
           "type": "multiple-choice",
-          "choices": ["var", "let", "const", "define"],
+          "choices": [
+            "var",
+            "let",
+            "const",
+            "define"
+          ],
           "correctAnswer": "var"
         },
         {
           "id": 3,
           "text": "Which function is used to print output in Go?",
           "type": "multiple-choice",
-          "choices": ["print()", "fmt.Print()", "console.log()", "fmt.Println()"],
+          "choices": [
+            "print()",
+            "fmt.Print()",
+            "console.log()",
+            "fmt.Println()"
+          ],
           "correctAnswer": "fmt.Println()"
         },
         {
           "id": 4,
           "text": "Go was developed at Google.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 5,
           "text": "Which keyword is used to define a function in Go?",
           "type": "multiple-choice",
-          "choices": ["function", "func", "def", "define"],
+          "choices": [
+            "function",
+            "func",
+            "def",
+            "define"
+          ],
           "correctAnswer": "func"
         },
         {
           "id": 6,
           "text": "Which of the following is a valid way to declare a constant in Go?",
           "type": "multiple-choice",
-          "choices": ["const PI = 3.14", "let PI = 3.14", "var PI = 3.14", "define PI = 3.14"],
+          "choices": [
+            "const PI = 3.14",
+            "let PI = 3.14",
+            "var PI = 3.14",
+            "define PI = 3.14"
+          ],
           "correctAnswer": "const PI = 3.14"
         },
         {
           "id": 7,
           "text": "Go supports concurrent programming using goroutines.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 8,
           "text": "Which package in Go is used for handling HTTP requests?",
           "type": "multiple-choice",
-          "choices": ["http", "net/http", "http/net", "web/http"],
+          "choices": [
+            "http",
+            "net/http",
+            "http/net",
+            "web/http"
+          ],
           "correctAnswer": "net/http"
         },
         {
           "id": 9,
           "text": "Which command is used to initialize a new Go module?",
           "type": "multiple-choice",
-          "choices": ["go init", "go start", "go mod init", "go new"],
+          "choices": [
+            "go init",
+            "go start",
+            "go mod init",
+            "go new"
+          ],
           "correctAnswer": "go mod init"
         },
         {
           "id": 10,
           "text": "Which symbol is used for single-line comments in Go?",
           "type": "multiple-choice",
-          "choices": ["#", "//", "/*", "<!--"],
+          "choices": [
+            "#",
+            "//",
+            "/*",
+            "<!--"
+          ],
           "correctAnswer": "//"
         }
       ],
       "price": 2099,
       "facultyId": "15",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "16",
       "assessmentName": "Django",
@@ -1823,78 +2046,121 @@
           "id": 1,
           "text": "What does MVT stand for in Django?",
           "type": "multiple-choice",
-          "choices": ["Model View Template", "Model View Transmission", "Model View Translator", "Model View Transition"],
+          "choices": [
+            "Model View Template",
+            "Model View Transmission",
+            "Model View Translator",
+            "Model View Transition"
+          ],
           "correctAnswer": "Model View Template"
         },
         {
           "id": 2,
           "text": "Django is a high-level Python web framework that encourages rapid development.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which of the following commands is used to create a new Django project?",
           "type": "multiple-choice",
-          "choices": ["django-admin startproject", "django-admin createproject", "django-admin newproject", "django-admin initproject"],
+          "choices": [
+            "django-admin startproject",
+            "django-admin createproject",
+            "django-admin newproject",
+            "django-admin initproject"
+          ],
           "correctAnswer": "django-admin startproject"
         },
         {
           "id": 4,
           "text": "Which file in a Django project is responsible for URL routing?",
           "type": "multiple-choice",
-          "choices": ["settings.py", "urls.py", "views.py", "models.py"],
+          "choices": [
+            "settings.py",
+            "urls.py",
+            "views.py",
+            "models.py"
+          ],
           "correctAnswer": "urls.py"
         },
         {
           "id": 5,
           "text": "Django uses an ORM (Object-Relational Mapping) system to interact with the database.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which of the following is the command to apply migrations in Django?",
           "type": "multiple-choice",
-          "choices": ["python manage.py runmigrations", "python manage.py migrate", "python manage.py applymigrations", "python manage.py makemigrations"],
+          "choices": [
+            "python manage.py runmigrations",
+            "python manage.py migrate",
+            "python manage.py applymigrations",
+            "python manage.py makemigrations"
+          ],
           "correctAnswer": "python manage.py migrate"
         },
         {
           "id": 7,
           "text": "Which Django template tag is used to render a variable in a template?",
           "type": "multiple-choice",
-          "choices": ["{{ }}", "{% %}", "{# #}", "[[ ]]"],
+          "choices": [
+            "{{ }}",
+            "{% %}",
+            "{# #}",
+            "[[ ]]"
+          ],
           "correctAnswer": "{{ }}"
         },
         {
           "id": 8,
           "text": "What is the default database used by Django?",
           "type": "multiple-choice",
-          "choices": ["MySQL", "PostgreSQL", "SQLite", "Oracle"],
+          "choices": [
+            "MySQL",
+            "PostgreSQL",
+            "SQLite",
+            "Oracle"
+          ],
           "correctAnswer": "SQLite"
         },
         {
           "id": 9,
           "text": "Which command is used to create a new Django app?",
           "type": "multiple-choice",
-          "choices": ["django-admin startapp", "django-admin createapp", "django-admin newapp", "django-admin initapp"],
+          "choices": [
+            "django-admin startapp",
+            "django-admin createapp",
+            "django-admin newapp",
+            "django-admin initapp"
+          ],
           "correctAnswer": "django-admin startapp"
         },
         {
           "id": 10,
           "text": "Django templates support both inheritance and inclusion.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         }
       ],
       "price": 2199,
       "facultyId": "16",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "17",
       "assessmentName": "Flask",
@@ -1905,78 +2171,121 @@
           "id": 1,
           "text": "Flask is known as a micro web framework for Python.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 2,
           "text": "Which method is used to define a route in Flask?",
           "type": "multiple-choice",
-          "choices": ["@flask.route", "@app.route", "@route", "@router"],
+          "choices": [
+            "@flask.route",
+            "@app.route",
+            "@route",
+            "@router"
+          ],
           "correctAnswer": "@app.route"
         },
         {
           "id": 3,
           "text": "Which template engine does Flask use by default?",
           "type": "multiple-choice",
-          "choices": ["Jinja2", "Mako", "Django", "Tornado"],
+          "choices": [
+            "Jinja2",
+            "Mako",
+            "Django",
+            "Tornado"
+          ],
           "correctAnswer": "Jinja2"
         },
         {
           "id": 4,
           "text": "Which of the following commands is used to run a Flask application?",
           "type": "multiple-choice",
-          "choices": ["flask run", "flask start", "python app.py", "python flask run"],
+          "choices": [
+            "flask run",
+            "flask start",
+            "python app.py",
+            "python flask run"
+          ],
           "correctAnswer": "flask run"
         },
         {
           "id": 5,
           "text": "Flask is based on WSGI (Web Server Gateway Interface).",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which of the following is the correct way to import Flask in a Python script?",
           "type": "multiple-choice",
-          "choices": ["import Flask", "from flask import Flask", "import flask.Flask", "import flask"],
+          "choices": [
+            "import Flask",
+            "from flask import Flask",
+            "import flask.Flask",
+            "import flask"
+          ],
           "correctAnswer": "from flask import Flask"
         },
         {
           "id": 7,
           "text": "Which Flask method is used to handle HTTP POST requests?",
           "type": "multiple-choice",
-          "choices": ["@app.post", "@app.route(methods=['POST'])", "@app.method('POST')", "@app.handle('POST')"],
+          "choices": [
+            "@app.post",
+            "@app.route(methods=['POST'])",
+            "@app.method('POST')",
+            "@app.handle('POST')"
+          ],
           "correctAnswer": "@app.route(methods=['POST'])"
         },
         {
           "id": 8,
           "text": "Flask supports SQLAlchemy for database operations.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which function is used to render a template in Flask?",
           "type": "multiple-choice",
-          "choices": ["render()", "render_template()", "template()", "render_html()"],
+          "choices": [
+            "render()",
+            "render_template()",
+            "template()",
+            "render_html()"
+          ],
           "correctAnswer": "render_template()"
         },
         {
           "id": 10,
           "text": "Which of the following is a way to define a static file path in Flask?",
           "type": "multiple-choice",
-          "choices": ["app.static_path", "app.static_folder", "app.static", "app.static_dir"],
+          "choices": [
+            "app.static_path",
+            "app.static_folder",
+            "app.static",
+            "app.static_dir"
+          ],
           "correctAnswer": "app.static_folder"
         }
       ],
       "price": 1999,
       "facultyId": "17",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "18",
       "assessmentName": "Vue.js",
@@ -1987,78 +2296,121 @@
           "id": 1,
           "text": "Vue.js is primarily used for building:",
           "type": "multiple-choice",
-          "choices": ["Server-side applications", "Client-side applications", "Mobile applications", "Desktop applications"],
+          "choices": [
+            "Server-side applications",
+            "Client-side applications",
+            "Mobile applications",
+            "Desktop applications"
+          ],
           "correctAnswer": "Client-side applications"
         },
         {
           "id": 2,
           "text": "Which directive is used to bind an attribute to an expression in Vue.js?",
           "type": "multiple-choice",
-          "choices": ["v-if", "v-bind", "v-for", "v-on"],
+          "choices": [
+            "v-if",
+            "v-bind",
+            "v-for",
+            "v-on"
+          ],
           "correctAnswer": "v-bind"
         },
         {
           "id": 3,
           "text": "Vue.js components can be defined using JavaScript or TypeScript.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which method is used to create a new Vue instance?",
           "type": "multiple-choice",
-          "choices": ["Vue.create()", "new Vue()", "Vue.new()", "create Vue()"],
+          "choices": [
+            "Vue.create()",
+            "new Vue()",
+            "Vue.new()",
+            "create Vue()"
+          ],
           "correctAnswer": "new Vue()"
         },
         {
           "id": 5,
           "text": "Which of the following is used to loop through an array in Vue.js?",
           "type": "multiple-choice",
-          "choices": ["v-if", "v-bind", "v-for", "v-model"],
+          "choices": [
+            "v-if",
+            "v-bind",
+            "v-for",
+            "v-model"
+          ],
           "correctAnswer": "v-for"
         },
         {
           "id": 6,
           "text": "Vue.js uses a virtual DOM for better performance.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which lifecycle hook is called after the Vue instance has been mounted?",
           "type": "multiple-choice",
-          "choices": ["beforeMount", "mounted", "beforeUpdate", "updated"],
+          "choices": [
+            "beforeMount",
+            "mounted",
+            "beforeUpdate",
+            "updated"
+          ],
           "correctAnswer": "mounted"
         },
         {
           "id": 8,
           "text": "Which Vue.js directive is used for two-way data binding?",
           "type": "multiple-choice",
-          "choices": ["v-bind", "v-model", "v-for", "v-on"],
+          "choices": [
+            "v-bind",
+            "v-model",
+            "v-for",
+            "v-on"
+          ],
           "correctAnswer": "v-model"
         },
         {
           "id": 9,
           "text": "Vue.js templates are written using HTML.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 10,
           "text": "Which file extension is used for single-file components in Vue.js?",
           "type": "multiple-choice",
-          "choices": [".vue", ".jsx", ".component", ".vuex"],
+          "choices": [
+            ".vue",
+            ".jsx",
+            ".component",
+            ".vuex"
+          ],
           "correctAnswer": ".vue"
         }
       ],
       "price": 2299,
       "facultyId": "18",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "19",
       "assessmentName": "ASP.NET",
@@ -2069,78 +2421,121 @@
           "id": 1,
           "text": "ASP.NET is a framework for building web applications on the:",
           "type": "multiple-choice",
-          "choices": [".NET platform", "Java platform", "Node.js platform", "Ruby on Rails"],
+          "choices": [
+            ".NET platform",
+            "Java platform",
+            "Node.js platform",
+            "Ruby on Rails"
+          ],
           "correctAnswer": ".NET platform"
         },
         {
           "id": 2,
           "text": "Which architectural pattern does ASP.NET MVC follow?",
           "type": "multiple-choice",
-          "choices": ["MVVM", "MVP", "MVC", "MVT"],
+          "choices": [
+            "MVVM",
+            "MVP",
+            "MVC",
+            "MVT"
+          ],
           "correctAnswer": "MVC"
         },
         {
           "id": 3,
           "text": "Razor is a markup syntax used in ASP.NET for embedding server-based code into web pages.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which of the following is used to manage packages in ASP.NET?",
           "type": "multiple-choice",
-          "choices": ["NuGet", "npm", "pip", "Composer"],
+          "choices": [
+            "NuGet",
+            "npm",
+            "pip",
+            "Composer"
+          ],
           "correctAnswer": "NuGet"
         },
         {
           "id": 5,
           "text": "ASP.NET Core is a cross-platform framework.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which method is used to start an ASP.NET application?",
           "type": "multiple-choice",
-          "choices": ["Start()", "Run()", "Begin()", "Execute()"],
+          "choices": [
+            "Start()",
+            "Run()",
+            "Begin()",
+            "Execute()"
+          ],
           "correctAnswer": "Run()"
         },
         {
           "id": 7,
           "text": "Which of the following is not a valid return type of a controller action in ASP.NET MVC?",
           "type": "multiple-choice",
-          "choices": ["ViewResult", "JsonResult", "FileResult", "PageResult"],
+          "choices": [
+            "ViewResult",
+            "JsonResult",
+            "FileResult",
+            "PageResult"
+          ],
           "correctAnswer": "PageResult"
         },
         {
           "id": 8,
           "text": "ASP.NET applications can be hosted on IIS.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which of the following is a built-in middleware in ASP.NET Core?",
           "type": "multiple-choice",
-          "choices": ["Routing", "Static Files", "Authentication", "All of the above"],
+          "choices": [
+            "Routing",
+            "Static Files",
+            "Authentication",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 10,
           "text": "Which file is used to configure the ASP.NET application and its dependencies?",
           "type": "multiple-choice",
-          "choices": ["appsettings.json", "web.config", "global.asax", "program.cs"],
+          "choices": [
+            "appsettings.json",
+            "web.config",
+            "global.asax",
+            "program.cs"
+          ],
           "correctAnswer": "appsettings.json"
         }
       ],
       "price": 2399,
       "facultyId": "19",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "20",
       "assessmentName": "Spring",
@@ -2151,78 +2546,119 @@
           "id": 1,
           "text": "Spring is primarily used for building:",
           "type": "multiple-choice",
-          "choices": ["Desktop applications", "Web applications", "Mobile applications", "Embedded systems"],
+          "choices": [
+            "Desktop applications",
+            "Web applications",
+            "Mobile applications",
+            "Embedded systems"
+          ],
           "correctAnswer": "Web applications"
         },
         {
           "id": 2,
           "text": "Spring uses dependency injection to manage components.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 3,
           "text": "Which of the following is a core module of Spring?",
           "type": "multiple-choice",
-          "choices": ["Spring MVC", "Spring Boot", "Spring Data", "All of the above"],
+          "choices": [
+            "Spring MVC",
+            "Spring Boot",
+            "Spring Data",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 4,
           "text": "Which annotation is used to enable Spring Boot's auto-configuration feature?",
           "type": "multiple-choice",
-          "choices": ["@EnableAutoConfiguration", "@SpringBootApplication", "@AutoConfigure", "@Configuration"],
+          "choices": [
+            "@EnableAutoConfiguration",
+            "@SpringBootApplication",
+            "@AutoConfigure",
+            "@Configuration"
+          ],
           "correctAnswer": "@EnableAutoConfiguration"
         },
         {
           "id": 5,
           "text": "Spring Boot is an extension of the Spring framework.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 6,
           "text": "Which of the following is used to configure a Spring application?",
           "type": "multiple-choice",
-          "choices": ["application.properties", "config.xml", "application.yml", "Both application.properties and application.yml"],
+          "choices": [
+            "application.properties",
+            "config.xml",
+            "application.yml",
+            "Both application.properties and application.yml"
+          ],
           "correctAnswer": "Both application.properties and application.yml"
         },
         {
           "id": 7,
           "text": "Which annotation is used to define a Spring component?",
           "type": "multiple-choice",
-          "choices": ["@Component", "@Bean", "@Service", "@Controller"],
+          "choices": [
+            "@Component",
+            "@Bean",
+            "@Service",
+            "@Controller"
+          ],
           "correctAnswer": "@Component"
         },
         {
           "id": 8,
           "text": "Spring Boot applications can be run using an embedded server.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which annotation is used to map a request to a controller in Spring MVC?",
           "type": "multiple-choice",
-          "choices": ["@RequestMapping", "@GetMapping", "@PostMapping", "All of the above"],
+          "choices": [
+            "@RequestMapping",
+            "@GetMapping",
+            "@PostMapping",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 10,
           "text": "Spring Initializr is a web-based tool for generating Spring Boot projects.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         }
       ],
       "price": 2499,
       "facultyId": "20",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "21",
       "assessmentName": "Laravel",
@@ -2233,78 +2669,121 @@
           "id": 1,
           "text": "Laravel is a PHP framework designed for:",
           "type": "multiple-choice",
-          "choices": ["Mobile development", "Desktop applications", "Web applications", "Game development"],
+          "choices": [
+            "Mobile development",
+            "Desktop applications",
+            "Web applications",
+            "Game development"
+          ],
           "correctAnswer": "Web applications"
         },
         {
           "id": 2,
           "text": "Which ORM does Laravel use?",
           "type": "multiple-choice",
-          "choices": ["Doctrine", "Eloquent", "Propel", "RedBeanPHP"],
+          "choices": [
+            "Doctrine",
+            "Eloquent",
+            "Propel",
+            "RedBeanPHP"
+          ],
           "correctAnswer": "Eloquent"
         },
         {
           "id": 3,
           "text": "Laravel's Blade is used for templating.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which command is used to create a new Laravel project?",
           "type": "multiple-choice",
-          "choices": ["laravel new", "laravel create", "php artisan new", "php artisan create"],
+          "choices": [
+            "laravel new",
+            "laravel create",
+            "php artisan new",
+            "php artisan create"
+          ],
           "correctAnswer": "laravel new"
         },
         {
           "id": 5,
           "text": "Which file in a Laravel project is used to define routes?",
           "type": "multiple-choice",
-          "choices": ["routes.php", "web.php", "app.php", "config.php"],
+          "choices": [
+            "routes.php",
+            "web.php",
+            "app.php",
+            "config.php"
+          ],
           "correctAnswer": "web.php"
         },
         {
           "id": 6,
           "text": "Laravel uses Composer for dependency management.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which Artisan command is used to run database migrations in Laravel?",
           "type": "multiple-choice",
-          "choices": ["migrate:run", "db:migrate", "make:migrate", "run:migrations"],
+          "choices": [
+            "migrate:run",
+            "db:migrate",
+            "make:migrate",
+            "run:migrations"
+          ],
           "correctAnswer": "db:migrate"
         },
         {
           "id": 8,
           "text": "Laravel supports RESTful routing.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 9,
           "text": "Which function is used to generate a URL in a Laravel Blade template?",
           "type": "multiple-choice",
-          "choices": ["url()", "route()", "path()", "link()"],
+          "choices": [
+            "url()",
+            "route()",
+            "path()",
+            "link()"
+          ],
           "correctAnswer": "url()"
         },
         {
           "id": 10,
           "text": "Which method is used to retrieve input data in a Laravel controller?",
           "type": "multiple-choice",
-          "choices": ["input()", "data()", "getInput()", "request()"],
+          "choices": [
+            "input()",
+            "data()",
+            "getInput()",
+            "request()"
+          ],
           "correctAnswer": "request()"
         }
       ],
       "price": 2199,
       "facultyId": "21",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "22",
       "assessmentName": "Scala",
@@ -2315,78 +2794,123 @@
           "id": 1,
           "text": "Scala is a language that combines functional and object-oriented programming.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 2,
           "text": "Which keyword is used to define a variable in Scala?",
           "type": "multiple-choice",
-          "choices": ["var", "let", "def", "val"],
+          "choices": [
+            "var",
+            "let",
+            "def",
+            "val"
+          ],
           "correctAnswer": "var"
         },
         {
           "id": 3,
           "text": "Which of the following is used to create an immutable variable in Scala?",
           "type": "multiple-choice",
-          "choices": ["var", "let", "def", "val"],
+          "choices": [
+            "var",
+            "let",
+            "def",
+            "val"
+          ],
           "correctAnswer": "val"
         },
         {
           "id": 4,
           "text": "In Scala, which of the following is used to define a function?",
           "type": "multiple-choice",
-          "choices": ["function", "def", "func", "fn"],
+          "choices": [
+            "function",
+            "def",
+            "func",
+            "fn"
+          ],
           "correctAnswer": "def"
         },
         {
           "id": 5,
           "text": "Which of the following collections in Scala is immutable?",
           "type": "multiple-choice",
-          "choices": ["ArrayBuffer", "ListBuffer", "Array", "List"],
+          "choices": [
+            "ArrayBuffer",
+            "ListBuffer",
+            "Array",
+            "List"
+          ],
           "correctAnswer": "List"
         },
         {
           "id": 6,
           "text": "Scala runs on the Java Virtual Machine (JVM).",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which of the following is the correct way to create a list in Scala?",
           "type": "multiple-choice",
-          "choices": ["List(1, 2, 3)", "[1, 2, 3]", "{1, 2, 3}", "Array(1, 2, 3)"],
+          "choices": [
+            "List(1, 2, 3)",
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "Array(1, 2, 3)"
+          ],
           "correctAnswer": "List(1, 2, 3)"
         },
         {
           "id": 8,
           "text": "In Scala, which keyword is used to extend a class?",
           "type": "multiple-choice",
-          "choices": ["extend", "inherit", "extends", "inherits"],
+          "choices": [
+            "extend",
+            "inherit",
+            "extends",
+            "inherits"
+          ],
           "correctAnswer": "extends"
         },
         {
           "id": 9,
           "text": "Which of the following is used for pattern matching in Scala?",
           "type": "multiple-choice",
-          "choices": ["match", "switch", "case", "pattern"],
+          "choices": [
+            "match",
+            "switch",
+            "case",
+            "pattern"
+          ],
           "correctAnswer": "match"
         },
         {
           "id": 10,
           "text": "Which Scala collection type can contain duplicate elements?",
           "type": "multiple-choice",
-          "choices": ["Set", "Map", "List", "Tuple"],
+          "choices": [
+            "Set",
+            "Map",
+            "List",
+            "Tuple"
+          ],
           "correctAnswer": "List"
         }
       ],
       "price": 2299,
       "facultyId": "22",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "23",
       "assessmentName": "Rust",
@@ -2397,78 +2921,121 @@
           "id": 1,
           "text": "Rust is known for its strong emphasis on memory safety.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 2,
           "text": "Which keyword is used to define a variable in Rust?",
           "type": "multiple-choice",
-          "choices": ["let", "var", "def", "val"],
+          "choices": [
+            "let",
+            "var",
+            "def",
+            "val"
+          ],
           "correctAnswer": "let"
         },
         {
           "id": 3,
           "text": "Rust uses ownership with rules that the compiler checks at compile time.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which keyword is used to create an immutable variable in Rust?",
           "type": "multiple-choice",
-          "choices": ["mut", "const", "static", "let"],
+          "choices": [
+            "mut",
+            "const",
+            "static",
+            "let"
+          ],
           "correctAnswer": "let"
         },
         {
           "id": 5,
           "text": "Which function is used to print output to the console in Rust?",
           "type": "multiple-choice",
-          "choices": ["print()", "echo()", "console.log()", "println!()"],
+          "choices": [
+            "print()",
+            "echo()",
+            "console.log()",
+            "println!()"
+          ],
           "correctAnswer": "println!()"
         },
         {
           "id": 6,
           "text": "In Rust, which keyword is used to declare a constant?",
           "type": "multiple-choice",
-          "choices": ["const", "let", "static", "val"],
+          "choices": [
+            "const",
+            "let",
+            "static",
+            "val"
+          ],
           "correctAnswer": "const"
         },
         {
           "id": 7,
           "text": "Rust has built-in support for concurrent programming.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 8,
           "text": "Which of the following is the correct way to create a mutable variable in Rust?",
           "type": "multiple-choice",
-          "choices": ["let x: i32;", "mut x: i32;", "let mut x: i32;", "mutable x: i32;"],
+          "choices": [
+            "let x: i32;",
+            "mut x: i32;",
+            "let mut x: i32;",
+            "mutable x: i32;"
+          ],
           "correctAnswer": "let mut x: i32;"
         },
         {
           "id": 9,
           "text": "Which of the following is used to handle errors in Rust?",
           "type": "multiple-choice",
-          "choices": ["Result", "Option", "Error", "Exception"],
+          "choices": [
+            "Result",
+            "Option",
+            "Error",
+            "Exception"
+          ],
           "correctAnswer": "Result"
         },
         {
           "id": 10,
           "text": "Which macro is used to handle pattern matching in Rust?",
           "type": "multiple-choice",
-          "choices": ["match", "switch", "case", "pattern"],
+          "choices": [
+            "match",
+            "switch",
+            "case",
+            "pattern"
+          ],
           "correctAnswer": "match"
         }
       ],
       "price": 2399,
       "facultyId": "23",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "24",
       "assessmentName": "Elixir",
@@ -2479,78 +3046,121 @@
           "id": 1,
           "text": "Elixir runs on the Erlang virtual machine (BEAM).",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 2,
           "text": "Which keyword is used to define a module in Elixir?",
           "type": "multiple-choice",
-          "choices": ["module", "defmodule", "mod", "define"],
+          "choices": [
+            "module",
+            "defmodule",
+            "mod",
+            "define"
+          ],
           "correctAnswer": "defmodule"
         },
         {
           "id": 3,
           "text": "Which macro is used to define a function in Elixir?",
           "type": "multiple-choice",
-          "choices": ["def", "fun", "fn", "lambda"],
+          "choices": [
+            "def",
+            "fun",
+            "fn",
+            "lambda"
+          ],
           "correctAnswer": "def"
         },
         {
           "id": 4,
           "text": "Elixir supports pattern matching.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 5,
           "text": "Which of the following is used to start an Elixir interactive shell?",
           "type": "multiple-choice",
-          "choices": ["elixir", "iex", "erl", "shell"],
+          "choices": [
+            "elixir",
+            "iex",
+            "erl",
+            "shell"
+          ],
           "correctAnswer": "iex"
         },
         {
           "id": 6,
           "text": "Which of the following is the correct way to define a list in Elixir?",
           "type": "multiple-choice",
-          "choices": ["[1, 2, 3]", "{1, 2, 3}", "(1, 2, 3)", "<1, 2, 3>"],
+          "choices": [
+            "[1, 2, 3]",
+            "{1, 2, 3}",
+            "(1, 2, 3)",
+            "<1, 2, 3>"
+          ],
           "correctAnswer": "[1, 2, 3]"
         },
         {
           "id": 7,
           "text": "Elixir uses immutability for data structures.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 8,
           "text": "Which macro is used to spawn a new process in Elixir?",
           "type": "multiple-choice",
-          "choices": ["spawn", "fork", "create", "process"],
+          "choices": [
+            "spawn",
+            "fork",
+            "create",
+            "process"
+          ],
           "correctAnswer": "spawn"
         },
         {
           "id": 9,
           "text": "Which of the following is used to handle errors in Elixir?",
           "type": "multiple-choice",
-          "choices": ["try/catch", "rescue", "try/rescue", "except"],
+          "choices": [
+            "try/catch",
+            "rescue",
+            "try/rescue",
+            "except"
+          ],
           "correctAnswer": "try/rescue"
         },
         {
           "id": 10,
           "text": "Which Elixir library is used for building concurrent and distributed applications?",
           "type": "multiple-choice",
-          "choices": ["Phoenix", "Ecto", "GenServer", "Plug"],
+          "choices": [
+            "Phoenix",
+            "Ecto",
+            "GenServer",
+            "Plug"
+          ],
           "correctAnswer": "GenServer"
         }
       ],
       "price": 2499,
       "facultyId": "24",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "25",
       "assessmentName": "Perl",
@@ -2561,78 +3171,119 @@
           "id": 1,
           "text": "Perl is known for its text processing capabilities.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 2,
           "text": "Which symbol is used to define a scalar variable in Perl?",
           "type": "multiple-choice",
-          "choices": ["$", "@", "%", "&"],
+          "choices": [
+            "$",
+            "@",
+            "%",
+            "&"
+          ],
           "correctAnswer": "$"
         },
         {
           "id": 3,
           "text": "Perl supports regular expressions for pattern matching.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which of the following is used to print output in Perl?",
           "type": "multiple-choice",
-          "choices": ["print", "echo", "console.log", "println"],
+          "choices": [
+            "print",
+            "echo",
+            "console.log",
+            "println"
+          ],
           "correctAnswer": "print"
         },
         {
           "id": 5,
           "text": "Which operator is used to concatenate strings in Perl?",
           "type": "multiple-choice",
-          "choices": [".", "+", "&", "*"],
+          "choices": [
+            ".",
+            "+",
+            "&",
+            "*"
+          ],
           "correctAnswer": "."
         },
         {
           "id": 6,
           "text": "Perl variables are dynamically typed.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which of the following is the correct way to define an array in Perl?",
           "type": "multiple-choice",
-          "choices": ["@array = (1, 2, 3);", "array = [1, 2, 3];", "%array = (1, 2, 3);", "&array = {1, 2, 3};"],
+          "choices": [
+            "@array = (1, 2, 3);",
+            "array = [1, 2, 3];",
+            "%array = (1, 2, 3);",
+            "&array = {1, 2, 3};"
+          ],
           "correctAnswer": "@array = (1, 2, 3);"
         },
         {
           "id": 8,
           "text": "Which keyword is used to define a subroutine in Perl?",
           "type": "multiple-choice",
-          "choices": ["function", "def", "sub", "fun"],
+          "choices": [
+            "function",
+            "def",
+            "sub",
+            "fun"
+          ],
           "correctAnswer": "sub"
         },
         {
           "id": 9,
           "text": "Which of the following is the correct way to match a regex in Perl?",
           "type": "multiple-choice",
-          "choices": ["$var =~ /regex/", "$var = /regex/", "$var !~ /regex/", "$var == /regex/"],
+          "choices": [
+            "$var =~ /regex/",
+            "$var = /regex/",
+            "$var !~ /regex/",
+            "$var == /regex/"
+          ],
           "correctAnswer": "$var =~ /regex/"
         },
         {
           "id": 10,
           "text": "Perl was originally developed by Larry Wall.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         }
       ],
       "price": 1899,
       "facultyId": "25",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "26",
       "assessmentName": "Shell Scripting",
@@ -2643,78 +3294,123 @@
           "id": 1,
           "text": "Which symbol is used to comment a line in a Bash script?",
           "type": "multiple-choice",
-          "choices": ["#", "//", "/*", "--"],
+          "choices": [
+            "#",
+            "//",
+            "/*",
+            "--"
+          ],
           "correctAnswer": "#"
         },
         {
           "id": 2,
           "text": "Which command is used to list files and directories in a Unix-based system?",
           "type": "multiple-choice",
-          "choices": ["ls", "list", "dir", "show"],
+          "choices": [
+            "ls",
+            "list",
+            "dir",
+            "show"
+          ],
           "correctAnswer": "ls"
         },
         {
           "id": 3,
           "text": "Bash stands for 'Bourne Again SHell'.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 4,
           "text": "Which command is used to change the current directory in a Unix-based system?",
           "type": "multiple-choice",
-          "choices": ["cd", "chdir", "move", "change"],
+          "choices": [
+            "cd",
+            "chdir",
+            "move",
+            "change"
+          ],
           "correctAnswer": "cd"
         },
         {
           "id": 5,
           "text": "Which command is used to display the contents of a file in a Unix-based system?",
           "type": "multiple-choice",
-          "choices": ["show", "display", "cat", "read"],
+          "choices": [
+            "show",
+            "display",
+            "cat",
+            "read"
+          ],
           "correctAnswer": "cat"
         },
         {
           "id": 6,
           "text": "Which command is used to find a specific pattern in a file in Unix?",
           "type": "multiple-choice",
-          "choices": ["find", "search", "grep", "locate"],
+          "choices": [
+            "find",
+            "search",
+            "grep",
+            "locate"
+          ],
           "correctAnswer": "grep"
         },
         {
           "id": 7,
           "text": "Which of the following is the correct way to create a variable in Bash?",
           "type": "multiple-choice",
-          "choices": ["var=value", "var: value", "var = value", "variable=value"],
+          "choices": [
+            "var=value",
+            "var: value",
+            "var = value",
+            "variable=value"
+          ],
           "correctAnswer": "var=value"
         },
         {
           "id": 8,
           "text": "Which of the following is used to execute a shell script?",
           "type": "multiple-choice",
-          "choices": ["run script.sh", "./script.sh", "sh script.sh", "All of the above"],
+          "choices": [
+            "run script.sh",
+            "./script.sh",
+            "sh script.sh",
+            "All of the above"
+          ],
           "correctAnswer": "All of the above"
         },
         {
           "id": 9,
           "text": "Shell scripts are executed sequentially line by line.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 10,
           "text": "Which command is used to change file permissions in Unix?",
           "type": "multiple-choice",
-          "choices": ["chmod", "chperm", "chown", "perm"],
+          "choices": [
+            "chmod",
+            "chperm",
+            "chown",
+            "perm"
+          ],
           "correctAnswer": "chmod"
         }
       ],
       "price": 2099,
       "facultyId": "26",
       "time": "3600"
-    }
-    ,
+    },
     {
       "id": "27",
       "assessmentName": "MATLAB",
@@ -2725,70 +3421,114 @@
           "id": 1,
           "text": "MATLAB stands for 'MATrix LABoratory'.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 2,
           "text": "Which function is used to create a 2D plot in MATLAB?",
           "type": "multiple-choice",
-          "choices": ["plot2d", "plot", "graph2d", "graph"],
+          "choices": [
+            "plot2d",
+            "plot",
+            "graph2d",
+            "graph"
+          ],
           "correctAnswer": "plot"
         },
         {
           "id": 3,
           "text": "Which command is used to clear all variables from the workspace in MATLAB?",
           "type": "multiple-choice",
-          "choices": ["clear all", "remove all", "delete all", "erase all"],
+          "choices": [
+            "clear all",
+            "remove all",
+            "delete all",
+            "erase all"
+          ],
           "correctAnswer": "clear all"
         },
         {
           "id": 4,
           "text": "In MATLAB, which symbol is used for element-wise multiplication?",
           "type": "multiple-choice",
-          "choices": ["*", ".*", "/", "./"],
+          "choices": [
+            "*",
+            ".*",
+            "/",
+            "./"
+          ],
           "correctAnswer": ".*"
         },
         {
           "id": 5,
           "text": "Which function is used to find the size of a matrix in MATLAB?",
           "type": "multiple-choice",
-          "choices": ["length", "size", "dim", "shape"],
+          "choices": [
+            "length",
+            "size",
+            "dim",
+            "shape"
+          ],
           "correctAnswer": "size"
         },
         {
           "id": 6,
           "text": "MATLAB supports complex numbers.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 7,
           "text": "Which function is used to save a workspace variable in MATLAB?",
           "type": "multiple-choice",
-          "choices": ["save", "store", "keep", "persist"],
+          "choices": [
+            "save",
+            "store",
+            "keep",
+            "persist"
+          ],
           "correctAnswer": "save"
         },
         {
           "id": 8,
           "text": "Which command is used to add a title to a plot in MATLAB?",
           "type": "multiple-choice",
-          "choices": ["addtitle", "settitle", "title", "plottitle"],
+          "choices": [
+            "addtitle",
+            "settitle",
+            "title",
+            "plottitle"
+          ],
           "correctAnswer": "title"
         },
         {
           "id": 9,
           "text": "MATLAB is primarily used for numerical computation and visualization.",
           "type": "true-false",
-          "choices": ["true", "false"],
+          "choices": [
+            "true",
+            "false"
+          ],
           "correctAnswer": "true"
         },
         {
           "id": 10,
           "text": "Which function is used to read data from a file in MATLAB?",
           "type": "multiple-choice",
-          "choices": ["fopen", "readfile", "load", "import"],
+          "choices": [
+            "fopen",
+            "readfile",
+            "load",
+            "import"
+          ],
           "correctAnswer": "load"
         }
       ],
@@ -2796,7 +3536,6 @@
       "facultyId": "27",
       "time": "3600"
     }
-    
   ],
   "cart": [
     {
@@ -3023,6 +3762,12 @@
       "id": 2,
       "userId": 2,
       "date": "2024-06-26T10:13:14.618Z",
+      "status": "success"
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "date": "2024-06-26T10:30:09.408Z",
       "status": "success"
     }
   ],
