@@ -53,6 +53,8 @@ import { ViewCategoryComponent } from './components/view-category/view-category.
 import { ViewAssessmentScoreComponent } from './components/view-assessment-score/view-assessment-score.component';
 import { FacultyComponent } from './components/faculty/faculty.component';
 
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -106,7 +108,8 @@ import { FacultyComponent } from './components/faculty/faculty.component';
     MatSelectModule,
     HttpClientModule,
     MatRadioModule , 
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    CanvasJSAngularChartsModule 
   ],
   providers: [
     provideClientHydration(),
