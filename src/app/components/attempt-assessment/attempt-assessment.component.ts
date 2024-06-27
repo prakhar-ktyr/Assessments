@@ -70,7 +70,7 @@ export class AttemptAssessmentComponent implements OnInit {
 
     this.assessmentScoreService.getAssessmentScore().subscribe(data => {
       let totalAssessmentScore = data.length ; 
-      let as = new AssessmentScore(totalAssessmentScore + 1 , this.assessmentId , parseInt(this.loggedUserId) , this.finalScore) ; 
+      let as = new AssessmentScore(String(totalAssessmentScore + 1 ), this.assessmentId , parseInt(this.loggedUserId) , this.finalScore) ; 
       this.assessmentScoreService.postAssessmentScore(as).subscribe(data =>{
         console.log("Added assessment score") ; 
       })
