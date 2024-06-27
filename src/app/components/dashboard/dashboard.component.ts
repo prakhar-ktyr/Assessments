@@ -50,19 +50,18 @@ export class DashboardComponent implements OnInit {
   fetchAssessmentsForTrainee(): void {
     this.traineeService.getAssessmentTrainess().subscribe(data => {
       this.arrAssessmentTrainees = data;
-
-      let arrId: string[] = [];
-      this.arrAssessmentTrainees.forEach(trainee => {
-        if (trainee.traineeId === this.loggedUserId) {
-          arrId.push(trainee.assessmentId);
-          this.quantityMap.set(trainee.assessmentId, trainee.quantity);
+      this.arrAssessmentTrainees.forEach((asst) => {
+        let q = parseInt(asst.quantity) ; 
+        let aid = parseInt(asst.assessmentId ); 
+        if(q > 0){
+          let a : Assessment ; 
+          this.assessmentService.getAssessmentById(aid).subscribe((data) => {
+            this.arrAssessments.push(data) ; 
+            this.quantityMap.set(asst.assessmentId , q) ;
+          })
+          this.cdr.detectChanges();
         }
-      });
-
-      this.assessmentService.getAssessments().subscribe(data => {
-        this.arrAssessments = data.filter(assessment => arrId.includes(String(assessment.id)));
-        this.cdr.detectChanges();
-      });
+      })
     });
   }
 
@@ -79,5 +78,10 @@ export class DashboardComponent implements OnInit {
 
   attemptAssessment(id:number){
     this.router.navigate(['/attemptAssessment/' + id])
+  }
+  onToggleChange(event: any, id: number): void {
+    const isChecked = event.checked;
+    console.log('Toggle changed for assessment', id, 'Status:', isChecked);
+    // Handle the toggle change event here
   }
 }

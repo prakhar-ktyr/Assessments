@@ -9,6 +9,8 @@ import { LocalStorageService } from '../../services/local-storage.service';
 import { AssessmentScoreService } from '../../services/assessment-score.service';
 import { AssessmentScore } from '../../models/assessmentScore';
 import { MatStepper } from '@angular/material/stepper';
+import { TraineeService } from '../../services/trainee.service';
+import { AssessmentTrainees } from '../../models/assessmentTrainess';
 
 @Component({
   selector: 'app-attempt-assessment',
@@ -34,7 +36,8 @@ export class AttemptAssessmentComponent implements OnInit {
     private activatedRoute: ActivatedRoute,
     private assessmentService: AssessmentService,
     private attendanceService: AttendanceService,
-    private assessmentScoreService:AssessmentScoreService
+    private assessmentScoreService:AssessmentScoreService , 
+    private traineeService:TraineeService
   ) {
     this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
     
@@ -72,7 +75,26 @@ export class AttemptAssessmentComponent implements OnInit {
         console.log("Added assessment score") ; 
       })
     })
-    // this.assessmentScoreService.po
+
+    this.traineeService.getAssessmentTrainess().subscribe(data => {
+      let updateId = -1 ;
+      let newAssessmentTrainee = new AssessmentTrainees("0" , "0" , "0" , "0") ;  
+      data.forEach((ass) => {
+        if(ass.assessmentId === String(this.assessmentId) && ass.traineeId === this.loggedUserId){
+          let q = parseInt(ass.quantity) ; 
+          ass.quantity = String(q - 1) ; 
+          updateId = Number(ass.id) ; 
+          newAssessmentTrainee = ass ; 
+        }
+        
+      })
+
+      this.traineeService.updateAssessmentTraineeById(updateId , newAssessmentTrainee).subscribe((data) => {
+        console.log("Assessment quantity reduced")
+      })
+
+
+    })
     // Handle the submission logic here
   }
 
@@ -114,6 +136,6 @@ export class AttemptAssessmentComponent implements OnInit {
   onTimeUp(): void {
     // Move to the last step and submit the form
     this.stepper.selectedIndex = this.stepper.steps.length - 1;
-    this.submitAnswers();
+    if(!this.hasFinished) this.submitAnswers();
   }
 }

@@ -57,25 +57,8 @@ export class CartComponent {
   }
   placeOrder(){
     this.traineeService.getAssessmentTrainess().subscribe(data => {
-      let currentId = data.length + 1 ;
-      console.log(data) ; 
-      let arr :AssessmentTrainees[] = data ; 
-      for(let i = 0 ; i < this.currentUserCart.quantity.length ; i++){
-        let aid = String(this.currentUserCart.arrAssessments[i].id) ; 
-        let id = String(currentId) ; 
-        let q = String(this.currentUserCart.quantity[i]) ; 
-        let obj = {
-          assessmentId:aid ,
-          traineeId:this.loggedUserId , 
-          id:id ,
-          quantity:q
-        }
-        arr.push(obj) ; 
-        this.traineeService.updateAssessmentTrainees(obj).subscribe(data => {
-          console.log(data) ; 
-        })
-        currentId += 1 ;
-      }       
+
+      
     })
     let cartId = this.currentUserCart.id ; 
     this.cartService.deleteCart(cartId).subscribe(data => {

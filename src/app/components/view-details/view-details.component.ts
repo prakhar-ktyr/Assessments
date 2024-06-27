@@ -9,7 +9,7 @@ import { AssessmentService } from '../../services/assessment.service';
   styleUrls: ['./view-details.component.scss']
 })
 export class ViewDetailsComponent implements OnInit {
-  assessment: Assessment = new Assessment(0, "", "", "", [], 0, 0, "");
+  assessment: Assessment = new Assessment(0, "", "", "", [], 0, 0, "" , true);
 
   constructor(private activatedRoute: ActivatedRoute, private assessmentService: AssessmentService) { }
 

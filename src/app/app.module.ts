@@ -44,6 +44,7 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
 import { TimerComponent } from './components/timer/timer.component';
 import { ViewAttendanceComponent } from './components/view-attendance/view-attendance.component';
 import { UpdateAttendanceComponent } from './components/update-attendance/update-attendance.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 @NgModule({
   declarations: [
@@ -90,7 +91,8 @@ import { UpdateAttendanceComponent } from './components/update-attendance/update
     MatIconModule,
     MatSelectModule,
     HttpClientModule,
-    MatRadioModule
+    MatRadioModule , 
+    MatSlideToggleModule
   ],
   providers: [
     provideClientHydration(),

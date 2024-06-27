@@ -9,7 +9,8 @@ export class Assessment {
     price: number; 
     facultyId: number;
     time: string;
-    constructor(id: number, name: string, description: string, assessmentImage: string, questions: Question[], price: number , facultyId:number, time: string) {
+    isActive:boolean = true;
+    constructor(id: number, name: string, description: string, assessmentImage: string, questions: Question[], price: number , facultyId:number, time: string , isActive:boolean=true) {
         this.id = id;
         this.assessmentName = name;
         this.assessmentDescription = description;
@@ -18,5 +19,6 @@ export class Assessment {
         this.price = price; 
         this.facultyId = facultyId ; 
         this.time = time;
+        this.isActive = isActive
     }
 }
