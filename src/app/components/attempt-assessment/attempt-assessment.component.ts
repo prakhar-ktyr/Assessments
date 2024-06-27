@@ -23,7 +23,7 @@ import { Report } from '../../models/report';
 })
 export class AttemptAssessmentComponent implements OnInit {
   @ViewChild('stepper') stepper!: MatStepper;
-
+  message : string = "Congratulations you have passed !" 
   hasFinished: boolean = false;
   hasStarted: boolean = false;
   assessmentId: number = 0;
@@ -89,7 +89,10 @@ export class AttemptAssessmentComponent implements OnInit {
     const answers = this.questionForm.value;
     console.log('Submitted answers:', answers);
     this.finalScore = this.getScore(answers);
-
+    // if score less than 50% , then fail
+    if(2 * this.finalScore < this.arrQuestions.length){
+      this.message = "Sorry you have failed , better try next time !"
+    }
     this.assessmentScoreService.getAssessmentScore().subscribe((data) => {
       let totalAssessmentScore = data.length;
       let as = new AssessmentScore(

@@ -59,6 +59,7 @@
    <div id="pdfContent">
     <div *ngIf="finalScore !== -1">
       <p id="score">Your final score is: {{ finalScore }} / {{ arrQuestions.length }}</p>
+      <p id="passfail">{{message}}</p>
     </div>
     <ng-container *ngIf="hasFinished" class="barchart">
       <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
