@@ -35,7 +35,7 @@
     <mat-step [stepControl]="questionsForm" label="Questions">
       <form [formGroup]="questionsForm">
         <div formArrayName="questions" class="mt-4">
-          <div *ngFor="let question of questionControls; let i = index" [formGroupName]="i" class="mb-4 p-3 border rounded">
+          <div class="fields" *ngFor="let question of questionControls; let i = index" [formGroupName]="i" class="mb-4 p-3 border rounded">
             <mat-form-field appearance="fill">
               <mat-label>Question Text</mat-label>
               <input matInput placeholder="Question Text" formControlName="text" required>
@@ -48,7 +48,7 @@
                 <mat-option value="true-false">True/False</mat-option>
               </mat-select>
             </mat-form-field>
-            <div formArrayName="choices" *ngIf="question.get('type')?.value === 'multiple-choice'">
+            <div  formArrayName="choices" *ngIf="question.get('type')?.value === 'multiple-choice'">
               <div *ngFor="let choice of getChoices(i).controls; let j = index" [formGroupName]="j" class="form-group">
                 <mat-form-field appearance="fill">
                   <mat-label>Choice {{j + 1}}</mat-label>
