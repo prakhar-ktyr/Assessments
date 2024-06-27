@@ -2,21 +2,25 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { AssessmentService } from '../../services/assessment.service';
 import { Assessment } from '../../models/assessment';
-import { Question } from '../../models/questions';
 import { LocalStorageService } from '../../services/local-storage.service';
 
 @Component({
-  selector: 'app-create-assessment',
-  templateUrl: './create-assessment.component.html',
-  styleUrls: ['./create-assessment.component.scss']
+  selector: 'app-update-assessment',
+  templateUrl: './update-assessment.component.html',
+  styleUrls: ['./update-assessment.component.scss']
 })
-export class CreateAssessmentComponent implements OnInit {
+export class UpdateAssessmentComponent implements OnInit {
+  assessmentSelectionForm: FormGroup;
   assessmentForm: FormGroup;
   questionsForm: FormGroup;
   assessments: Assessment[] = [];
-  loggedUserId: string = '';
+  selectedAssessment: Assessment | null = null;
 
   constructor(private localStorageService: LocalStorageService, private fb: FormBuilder, private assessmentService: AssessmentService) {
+    this.assessmentSelectionForm = this.fb.group({
+      selectedAssessmentId: ['', Validators.required]
+    });
+
     this.assessmentForm = this.fb.group({
       assessmentName: ['', Validators.required],
       assessmentDescription: ['', Validators.required],
@@ -25,10 +29,8 @@ export class CreateAssessmentComponent implements OnInit {
       time: ['', Validators.required] // Time is treated as a string
     });
 
-    this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
-
     this.questionsForm = this.fb.group({
-      questions: this.fb.array([this.createQuestion(1)])
+      questions: this.fb.array([])
     });
   }
 
@@ -42,19 +44,19 @@ export class CreateAssessmentComponent implements OnInit {
     });
   }
 
-  createQuestion(id: number): FormGroup {
+  createQuestion(question: any): FormGroup {
     return this.fb.group({
-      id: [id, Validators.required],
-      text: ['', Validators.required],
-      type: ['', Validators.required],
-      choices: this.fb.array([]),
-      correctAnswer: ['', Validators.required]
+      id: [question.id, Validators.required],
+      text: [question.text, Validators.required],
+      type: [question.type, Validators.required],
+      choices: this.fb.array(question.choices.map((choice: any) => this.createChoice(choice))),
+      correctAnswer: [question.correctAnswer, Validators.required]
     });
   }
 
-  createChoice(): FormGroup {
+  createChoice(choiceText: string): FormGroup {
     return this.fb.group({
-      choiceText: ['', Validators.required]
+      choiceText: [choiceText, Validators.required]
     });
   }
 
@@ -65,7 +67,7 @@ export class CreateAssessmentComponent implements OnInit {
   addQuestion(): void {
     const questionArray = this.questionsForm.get('questions') as FormArray;
     const newQuestionId = questionArray.length + 1;
-    questionArray.push(this.createQuestion(newQuestionId));
+    questionArray.push(this.createQuestion({ id: newQuestionId, text: '', type: 'multiple-choice', choices: ['', '', '', ''], correctAnswer: '' }));
   }
 
   getChoices(questionIndex: number): FormArray {
@@ -83,7 +85,7 @@ export class CreateAssessmentComponent implements OnInit {
 
     if (question.get('type')?.value === 'multiple-choice') {
       for (let i = 0; i < 4; i++) {
-        choicesArray.push(this.createChoice());
+        choicesArray.push(this.createChoice(''));
       }
     } else if (question.get('type')?.value === 'true-false') {
       choicesArray.push(this.fb.group({ choiceText: 'true' }));
@@ -91,41 +93,55 @@ export class CreateAssessmentComponent implements OnInit {
     }
   }
 
-  getMaxId(assessments: Assessment[]): number {
-    return assessments.reduce((max, assessment) => (assessment.id > max ? assessment.id : max), 0);
+  onAssessmentChange(event: any): void {
+    const selectedAssessmentId = event.value;
+    this.selectedAssessment = this.assessments.find(assessment => assessment.id === selectedAssessmentId) || null;
+
+    if (this.selectedAssessment) {
+      this.assessmentForm.patchValue({
+        assessmentName: this.selectedAssessment.assessmentName,
+        assessmentDescription: this.selectedAssessment.assessmentDescription,
+        assessmentImage: this.selectedAssessment.assessmentImage,
+        price: this.selectedAssessment.price,
+        time: this.selectedAssessment.time
+      });
+
+      const questionArray = this.questionsForm.get('questions') as FormArray;
+      questionArray.clear();
+
+      this.selectedAssessment.questions.forEach((question: any) => {
+        questionArray.push(this.createQuestion(question));
+      });
+    }
   }
 
-  submitAssessment(): void {
-    console.log('Form Value:', this.assessmentForm.value);
+  updateAssessment(): void {
+    if (!this.selectedAssessment) return;
 
-    const newAssessmentId = this.getMaxId(this.assessments) + 1;
-
-    const assessmentData = this.assessmentForm.value;
+    const updatedAssessmentData = this.assessmentForm.value;
     const questionsData = this.questionsForm.value.questions.map((question: any, index: number) => ({
       ...question,
       id: index + 1,
       choices: question.type === 'true-false' ? ['true', 'false'] : question.choices.map((choice: any) => choice.choiceText)
     }));
 
-    const newAssessment = new Assessment(
-      newAssessmentId,
-      assessmentData.assessmentName,
-      assessmentData.assessmentDescription,
-      assessmentData.assessmentImage,
-      questionsData,
-      assessmentData.price,
-      parseInt(this.loggedUserId),
-      assessmentData.time,
-      true
-    );
+    const updatedAssessment: Assessment = {
+      ...this.selectedAssessment,
+      assessmentName: updatedAssessmentData.assessmentName,
+      assessmentDescription: updatedAssessmentData.assessmentDescription,
+      assessmentImage: updatedAssessmentData.assessmentImage,
+      price: updatedAssessmentData.price,
+      time: updatedAssessmentData.time,
+      questions: questionsData
+    };
 
-    this.assessmentService.addAssessment(newAssessment).subscribe(
+    this.assessmentService.updateAssessmentById(updatedAssessment.id, updatedAssessment).subscribe(
       response => {
-        console.log('Assessment created successfully:', response);
+        console.log('Assessment updated successfully:', response);
         this.loadAssessments();  // Reload assessments to get the latest list
       },
       error => {
-        console.error('Error creating assessment:', error);
+        console.error('Error updating assessment:', error);
       }
     );
   }

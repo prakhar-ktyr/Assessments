@@ -52,7 +52,6 @@ import { ViewCourseComponent } from './components/view-course/view-course.compon
 import { ViewCategoryComponent } from './components/view-category/view-category.component';
 import { ViewAssessmentScoreComponent } from './components/view-assessment-score/view-assessment-score.component';
 import { FacultyComponent } from './components/faculty/faculty.component';
-
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
 import { BarChartComponent } from './components/bar-chart/bar-chart.component';
 import { ViewReportsComponent } from './components/view-reports/view-reports.component';

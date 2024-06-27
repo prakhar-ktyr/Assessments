@@ -271,7 +271,7 @@
           "correctAnswer": "all of the above"
         }
       ],
-      "price": 1999,
+      "price": 999,
       "facultyId": "1",
       "time": "8",
       "isActive": true
@@ -1917,7 +1917,7 @@
           "correctAnswer": "Type declaration"
         }
       ],
-      "price": 1899,
+      "price": 1999,
       "facultyId": "14",
       "time": "3600",
       "isActive": true
