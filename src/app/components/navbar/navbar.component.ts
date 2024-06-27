@@ -17,6 +17,7 @@ export class NavbarComponent implements OnInit {
   isLoggedIn: boolean = false;
   searchTerm: string = '';
   arrAssessments: Assessment[] = [];
+  userRole: string = '';
 
   constructor(
     private fb: FormBuilder,
@@ -33,9 +34,18 @@ export class NavbarComponent implements OnInit {
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.localStorageService.getItem('username');
+    this.userRole = this.localStorageService.getItem('role') || '';
     this.assessmentService.getAssessments().subscribe((assessments: Assessment[]) => {
       this.arrAssessments = assessments;
     });
+  }
+
+  get isAdmin(): boolean {
+    return this.userRole === 'Admin';
+  }
+
+  get isFaculty(): boolean {
+    return this.userRole === 'Faculty';
   }
 
   onSubmit(): void {

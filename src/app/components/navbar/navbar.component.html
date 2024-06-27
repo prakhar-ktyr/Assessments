@@ -17,8 +17,11 @@
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/assessments']">Assessments</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item" *ngIf="isAdmin">
           <a class="nav-link" [routerLink]="['/admin']">Admin</a>
+        </li>
+        <li class="nav-item" *ngIf="isFaculty">
+          <a class="nav-link" [routerLink]="['/faculty']">Faculty</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [routerLink]="['/contactus']">Contact Us</a>

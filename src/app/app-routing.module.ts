@@ -11,6 +11,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { ViewDetailsComponent } from './components/view-details/view-details.component';
 import { AttemptAssessmentComponent } from './components/attempt-assessment/attempt-assessment.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { FacultyComponent } from './components/faculty/faculty.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'viewDetails/:id' , component:ViewDetailsComponent },
   { path: 'attemptAssessment/:id' , component:AttemptAssessmentComponent },
+  { path: 'faculty', component: FacultyComponent },
   { path: '**', component: NotFoundComponent }
 ];
 
