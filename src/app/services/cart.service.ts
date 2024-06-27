@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Cart } from '../models/cart';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, Subject, catchError, throwError } from 'rxjs';
 import { Assessment } from '../models/assessment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-
+  private checkoutSource = new Subject<number>() ; 
   baseUrl: string = 'http://localhost:3000';
   httpHeader = {
     headers: new HttpHeaders({
@@ -42,6 +42,15 @@ export class CartService {
   addNewCart(newCart:any){
     return this.httpClient.post<Cart>(this.baseUrl + "/cart", JSON.stringify(newCart) , this.httpHeader).pipe(catchError(this.httpError)) ;
   }
+
+  checkout(count:number){
+    this.checkoutSource.next(count) ; 
+  }
+
+  getCheckout(){
+    return this.checkoutSource.asObservable() ; 
+  }
+
   httpError(error:HttpErrorResponse){
     let msg='';
     if(error.error instanceof ErrorEvent){

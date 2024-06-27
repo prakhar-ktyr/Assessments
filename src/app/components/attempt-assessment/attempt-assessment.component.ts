@@ -116,13 +116,14 @@ export class AttemptAssessmentComponent implements OnInit {
           updateId = Number(ass.id);
           newAssessmentTrainee = ass;
         }
+        
+      this.traineeService
+      .updateAssessmentTraineeById(updateId, newAssessmentTrainee)
+      .subscribe((data) => {
+        console.log('Assessment quantity reduced');
+      });
       });
 
-      this.traineeService
-        .updateAssessmentTraineeById(updateId, newAssessmentTrainee)
-        .subscribe((data) => {
-          console.log('Assessment quantity reduced');
-        });
       
     });
     // Add report 

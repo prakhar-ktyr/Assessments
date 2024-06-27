@@ -58,6 +58,7 @@ import { ViewReportsComponent } from './components/view-reports/view-reports.com
 import { UpdateReportsComponent } from './components/update-reports/update-reports.component';
 import { UpdateAssessmentComponent } from './components/update-assessment/update-assessment.component';
 import { ViewAssessmentComponent } from './components/view-assessment/view-assessment.component';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -118,7 +119,8 @@ import { ViewAssessmentComponent } from './components/view-assessment/view-asses
     HttpClientModule,
     MatRadioModule , 
     MatSlideToggleModule,
-    CanvasJSAngularChartsModule 
+    CanvasJSAngularChartsModule ,
+    MatBadgeModule
   ],
   providers: [
     provideClientHydration(),
