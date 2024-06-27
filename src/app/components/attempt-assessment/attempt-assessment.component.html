@@ -1,11 +1,17 @@
 <ng-container *ngIf="hasStarted">
-  <app-timer [duration]="assessmentDuration" [assessmentSubmitted]="hasFinished" (timeUp)="onTimeUp()"></app-timer>
+  <app-timer
+    [duration]="assessmentDuration"
+    [assessmentSubmitted]="hasFinished"
+    (timeUp)="onTimeUp()"
+  ></app-timer>
 </ng-container>
 
 <mat-horizontal-stepper linear #stepper>
   <mat-step [editable]="false">
     <ng-template matStepLabel>Start assessment</ng-template>
-    <p>Before you start the assessment, please read the following instructions:</p>
+    <p>
+      Before you start the assessment, please read the following instructions:
+    </p>
     <ul>
       <li>Read each question carefully.</li>
       <li>Select the most appropriate answer from the given options.</li>
@@ -18,13 +24,16 @@
   <ng-container *ngFor="let question of arrQuestions; let i = index">
     <mat-step [stepControl]="getFormGroup(i)" [completed]="hasStarted">
       <form [formGroup]="getFormGroup(i)">
-        <ng-template matStepLabel>Q{{i + 1}}</ng-template>
-        <p>{{question.text}}</p>
+        <ng-template matStepLabel>Q{{ i + 1 }}</ng-template>
+        <p>{{ question.text }}</p>
         <ng-container [ngSwitch]="question.type">
           <ng-container *ngSwitchCase="'multiple-choice'">
             <mat-radio-group formControlName="answer">
-              <mat-radio-button *ngFor="let choice of question.choices" [value]="choice">
-                {{choice}}
+              <mat-radio-button
+                *ngFor="let choice of question.choices"
+                [value]="choice"
+              >
+                {{ choice }}
               </mat-radio-button>
             </mat-radio-group>
           </ng-container>
@@ -42,13 +51,21 @@
       </form>
     </mat-step>
   </ng-container>
-  <mat-step>
+  <mat-step class="laststep">
     <ng-template matStepLabel>Submit</ng-template>
     <p>Review your answers and submit</p>
     <button mat-button matStepperPrevious>Back</button>
     <button mat-button (click)="submitAnswers()">Submit</button>
+   <div id="pdfContent">
     <div *ngIf="finalScore !== -1">
-      <p>Your final score is: {{finalScore}} / {{arrQuestions.length}}</p>
+      <p id="score">Your final score is: {{ finalScore }} / {{ arrQuestions.length }}</p>
     </div>
+    <ng-container *ngIf="hasFinished" class="barchart">
+      <canvasjs-chart [options]="chartOptions"></canvasjs-chart>
+    </ng-container>
+   </div>
+   <ng-container *ngIf="hasFinished">
+    <button class="btn btn-primary" (click)="generateReport()">Generate report</button>
+  </ng-container>
   </mat-step>
 </mat-horizontal-stepper>

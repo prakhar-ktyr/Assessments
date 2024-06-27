@@ -49,6 +49,8 @@ import { CreateCategoryComponent } from './components/create-category/create-cat
 import { UpdateCategoryComponent } from './components/update-category/update-category.component';
 import { UpdateAssessmentScoreComponent } from './components/update-assessment-score/update-assessment-score.component';
 
+import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -98,7 +100,8 @@ import { UpdateAssessmentScoreComponent } from './components/update-assessment-s
     MatSelectModule,
     HttpClientModule,
     MatRadioModule , 
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    CanvasJSAngularChartsModule 
   ],
   providers: [
     provideClientHydration(),

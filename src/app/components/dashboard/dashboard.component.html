@@ -1,7 +1,7 @@
 <div class="container my-assessments-container">
   <h2 class="my-assessments-title">My Assessments</h2>
   <div class="row">
-    <div class="col-md-4 mb-4" *ngFor="let a of arrAssessments">
+    <div  class="col-md-4 mb-4" *ngFor="let a of arrAssessments">
       <div class="card" [ngClass]="{'greyed-out': !a.isActive}">
         <img [src]="a.assessmentImage" class="card-img-top" alt="Image">
         <div class="card-body">

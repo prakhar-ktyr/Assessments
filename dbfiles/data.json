@@ -274,7 +274,7 @@
       "price": 1999,
       "facultyId": "1",
       "time": "8",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "2",
@@ -400,7 +400,7 @@
       "price": 2499,
       "facultyId": "2",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "3",
@@ -524,7 +524,7 @@
       "price": 2299,
       "facultyId": "3",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "4",
@@ -776,7 +776,7 @@
       "price": 1899,
       "facultyId": "5",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "6",
@@ -3638,8 +3638,8 @@
   "assessmentTrainees": [
     {
       "id": "1",
-      "assessmentId": "1",
-      "traineeId": "1",
+      "assessmentId": "3",
+      "traineeId": "2",
       "quantity": "2"
     },
     {
@@ -3658,7 +3658,7 @@
       "id": "4",
       "assessmentId": "4",
       "traineeId": "2",
-      "quantity": "95"
+      "quantity": "87"
     },
     {
       "id": "5",
@@ -3925,6 +3925,258 @@
       "userId": "2",
       "date": "2024-06-27T05:24:42.402Z",
       "status": "success"
+    },
+    {
+      "id": "42",
+      "userId": "2",
+      "date": "2024-06-27T09:09:24.488Z",
+      "status": "success"
+    },
+    {
+      "id": "43",
+      "userId": "2",
+      "date": "2024-06-27T09:11:43.939Z",
+      "status": "success"
+    },
+    {
+      "id": "44",
+      "userId": "2",
+      "date": "2024-06-27T09:14:29.483Z",
+      "status": "success"
+    },
+    {
+      "id": "45",
+      "userId": "2",
+      "date": "2024-06-27T09:15:15.192Z",
+      "status": "success"
+    },
+    {
+      "id": "46",
+      "userId": "2",
+      "date": "2024-06-27T09:16:36.797Z",
+      "status": "success"
+    },
+    {
+      "id": "47",
+      "userId": "2",
+      "date": "2024-06-27T09:17:24.303Z",
+      "status": "success"
+    },
+    {
+      "id": "48",
+      "userId": "2",
+      "date": "2024-06-27T09:20:52.875Z",
+      "status": "success"
+    },
+    {
+      "id": "49",
+      "userId": "2",
+      "date": "2024-06-27T09:21:22.242Z",
+      "status": "success"
+    },
+    {
+      "id": "50",
+      "userId": "2",
+      "date": "2024-06-27T09:22:30.645Z",
+      "status": "success"
+    },
+    {
+      "id": "51",
+      "userId": "2",
+      "date": "2024-06-27T09:23:58.162Z",
+      "status": "success"
+    },
+    {
+      "id": "52",
+      "userId": "2",
+      "date": "2024-06-27T09:26:58.152Z",
+      "status": "success"
+    },
+    {
+      "id": "53",
+      "userId": "2",
+      "date": "2024-06-27T09:28:18.075Z",
+      "status": "success"
+    },
+    {
+      "id": "54",
+      "userId": "2",
+      "date": "2024-06-27T09:30:10.852Z",
+      "status": "success"
+    },
+    {
+      "id": "55",
+      "userId": "2",
+      "date": "2024-06-27T09:30:29.566Z",
+      "status": "success"
+    },
+    {
+      "id": "56",
+      "userId": "2",
+      "date": "2024-06-27T09:31:39.439Z",
+      "status": "success"
+    },
+    {
+      "id": "57",
+      "userId": "2",
+      "date": "2024-06-27T09:31:54.174Z",
+      "status": "success"
+    },
+    {
+      "id": "58",
+      "userId": "2",
+      "date": "2024-06-27T09:32:17.651Z",
+      "status": "success"
+    },
+    {
+      "id": "59",
+      "userId": "2",
+      "date": "2024-06-27T09:33:50.420Z",
+      "status": "success"
+    },
+    {
+      "id": "60",
+      "userId": "2",
+      "date": "2024-06-27T09:34:43.589Z",
+      "status": "success"
+    },
+    {
+      "id": "61",
+      "userId": "2",
+      "date": "2024-06-27T09:35:05.062Z",
+      "status": "success"
+    },
+    {
+      "id": "62",
+      "userId": "2",
+      "date": "2024-06-27T09:35:35.039Z",
+      "status": "success"
+    },
+    {
+      "id": "63",
+      "userId": "2",
+      "date": "2024-06-27T09:35:59.663Z",
+      "status": "success"
+    },
+    {
+      "id": "64",
+      "userId": "2",
+      "date": "2024-06-27T09:36:11.206Z",
+      "status": "success"
+    },
+    {
+      "id": "65",
+      "userId": "2",
+      "date": "2024-06-27T09:37:16.679Z",
+      "status": "success"
+    },
+    {
+      "id": "66",
+      "userId": "2",
+      "date": "2024-06-27T09:37:34.530Z",
+      "status": "success"
+    },
+    {
+      "id": "67",
+      "userId": "2",
+      "date": "2024-06-27T09:38:08.647Z",
+      "status": "success"
+    },
+    {
+      "id": "68",
+      "userId": "2",
+      "date": "2024-06-27T09:38:54.407Z",
+      "status": "success"
+    },
+    {
+      "id": "69",
+      "userId": "2",
+      "date": "2024-06-27T09:44:11.039Z",
+      "status": "success"
+    },
+    {
+      "id": "70",
+      "userId": "2",
+      "date": "2024-06-27T09:44:55.413Z",
+      "status": "success"
+    },
+    {
+      "id": "71",
+      "userId": "2",
+      "date": "2024-06-27T09:45:36.438Z",
+      "status": "success"
+    },
+    {
+      "id": "72",
+      "userId": "2",
+      "date": "2024-06-27T09:53:06.052Z",
+      "status": "success"
+    },
+    {
+      "id": "73",
+      "userId": "2",
+      "date": "2024-06-27T10:01:31.529Z",
+      "status": "success"
+    },
+    {
+      "id": "74",
+      "userId": "2",
+      "date": "2024-06-27T10:27:03.976Z",
+      "status": "success"
+    },
+    {
+      "id": "75",
+      "userId": "2",
+      "date": "2024-06-27T10:27:27.276Z",
+      "status": "success"
+    },
+    {
+      "id": "76",
+      "userId": "2",
+      "date": "2024-06-27T10:30:15.273Z",
+      "status": "success"
+    },
+    {
+      "id": "77",
+      "userId": "2",
+      "date": "2024-06-27T10:32:56.514Z",
+      "status": "success"
+    },
+    {
+      "id": "78",
+      "userId": "2",
+      "date": "2024-06-27T10:40:56.533Z",
+      "status": "success"
+    },
+    {
+      "id": "79",
+      "userId": "2",
+      "date": "2024-06-27T10:49:56.375Z",
+      "status": "success"
+    },
+    {
+      "id": "80",
+      "userId": "2",
+      "date": "2024-06-27T10:50:34.284Z",
+      "status": "success"
+    },
+    {
+      "id": "81",
+      "userId": "2",
+      "date": "2024-06-27T10:51:19.587Z",
+      "status": "success"
+    },
+    {
+      "id": "82",
+      "userId": "2",
+      "date": "2024-06-27T10:51:40.395Z",
+      "status": "success"
+    },
+    {
+      "id": "83",
+      "userId": "2",
+      "date": "2024-06-27T10:52:02.778Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -4159,6 +4411,204 @@
     {
       "id": "39",
       "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "40",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 6
+    },
+    {
+      "id": "41",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "42",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "43",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 7
+    },
+    {
+      "id": "44",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "45",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 1
+    },
+    {
+      "id": "46",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 1
+    },
+    {
+      "id": "47",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "48",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 4
+    },
+    {
+      "id": "49",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 4
+    },
+    {
+      "id": "50",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 7
+    },
+    {
+      "id": "51",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "52",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 1
+    },
+    {
+      "id": "53",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "54",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "55",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "56",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "57",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "58",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "59",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "60",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "61",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "62",
+      "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "63",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "64",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "65",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 9
+    },
+    {
+      "id": "66",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "67",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 3
+    },
+    {
+      "id": "68",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 2
+    },
+    {
+      "id": "69",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "70",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "71",
+      "assessmentId": "4",
+      "traineeId": 2,
+      "score": 1
+    },
+    {
+      "id": "72",
+      "assessmentId": "4",
       "traineeId": 2,
       "score": 0
     }
