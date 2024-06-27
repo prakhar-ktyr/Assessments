@@ -60,6 +60,7 @@ import { UpdateAssessmentComponent } from './components/update-assessment/update
 import { ViewAssessmentComponent } from './components/view-assessment/view-assessment.component';
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import {MatBadgeModule} from '@angular/material/badge';
 
 @NgModule({
   declarations: [
@@ -122,7 +123,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatRadioModule , 
     MatSlideToggleModule,
     CanvasJSAngularChartsModule,
-    MatDialogModule
+    MatDialogModule,
+    MatBadgeModule
   ],
   providers: [
     provideClientHydration(),

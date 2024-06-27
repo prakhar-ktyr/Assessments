@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import { AssessmentService } from '../../services/assessment.service';
 import { Assessment } from '../../models/assessment';
 import { Address } from '../../models/address';
+import { CartService } from '../../services/cart.service';
 
 @Component({
   selector: 'app-navbar',
@@ -22,13 +23,14 @@ export class NavbarComponent implements OnInit {
   arrUsers: User[] = [];
   userRole: string = '';
   today: string = new Date().toISOString().split('T')[0];
-
+  newAssessmentCount:number = 0 ; 
   constructor(
     private fb: FormBuilder,
     private userService: UserService,
     private localStorageService: LocalStorageService,
     private router: Router,
-    private assessmentService: AssessmentService
+    private assessmentService: AssessmentService ,
+    private cartService : CartService
   ) {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
@@ -45,6 +47,11 @@ export class NavbarComponent implements OnInit {
       confirmPassword: ['', Validators.required],
       address: this.fb.array([this.createAddress()])
     }, { validators: this.passwordMatchValidator });
+
+    this.cartService.getCheckout().subscribe(data => {
+      this.newAssessmentCount += data ; 
+    })
+    
   }
 
   ngOnInit(): void {

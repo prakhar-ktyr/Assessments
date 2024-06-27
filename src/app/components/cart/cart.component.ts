@@ -77,6 +77,7 @@ export class CartComponent {
   }
   placeOrder() {
     let arrAssTrainees: AssessmentTrainees[];
+    this.cartService.checkout(this.currentUserCart.arrAssessments.length) ;
     this.traineeService.getAssessmentTrainess().subscribe((data) => {
       arrAssTrainees = data;
       this.currentUserCart.arrAssessments.forEach((ass, index) => {
