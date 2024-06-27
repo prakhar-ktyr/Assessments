@@ -58,8 +58,8 @@ export class DashboardComponent implements OnInit {
           this.assessmentService.getAssessmentById(aid).subscribe((data) => {
             this.arrAssessments.push(data) ; 
             this.quantityMap.set(asst.assessmentId , q) ;
+            this.cdr.detectChanges();
           })
-          this.cdr.detectChanges();
         }
       })
     });
@@ -82,6 +82,15 @@ export class DashboardComponent implements OnInit {
   onToggleChange(event: any, id: number): void {
     const isChecked = event.checked;
     console.log('Toggle changed for assessment', id, 'Status:', isChecked);
+    let newAssessment:Assessment ; 
+    this.assessmentService.getAssessmentById(id).subscribe(data => {
+      newAssessment = data ; 
+      newAssessment.isActive = isChecked ;
+      this.assessmentService.updateAssessmentById(id , newAssessment).subscribe(data => {
+        console.log("assessment toggled")
+      })
+    })
+    window.location.reload()
     // Handle the toggle change event here
   }
 }
