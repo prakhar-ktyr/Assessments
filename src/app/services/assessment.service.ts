@@ -48,6 +48,9 @@ export class AssessmentService {
     return of(this.arrAssessments);
   }
 
+  updateAssessmentById(id:number , a:Assessment){
+    return this.httpClient.put<Assessment>(this.baseUrl + "/assessments/" + id , a , this.httpHeader).pipe(catchError(this.httpError)) ;
+  }
   private httpError(error: HttpErrorResponse) {
     let msg = '';
     if (error.error instanceof ErrorEvent) {

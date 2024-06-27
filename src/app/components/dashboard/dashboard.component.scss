@@ -55,4 +55,10 @@
     flex-direction: row;
     justify-content: space-around;
   }
+
+  .greyed-out {
+    opacity: 0.5;
+    pointer-events: none; /* Optional: disables interactions with the card */
+  }
+  
   
