@@ -44,7 +44,7 @@ export class UpdateCourseComponent implements OnInit {
     };
 
     this.courseService.updateCourse(updatedCourse).subscribe(
-      (response: Course[]) => {
+      (response: any) => {
         console.log('Course updated successfully', response);
       },
       (error: any) => {
@@ -55,7 +55,10 @@ export class UpdateCourseComponent implements OnInit {
 
   onChangeType(evt: any): void {
     const selectedCourseId = evt.target.value;
+    console.log('Selected Course ID:', selectedCourseId);
+    
     const selectedCourse = this.arrCourses.find(course => course.id === selectedCourseId);
+    console.log('Selected Course:', selectedCourse);
 
     if (selectedCourse) {
       this.courseUpdateForm.patchValue({
