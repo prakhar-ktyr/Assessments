@@ -20,6 +20,12 @@ export class AttendanceService {
   getAttendance(){
     return this.httpClient.get<Attendance[]>(this.baseUrl + "/attendance" , this.httpHeader).pipe(catchError(this.httpError))
   }
+  getAttendanceById(id:number){
+    return this.httpClient.get<Attendance>(this.baseUrl + "/attendance/" + id , this.httpHeader).pipe(catchError(this.httpError))
+  }
+  updateAttendance(id:number , att : Attendance){
+    return this.httpClient.put<Attendance>(this.baseUrl + "/attendance/" + id , att , this.httpHeader).pipe(catchError(this.httpError))
+  }
   private httpError(error: HttpErrorResponse) {
     let msg = '';
     if (error.error instanceof ErrorEvent) {

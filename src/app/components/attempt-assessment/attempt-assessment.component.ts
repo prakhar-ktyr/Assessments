@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Question } from '../../models/questions';
 import { AssessmentService } from '../../services/assessment.service';
@@ -6,6 +6,9 @@ import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Attendance } from '../../models/attendance';
 import { AttendanceService } from '../../services/attendance.service';
 import { LocalStorageService } from '../../services/local-storage.service';
+import { AssessmentScoreService } from '../../services/assessment-score.service';
+import { AssessmentScore } from '../../models/assessmentScore';
+import { MatStepper } from '@angular/material/stepper';
 
 @Component({
   selector: 'app-attempt-assessment',
@@ -13,6 +16,9 @@ import { LocalStorageService } from '../../services/local-storage.service';
   styleUrl: './attempt-assessment.component.scss',
 })
 export class AttemptAssessmentComponent implements OnInit {
+  @ViewChild('stepper') stepper!: MatStepper;
+  
+  hasFinished:boolean = false ; 
   hasStarted: boolean = false;
   assessmentId: number = 0;
   arrQuestions: Question[] = [];
@@ -20,16 +26,18 @@ export class AttemptAssessmentComponent implements OnInit {
   finalScore: number = -1;
   startTime: Date = new Date();
   loggedUserId: string = '';
+  assessmentDuration:number = 0 ; 
   constructor(
     private localStorageService: LocalStorageService,
     private fb: FormBuilder,
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private assessmentService: AssessmentService,
-    private attendanceService: AttendanceService
+    private attendanceService: AttendanceService,
+    private assessmentScoreService:AssessmentScoreService
   ) {
     this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
-
+    
     this.activatedRoute.params.subscribe((params) => {
       this.assessmentId = params['id'];
     });
@@ -37,6 +45,7 @@ export class AttemptAssessmentComponent implements OnInit {
       .getAssessmentById(this.assessmentId)
       .subscribe((data) => {
         this.arrQuestions = data.questions;
+        this.assessmentDuration = Number(data.time) ; 
         // console.log(data.questions) ;
         console.log(this.arrQuestions);
         this.questionForm = this.fb.array(
@@ -51,9 +60,19 @@ export class AttemptAssessmentComponent implements OnInit {
   ngOnInit(): void {}
 
   submitAnswers(): void {
+    this.hasFinished = true; 
     const answers = this.questionForm.value;
     console.log('Submitted answers:', answers);
     this.finalScore = this.getScore(answers);
+
+    this.assessmentScoreService.getAssessmentScore().subscribe(data => {
+      let totalAssessmentScore = data.length ; 
+      let as = new AssessmentScore(totalAssessmentScore + 1 , this.assessmentId , parseInt(this.loggedUserId) , this.finalScore) ; 
+      this.assessmentScoreService.postAssessmentScore(as).subscribe(data =>{
+        console.log("Added assessment score") ; 
+      })
+    })
+    // this.assessmentScoreService.po
     // Handle the submission logic here
   }
 
@@ -84,10 +103,17 @@ export class AttemptAssessmentComponent implements OnInit {
     this.attendanceService.getAttendance().subscribe((data) => {
       let totalAttendance = data.length;
       console.log(totalAttendance) ; 
-      let newAttendance = new Attendance(totalAttendance + 1, parseInt(this.loggedUserId) , new Date() , "success");
+      let newAttendance = new Attendance(String(totalAttendance + 1), this.loggedUserId , new Date() , "success");
       this.attendanceService.addAttendance(newAttendance).subscribe(data => {
         console.log("attendance added")
       })
     });
+  }
+
+
+  onTimeUp(): void {
+    // Move to the last step and submit the form
+    this.stepper.selectedIndex = this.stepper.steps.length - 1;
+    this.submitAnswers();
   }
 }

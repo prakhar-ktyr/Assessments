@@ -1,4 +1,8 @@
-<mat-horizontal-stepper linear>
+<ng-container *ngIf="hasStarted">
+  <app-timer [duration]="assessmentDuration" [assessmentSubmitted]="hasFinished" (timeUp)="onTimeUp()"></app-timer>
+</ng-container>
+
+<mat-horizontal-stepper linear #stepper>
   <mat-step [editable]="false">
     <ng-template matStepLabel>Start assessment</ng-template>
     <p>Before you start the assessment, please read the following instructions:</p>
