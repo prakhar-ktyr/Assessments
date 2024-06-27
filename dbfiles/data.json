@@ -3636,6 +3636,269 @@
           "price": 2099
         }
       ]
+    },
+    {
+      "id": "2",
+      "userId": "2",
+      "quantity": [
+        1,
+        1
+      ],
+      "total": 2399,
+      "arrAssessments": [
+        {
+          "id": "7",
+          "assessmentName": "C#",
+          "assessmentDescription": "This assessment covers C#, a language used for developing Windows applications. Test your skills in .NET framework, OOP, and more.",
+          "assessmentImage": "/assets/images/csharp.png",
+          "questions": [
+            {
+              "id": 1,
+              "text": "Which of the following is the correct syntax to declare a class in C#?",
+              "type": "multiple-choice",
+              "choices": [
+                "class MyClass {}",
+                "MyClass class {}",
+                "class: MyClass {}",
+                "def class MyClass {}"
+              ],
+              "correctAnswer": "class MyClass {}"
+            },
+            {
+              "id": 2,
+              "text": "C# is a statically-typed language.",
+              "type": "true-false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "correctAnswer": "true"
+            },
+            {
+              "id": 3,
+              "text": "Which of the following is not a data type in C#?",
+              "type": "multiple-choice",
+              "choices": [
+                "int",
+                "float",
+                "boolean",
+                "decimal"
+              ],
+              "correctAnswer": "boolean"
+            },
+            {
+              "id": 4,
+              "text": "Which method is used to read a line of text from the console in C#?",
+              "type": "multiple-choice",
+              "choices": [
+                "ReadLine()",
+                "Read()",
+                "ReadText()",
+                "ReadInput()"
+              ],
+              "correctAnswer": "ReadLine()"
+            },
+            {
+              "id": 5,
+              "text": "C# supports operator overloading.",
+              "type": "true-false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "correctAnswer": "true"
+            },
+            {
+              "id": 6,
+              "text": "Which keyword is used to inherit a class in C#?",
+              "type": "multiple-choice",
+              "choices": [
+                "inherits",
+                "extends",
+                "base",
+                "super"
+              ],
+              "correctAnswer": "extends"
+            },
+            {
+              "id": 7,
+              "text": "Which of the following is used to handle exceptions in C#?",
+              "type": "multiple-choice",
+              "choices": [
+                "try-catch",
+                "if-else",
+                "for loop",
+                "switch-case"
+              ],
+              "correctAnswer": "try-catch"
+            },
+            {
+              "id": 8,
+              "text": "C# is part of the .NET framework.",
+              "type": "true-false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "correctAnswer": "true"
+            },
+            {
+              "id": 9,
+              "text": "Which of the following is the correct way to declare an array in C#?",
+              "type": "multiple-choice",
+              "choices": [
+                "int[] arr = new int[5];",
+                "int arr = new int[5];",
+                "int[] arr = new int(5);",
+                "int arr[] = new int[5];"
+              ],
+              "correctAnswer": "int[] arr = new int[5];"
+            },
+            {
+              "id": 10,
+              "text": "Which method is used to start a thread in C#?",
+              "type": "multiple-choice",
+              "choices": [
+                "start()",
+                "run()",
+                "begin()",
+                "init()"
+              ],
+              "correctAnswer": "start()"
+            }
+          ],
+          "price": 2399,
+          "facultyId": "7",
+          "time": "3600",
+          "isActive": true
+        },
+        {
+          "id": "8",
+          "assessmentName": "PHP",
+          "assessmentDescription": "This assessment covers PHP, a server-side scripting language. Test your skills in web development, database interaction, and more.",
+          "assessmentImage": "/assets/images/php.png",
+          "questions": [
+            {
+              "id": 1,
+              "text": "Which of the following is the correct way to start a PHP tag?",
+              "type": "multiple-choice",
+              "choices": [
+                "<php>",
+                "<?php>",
+                "<?php",
+                "<php?"
+              ],
+              "correctAnswer": "<?php>"
+            },
+            {
+              "id": 2,
+              "text": "PHP scripts are executed on the client side.",
+              "type": "true-false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "correctAnswer": "false"
+            },
+            {
+              "id": 3,
+              "text": "Which function is used to include a file in PHP?",
+              "type": "multiple-choice",
+              "choices": [
+                "includeFile()",
+                "requireFile()",
+                "include()",
+                "insertFile()"
+              ],
+              "correctAnswer": "include()"
+            },
+            {
+              "id": 4,
+              "text": "Which function is used to get the length of a string in PHP?",
+              "type": "multiple-choice",
+              "choices": [
+                "strlen()",
+                "length()",
+                "size()",
+                "count()"
+              ],
+              "correctAnswer": "strlen()"
+            },
+            {
+              "id": 5,
+              "text": "PHP stands for Hypertext Preprocessor.",
+              "type": "true-false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "correctAnswer": "true"
+            },
+            {
+              "id": 6,
+              "text": "Which of the following is not a valid PHP variable name?",
+              "type": "multiple-choice",
+              "choices": [
+                "$var_name",
+                "$2nd_variable",
+                "$variableName",
+                "$varName123"
+              ],
+              "correctAnswer": "$2nd_variable"
+            },
+            {
+              "id": 7,
+              "text": "Which function is used to open a file in PHP?",
+              "type": "multiple-choice",
+              "choices": [
+                "fopen()",
+                "open()",
+                "fileOpen()",
+                "openFile()"
+              ],
+              "correctAnswer": "fopen()"
+            },
+            {
+              "id": 8,
+              "text": "PHP supports both procedural and object-oriented programming.",
+              "type": "true-false",
+              "choices": [
+                "true",
+                "false"
+              ],
+              "correctAnswer": "true"
+            },
+            {
+              "id": 9,
+              "text": "Which of the following is used to connect to a MySQL database in PHP?",
+              "type": "multiple-choice",
+              "choices": [
+                "mysql_connect()",
+                "mysqlConnection()",
+                "connect_mysql()",
+                "connect()"
+              ],
+              "correctAnswer": "mysql_connect()"
+            },
+            {
+              "id": 10,
+              "text": "Which of the following is a superglobal array in PHP?",
+              "type": "multiple-choice",
+              "choices": [
+                "$_GET",
+                "$GLOBALS",
+                "$_POST",
+                "All of the above"
+              ],
+              "correctAnswer": "All of the above"
+            }
+          ],
+          "price": 1999,
+          "facultyId": "8",
+          "time": "3600",
+          "isActive": true
+        }
+      ]
     }
   ],
   "assessmentTrainees": [
@@ -3661,7 +3924,7 @@
       "id": "4",
       "assessmentId": "4",
       "traineeId": "2",
-      "quantity": "96"
+      "quantity": "95"
     },
     {
       "id": "5",
@@ -3910,6 +4173,12 @@
       "userId": "2",
       "date": "2024-06-27T04:13:42.531Z",
       "status": "success"
+    },
+    {
+      "id": "41",
+      "userId": "2",
+      "date": "2024-06-27T06:39:28.626Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -4132,6 +4401,12 @@
     {
       "id": 37,
       "assessmentId": "1",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": 38,
+      "assessmentId": "4",
       "traineeId": 2,
       "score": 0
     }

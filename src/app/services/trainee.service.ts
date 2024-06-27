@@ -36,6 +36,9 @@ export class TraineeService {
   updateAssessmentTrainees(asst:AssessmentTrainees){
     return this.httpClient.post<AssessmentTrainees[]>(this.baseUrl + "/assessmentTrainees/", JSON.stringify(asst), this.httpHeader).pipe(catchError(this.httpError));
   }
+  updateAllAssessmentTrainees(asst:AssessmentTrainees[]){
+    return this.httpClient.put<AssessmentTrainees[]>(this.baseUrl + "/assessmentTrainees/" , asst , this.httpHeader).pipe(catchError(this.httpError));
+  }
   private httpError(error: HttpErrorResponse) {
     let msg = '';
     if (error.error instanceof ErrorEvent) {

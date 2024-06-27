@@ -56,13 +56,36 @@ export class CartComponent {
     return this.currentUserCart.total ; 
   }
   placeOrder(){
+    let arrAssTrainees:AssessmentTrainees[] ; 
     this.traineeService.getAssessmentTrainess().subscribe(data => {
+      arrAssTrainees = data ; 
+      this.currentUserCart.arrAssessments.forEach((ass , index) =>{
+        let existsInDashboard = false ; 
+        // check if current assessment already exists in dashboard
+        for(let i = 0 ; i < arrAssTrainees.length ; i++){
+          if(arrAssTrainees[i].assessmentId == String(ass.id) && arrAssTrainees[i].traineeId == this.loggedUserId){
+            existsInDashboard = true ; 
+            arrAssTrainees[i].quantity += this.currentUserCart.quantity[index] ; 
+            break ;  
+          }
+        }
+        // if it doesnt exist in dashboard
+        if(!existsInDashboard){
+          let newId = String(arrAssTrainees.length + 1);
+          let newAssId = String(ass.id) ;
+          arrAssTrainees.push(new AssessmentTrainees(newId , newAssId , this.loggedUserId , this.currentUserCart.quantity[index].toString()))
+        }
+      })
+      // now update the dashboard 
+      this.traineeService.updateAllAssessmentTrainees(arrAssTrainees).subscribe((data) =>{
+        console.log("changed dashboard") ;
+        // now clear cart
+        let cartId = this.currentUserCart.id ; 
+        this.cartService.deleteCart(cartId).subscribe(data => {
+          console.log("deleted")
+        })
+      })
+    })
 
-      
-    })
-    let cartId = this.currentUserCart.id ; 
-    this.cartService.deleteCart(cartId).subscribe(data => {
-      console.log("deleted")
-    })
   }
 }
