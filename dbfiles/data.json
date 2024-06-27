@@ -274,7 +274,7 @@
       "price": 1999,
       "facultyId": "1",
       "time": "8",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": "2",
@@ -400,7 +400,7 @@
       "price": 2499,
       "facultyId": "2",
       "time": "3600",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": "3",
@@ -524,7 +524,7 @@
       "price": 2299,
       "facultyId": "3",
       "time": "3600",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": "4",
@@ -651,7 +651,6 @@
       "facultyId": "4",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "5",
@@ -777,7 +776,7 @@
       "price": 1899,
       "facultyId": "5",
       "time": "3600",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": "6",
@@ -905,7 +904,7 @@
       "price": 2199,
       "facultyId": "6",
       "time": "3600",
-      "isActive": true
+      "isActive": false
     },
     {
       "id": "7",
@@ -1031,7 +1030,6 @@
       "price": 2399,
       "facultyId": "7",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -1159,7 +1157,6 @@
       "facultyId": "8",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "9",
@@ -1286,7 +1283,6 @@
       "facultyId": "9",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "10",
@@ -1412,7 +1408,6 @@
       "price": 2299,
       "facultyId": "10",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -1544,7 +1539,6 @@
       "facultyId": "11",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "12",
@@ -1670,7 +1664,6 @@
       "price": 1799,
       "facultyId": "12",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -1800,7 +1793,6 @@
       "facultyId": "13",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "14",
@@ -1929,7 +1921,6 @@
       "facultyId": "14",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "15",
@@ -2055,7 +2046,6 @@
       "price": 2099,
       "facultyId": "15",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -2183,7 +2173,6 @@
       "facultyId": "16",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "17",
@@ -2309,7 +2298,6 @@
       "price": 1999,
       "facultyId": "17",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -2437,7 +2425,6 @@
       "facultyId": "18",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "19",
@@ -2564,7 +2551,6 @@
       "facultyId": "19",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "20",
@@ -2688,7 +2674,6 @@
       "price": 2499,
       "facultyId": "20",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -2815,7 +2800,6 @@
       "price": 2199,
       "facultyId": "21",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -2945,7 +2929,6 @@
       "facultyId": "22",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "23",
@@ -3071,7 +3054,6 @@
       "price": 2399,
       "facultyId": "23",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -3199,7 +3181,6 @@
       "facultyId": "24",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "25",
@@ -3323,7 +3304,6 @@
       "price": 1899,
       "facultyId": "25",
       "time": "3600",
-      "isActive": true
       "isActive": true
     },
     {
@@ -3453,7 +3433,6 @@
       "facultyId": "26",
       "time": "3600",
       "isActive": true
-      "isActive": true
     },
     {
       "id": "27",
@@ -3579,7 +3558,6 @@
       "price": 2499,
       "facultyId": "27",
       "time": "3600",
-      "isActive": true
       "isActive": true
     }
   ],
