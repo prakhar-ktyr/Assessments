@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let a of pagedAssessments">
-      <div class="card">
+      <div class="card" [ngClass]="{'greyed-out': !a.isActive}">
         <img [src]="a.assessmentImage" class="card-img-top" alt="Image">
         <div class="card-body">
           <h5 class="card-title">{{a.assessmentName}}</h5>

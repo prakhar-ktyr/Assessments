@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, FormArray, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 
@@ -19,7 +19,7 @@ export class AddUserComponent implements OnInit {
       lastName: ['', Validators.required],
       email: ['', [Validators.required, Validators.email]],
       mobile: ['', Validators.required],
-      dob: ['', Validators.required],
+      dob: ['', [Validators.required, this.dateValidator]],
       role: ['user', Validators.required],
       password: ['', Validators.required],
       address: this.fb.array([this.createAddress()])
@@ -38,7 +38,7 @@ export class AddUserComponent implements OnInit {
 
   createAddress(): FormGroup {
     return this.fb.group({
-      houseNo: [, Validators.required],
+      houseNo: ['', Validators.required],
       street: ['', Validators.required],
       area: ['', Validators.required],
       city: ['', Validators.required],
@@ -70,13 +70,22 @@ export class AddUserComponent implements OnInit {
     return users.reduce((max, user) => (parseInt(user.id) > max ? parseInt(user.id) : max), 0);
   }
 
+  dateValidator(control: AbstractControl): ValidationErrors | null {
+    const today = new Date();
+    const dob = new Date(control.value);
+    if (dob > today) {
+      return { 'invalidDate': true };
+    }
+    return null;
+  }
+
   onSubmit(frmValue: any): void {
     console.log('Form Value:', frmValue);
 
     const newUserId = this.getMaxId(this.users) + 1;
 
     const tempUser: User = {
-      id: newUserId.toString(), 
+      id: newUserId.toString(),
       firstName: frmValue.firstName,
       lastName: frmValue.lastName,
       email: frmValue.email,

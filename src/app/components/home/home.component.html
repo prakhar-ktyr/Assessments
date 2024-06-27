@@ -9,9 +9,9 @@
 
 <table class="table">
     <tbody>
-    <tr>
+    <tr class="imp">
         <td *ngFor="let a of arrAssessments">
-            <div class="card">
+            <div class="card" [ngClass]="{'greyed-out': !a.isActive}">
                 <img [src]="a.assessmentImage" class="card-img-top" alt="Image">
                 <div class="card-body">
                     <h5 class="card-title">{{a.assessmentName}}</h5>
