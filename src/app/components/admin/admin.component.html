@@ -110,7 +110,7 @@
             </div>
             
             <div class="tab-pane fade" id="courses-view" role="tabpanel" aria-labelledby="courses-view-tab">
-                <!-- View Content Here -->
+                <app-view-course/>
             </div>
         </div>
     </div>
@@ -124,9 +124,9 @@
             <li class="nav-item">
                 <a class="nav-link" id="course-category-update-tab" data-bs-toggle="tab" href="#course-category-update" role="tab" aria-controls="course-category-update" aria-selected="false">Update</a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" id="course-category-delete-tab" data-bs-toggle="tab" href="#course-category-delete" role="tab" aria-controls="course-category-delete" aria-selected="false">Delete</a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" id="course-category-view-tab" data-bs-toggle="tab" href="#course-category-view" role="tab" aria-controls="course-category-view" aria-selected="false">View</a>
             </li>
@@ -138,11 +138,11 @@
             <div class="tab-pane fade" id="course-category-update" role="tabpanel" aria-labelledby="course-category-update-tab">
                 <app-update-category/>
             </div>
-            <div class="tab-pane fade" id="course-category-delete" role="tabpanel" aria-labelledby="course-category-delete-tab">
-                <!-- Delete Course Category Content Here -->
-            </div>
+            <!-- <div class="tab-pane fade" id="course-category-delete" role="tabpanel" aria-labelledby="course-category-delete-tab">
+                Delete Course Category Content Here
+            </div> -->
             <div class="tab-pane fade" id="course-category-view" role="tabpanel" aria-labelledby="course-category-view-tab">
-                <!-- View Course Category Content Here -->
+                <app-view-category/>
             </div>
         </div>
     </div>
@@ -179,7 +179,7 @@
     <div class="tab-pane fade" id="assessment-scores" role="tabpanel" aria-labelledby="assessment-scores-tab">
         <ul class="nav nav-tabs" id="assessmentScoresCrudTabs" role="tablist">
             <li class="nav-item">
-                <a class="nav-link" id="assessment-scores-update-tab" data-bs-toggle="tab" href="#assessment-scores-update" role="tab" aria-controls="assessment-scores-update" aria-selected="true">Update</a>
+                <a class="nav-link active" id="assessment-scores-update-tab" data-bs-toggle="tab" href="#assessment-scores-update" role="tab" aria-controls="assessment-scores-update" aria-selected="true">Update</a>
             </li>
             
             <li class="nav-item">
@@ -191,7 +191,7 @@
                 <app-update-assessment-score/>
             </div>
             <div class="tab-pane fade" id="assessment-scores-view" role="tabpanel" aria-labelledby="assessment-scores-view-tab">
-                <!-- View Assessment Scores Content Here -->
+                <app-view-assessment-score/>
             </div>
         </div>
 
@@ -216,7 +216,7 @@
                 <a class="nav-link active" id="attendance-create-tab" data-bs-toggle="tab" href="#attendance-create" role="tab" aria-controls="attendance-create" aria-selected="true">Create</a>
             </li> -->
             <li class="nav-item">
-                <a class="nav-link" id="attendance-update-tab" data-bs-toggle="tab" href="#attendance-update" role="tab" aria-controls="attendance-update" aria-selected="false">Update</a>
+                <a class="nav-link active" id="attendance-update-tab" data-bs-toggle="tab" href="#attendance-update" role="tab" aria-controls="attendance-update" aria-selected="false">Update</a>
             </li>
             
             <li class="nav-item">

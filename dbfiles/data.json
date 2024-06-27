@@ -904,7 +904,7 @@
       "price": 2199,
       "facultyId": "6",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "7",
