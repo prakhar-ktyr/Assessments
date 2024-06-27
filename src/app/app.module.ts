@@ -45,6 +45,8 @@ import { TimerComponent } from './components/timer/timer.component';
 import { ViewAttendanceComponent } from './components/view-attendance/view-attendance.component';
 import { UpdateAttendanceComponent } from './components/update-attendance/update-attendance.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { CreateCategoryComponent } from './components/create-category/create-category.component';
+import { UpdateCategoryComponent } from './components/update-category/update-category.component';
 
 @NgModule({
   declarations: [
@@ -72,7 +74,9 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     NotFoundComponent,
     TimerComponent,
     ViewAttendanceComponent,
-    UpdateAttendanceComponent
+    UpdateAttendanceComponent,
+    CreateCategoryComponent,
+    UpdateCategoryComponent
   ],
   imports: [
     ReactiveFormsModule,

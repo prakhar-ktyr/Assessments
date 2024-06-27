@@ -1,10 +1,10 @@
 export class AssessmentScore {
-  id: number;
+  id: string;
   assessmentId: number;
   traineeId: number;
   score: number;
   constructor(
-    id: number,
+    id: string,
     assessmentId: number,
     traineeId: number,
     score: number
