@@ -25,6 +25,7 @@ export class UpdateCourseComponent implements OnInit {
   ngOnInit(): void {
     this.courseService.getCourses().subscribe((courses: Course[]) => {
       this.arrCourses = courses;
+      console.log('Courses Loaded:', this.arrCourses);
     });
   }
 
@@ -44,7 +45,7 @@ export class UpdateCourseComponent implements OnInit {
     };
 
     this.courseService.updateCourse(updatedCourse).subscribe(
-      (response: any) => {
+      (response: Course[]) => {
         console.log('Course updated successfully', response);
       },
       (error: any) => {
@@ -54,12 +55,12 @@ export class UpdateCourseComponent implements OnInit {
   }
 
   onChangeType(evt: any): void {
-    const selectedCourseId = evt.target.value;
+    const selectedCourseId = evt.target.value.split(':')[1].trim();
     console.log('Selected Course ID:', selectedCourseId);
-    
+  
     const selectedCourse = this.arrCourses.find(course => course.id === selectedCourseId);
     console.log('Selected Course:', selectedCourse);
-
+  
     if (selectedCourse) {
       this.courseUpdateForm.patchValue({
         id: selectedCourse.id,
@@ -67,6 +68,8 @@ export class UpdateCourseComponent implements OnInit {
         courseDescription: selectedCourse.courseDescription,
         categoryId: selectedCourse.categoryId
       });
+      console.log('Form Updated:', this.courseUpdateForm.value);
     }
   }
+  
 }
