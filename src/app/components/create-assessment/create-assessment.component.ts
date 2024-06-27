@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, FormArray, Validators } from '@angular/forms';
 import { AssessmentService } from '../../services/assessment.service';
 import { Assessment } from '../../models/assessment';
 import { Question } from '../../models/questions';
+import { LocalStorageService } from '../../services/local-storage.service';
+
 
 @Component({
   selector: 'app-create-assessment',
@@ -10,29 +12,34 @@ import { Question } from '../../models/questions';
   styleUrls: ['./create-assessment.component.scss']
 })
 export class CreateAssessmentComponent implements OnInit {
-  isLinear = true;
   assessmentForm: FormGroup;
   questionsForm: FormGroup;
+  loggedUserId: string = '';
 
-  constructor(private fb: FormBuilder, private assessmentService: AssessmentService) {
+  constructor(private localStorageService: LocalStorageService,private fb: FormBuilder, private assessmentService: AssessmentService) {
     this.assessmentForm = this.fb.group({
-      name: ['', Validators.required],
-      description: ['', Validators.required],
-      assessmentImage: ['', Validators.required]
+      assessmentName: ['', Validators.required],
+      assessmentDescription: ['', Validators.required],
+      assessmentImage: ['', Validators.required],
+      price: ['', Validators.required],
+      time: ['', Validators.required] // Time is treated as a string
     });
 
+    this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
+
     this.questionsForm = this.fb.group({
-      questions: this.fb.array([this.createQuestion()])
+      questions: this.fb.array([this.createQuestion(1)])
     });
   }
 
   ngOnInit(): void {}
 
-  createQuestion(): FormGroup {
+  createQuestion(id: number): FormGroup {
     return this.fb.group({
+      id: [id, Validators.required],
       text: ['', Validators.required],
       type: ['', Validators.required],
-      choices: this.fb.array([this.createChoice(), this.createChoice(), this.createChoice(), this.createChoice()]),
+      choices: this.fb.array([]),
       correctAnswer: ['', Validators.required]
     });
   }
@@ -48,30 +55,52 @@ export class CreateAssessmentComponent implements OnInit {
   }
 
   addQuestion(): void {
-    (this.questionsForm.get('questions') as FormArray).push(this.createQuestion());
+    const questionArray = this.questionsForm.get('questions') as FormArray;
+    const newQuestionId = questionArray.length + 1;
+    questionArray.push(this.createQuestion(newQuestionId));
   }
 
-  saveFirstStepData(formGroup: FormGroup) {
-    console.log('First Step Data:', formGroup.value);
+  getChoices(questionIndex: number): FormArray {
+    return (this.questionsForm.get('questions') as FormArray).at(questionIndex).get('choices') as FormArray;
   }
 
-  saveSecondStepData(formGroup: FormGroup) {
-    console.log('Second Step Data:', formGroup);
+  onQuestionTypeChange(questionIndex: number): void {
+    const questionArray = this.questionsForm.get('questions') as FormArray;
+    const question = questionArray.at(questionIndex) as FormGroup;
+
+    const choicesArray = question.get('choices') as FormArray;
+    while (choicesArray.length !== 0) {
+      choicesArray.removeAt(0);
+    }
+
+    if (question.get('type')?.value === 'multiple-choice') {
+      for (let i = 0; i < 4; i++) {
+        choicesArray.push(this.createChoice());
+      }
+    } else if (question.get('type')?.value === 'true-false') {
+      choicesArray.push(this.fb.group({ choiceText: 'true' }));
+      choicesArray.push(this.fb.group({ choiceText: 'false' }));
+    }
   }
 
-  onSubmit(): void {
+  submitAssessment(): void {
     const assessmentData = this.assessmentForm.value;
-    const questionsData = this.questionsForm.value.questions;
-    
+    const questionsData = this.questionsForm.value.questions.map((question: any, index: number) => ({
+      ...question,
+      id: index + 1,
+      choices: question.type === 'true-false' ? ['true', 'false'] : question.choices.map((choice: any) => choice.choiceText)
+    }));
+
     const newAssessment = new Assessment(
       0, // ID will be generated
-      assessmentData.name,
-      assessmentData.description,
+      assessmentData.assessmentName,
+      assessmentData.assessmentDescription,
       assessmentData.assessmentImage,
       questionsData,
-      0,
-      0,
-      '' 
+      assessmentData.price,
+      parseInt(this.loggedUserId), // Default faculty ID, update as necessary
+      assessmentData.time,
+      true
     );
 
     this.assessmentService.addAssessment(newAssessment).subscribe(
@@ -82,16 +111,5 @@ export class CreateAssessmentComponent implements OnInit {
         console.error('Error creating assessment:', error);
       }
     );
-  }
-
-
-  // Method to safely get the choices FormArray for a specific question
-  getChoices(questionIndex: number): FormArray {
-    const questionFormGroup = this.questionControls.at(questionIndex) as FormGroup;
-    const choices = questionFormGroup.get('choices');
-    if (choices instanceof FormArray) { // Type check to ensure it's a FormArray
-      return choices;
-    }
-    throw new Error('Choices control is missing or not a FormArray');
   }
 }

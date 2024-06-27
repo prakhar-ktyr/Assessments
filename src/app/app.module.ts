@@ -51,6 +51,7 @@ import { UpdateAssessmentScoreComponent } from './components/update-assessment-s
 import { ViewCourseComponent } from './components/view-course/view-course.component';
 import { ViewCategoryComponent } from './components/view-category/view-category.component';
 import { ViewAssessmentScoreComponent } from './components/view-assessment-score/view-assessment-score.component';
+import { FacultyComponent } from './components/faculty/faculty.component';
 
 @NgModule({
   declarations: [
@@ -84,7 +85,8 @@ import { ViewAssessmentScoreComponent } from './components/view-assessment-score
     UpdateAssessmentScoreComponent,
     ViewCourseComponent,
     ViewCategoryComponent,
-    ViewAssessmentScoreComponent
+    ViewAssessmentScoreComponent,
+    FacultyComponent
   ],
   imports: [
     ReactiveFormsModule,

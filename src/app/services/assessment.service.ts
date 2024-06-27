@@ -16,12 +16,7 @@ export class AssessmentService {
     }),
   };
 
-  constructor(private httpClient: HttpClient) {
-    this.arrAssessments = [
-      // Example assessments can be initialized here
-      // new Assessment(1, "Angular Assessment", "Test your Angular skills", "/path/to/image.png", [], 2999),
-    ];
-  }
+  constructor(private httpClient: HttpClient) {}
 
   getAssessments(): Observable<Assessment[]> {
     return this.httpClient.get<Assessment[]>(this.baseUrl + "/assessments", this.httpHeader)
@@ -29,28 +24,20 @@ export class AssessmentService {
   }
 
   getAssessmentById(id: number): Observable<Assessment> {
-    const localAssessment = this.arrAssessments.find(assessment => assessment.id === id);
-    if (localAssessment) {
-      return of(localAssessment);
-    }
     return this.httpClient.get<Assessment>(`${this.baseUrl}/assessments/${id}`, this.httpHeader)
-      .pipe(
-        map((assessment: Assessment) => {
-          this.arrAssessments.push(assessment);
-          return assessment;
-        }),
-        catchError(this.httpError)
-      );
+      .pipe(catchError(this.httpError));
   }
 
-  addAssessment(assessment: Assessment): Observable<Assessment[]> {
-    this.arrAssessments.push(assessment);
-    return of(this.arrAssessments);
+  addAssessment(assessment: Assessment): Observable<Assessment> {
+    return this.httpClient.post<Assessment>(this.baseUrl + "/assessments", assessment, this.httpHeader)
+      .pipe(catchError(this.httpError));
   }
 
-  updateAssessmentById(id:number , a:Assessment){
-    return this.httpClient.put<Assessment>(this.baseUrl + "/assessments/" + id , a , this.httpHeader).pipe(catchError(this.httpError)) ;
+  updateAssessmentById(id: number, assessment: Assessment): Observable<Assessment> {
+    return this.httpClient.put<Assessment>(`${this.baseUrl}/assessments/${id}`, assessment, this.httpHeader)
+      .pipe(catchError(this.httpError));
   }
+
   private httpError(error: HttpErrorResponse) {
     let msg = '';
     if (error.error instanceof ErrorEvent) {

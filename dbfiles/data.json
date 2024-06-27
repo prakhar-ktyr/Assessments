@@ -274,7 +274,7 @@
       "price": 1999,
       "facultyId": "1",
       "time": "8",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "2",
@@ -400,7 +400,7 @@
       "price": 2499,
       "facultyId": "2",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "3",
@@ -524,7 +524,7 @@
       "price": 2299,
       "facultyId": "3",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "4",
@@ -776,7 +776,7 @@
       "price": 1899,
       "facultyId": "5",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "6",
@@ -904,7 +904,7 @@
       "price": 2199,
       "facultyId": "6",
       "time": "3600",
-      "isActive": false
+      "isActive": true
     },
     {
       "id": "7",
