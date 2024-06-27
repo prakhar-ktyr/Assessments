@@ -52,10 +52,10 @@ import { ViewCourseComponent } from './components/view-course/view-course.compon
 import { ViewCategoryComponent } from './components/view-category/view-category.component';
 import { ViewAssessmentScoreComponent } from './components/view-assessment-score/view-assessment-score.component';
 import { FacultyComponent } from './components/faculty/faculty.component';
-
 import { CanvasJSAngularChartsModule } from '@canvasjs/angular-charts';
-import { UpdateAssessmentComponent } from './components/update-assessment/update-assessment.component';
-import { ViewAssessmentComponent } from './components/view-assessment/view-assessment.component';
+import { BarChartComponent } from './components/bar-chart/bar-chart.component';
+import { ViewReportsComponent } from './components/view-reports/view-reports.component';
+import { UpdateReportsComponent } from './components/update-reports/update-reports.component';
 
 @NgModule({
   declarations: [
@@ -91,8 +91,9 @@ import { ViewAssessmentComponent } from './components/view-assessment/view-asses
     ViewCategoryComponent,
     ViewAssessmentScoreComponent,
     FacultyComponent,
-    UpdateAssessmentComponent,
-    ViewAssessmentComponent
+    BarChartComponent,
+    ViewReportsComponent,
+    UpdateReportsComponent
   ],
   imports: [
     ReactiveFormsModule,
@@ -113,7 +114,7 @@ import { ViewAssessmentComponent } from './components/view-assessment/view-asses
     HttpClientModule,
     MatRadioModule , 
     MatSlideToggleModule,
-    CanvasJSAngularChartsModule
+    CanvasJSAngularChartsModule 
   ],
   providers: [
     provideClientHydration(),

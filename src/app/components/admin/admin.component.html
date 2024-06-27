@@ -197,24 +197,29 @@
 
     </div>
     <div class="tab-pane fade" id="reports" role="tabpanel" aria-labelledby="reports-tab">
-        <form>
-            <div class="mb-3">
-                <label for="reportType" class="form-label">Report Type</label>
-                <input type="text" class="form-control" id="reportType">
+        <!-- Nested Tabs -->
+        <ul class="nav nav-tabs" id="nestedTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="view-tab" data-bs-toggle="tab" href="#view" role="tab" aria-controls="view" aria-selected="true">View</a>
+            </li>
+            <li class="nav-item" role="presentation">
+                <a class="nav-link" id="update-tab" data-bs-toggle="tab" href="#update" role="tab" aria-controls="update" aria-selected="false">Update</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="nestedTabContent">
+            <div class="tab-pane fade show active" id="view" role="tabpanel" aria-labelledby="view-tab">
+                <!-- Content for View tab goes here -->
+                <app-view-reports></app-view-reports>
             </div>
-            <div class="mb-3">
-                <label for="reportDescription" class="form-label">Description</label>
-                <textarea class="form-control" id="reportDescription" rows="3"></textarea>
+            <div class="tab-pane fade" id="update" role="tabpanel" aria-labelledby="update-tab">
+                <!-- Content for Update tab goes here -->
+                <app-update-reports></app-update-reports>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </form>
+        </div>
     </div>
-
+    
     <div class="tab-pane fade" id="attendance" role="tabpanel" aria-labelledby="attendance-tab">
         <ul class="nav nav-tabs" id="attendanceCrudTabs" role="tablist">
-            <!-- <li class="nav-item">
-                <a class="nav-link active" id="attendance-create-tab" data-bs-toggle="tab" href="#attendance-create" role="tab" aria-controls="attendance-create" aria-selected="true">Create</a>
-            </li> -->
             <li class="nav-item">
                 <a class="nav-link active" id="attendance-update-tab" data-bs-toggle="tab" href="#attendance-update" role="tab" aria-controls="attendance-update" aria-selected="false">Update</a>
             </li>

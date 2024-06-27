@@ -13,6 +13,8 @@ import { TraineeService } from '../../services/trainee.service';
 import { AssessmentTrainees } from '../../models/assessmentTrainess';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
+import { ReportsService } from '../../services/reports.service';
+import { Report } from '../../models/report';
 
 @Component({
   selector: 'app-attempt-assessment',
@@ -31,7 +33,7 @@ export class AttemptAssessmentComponent implements OnInit {
   startTime: Date = new Date();
   loggedUserId: string = '';
   assessmentDuration: number = 0;
-
+  marks:boolean[] = [] ; 
   chartOptions = {
     title: {
       text: 'Marks distribution',
@@ -56,7 +58,8 @@ export class AttemptAssessmentComponent implements OnInit {
     private assessmentService: AssessmentService,
     private attendanceService: AttendanceService,
     private assessmentScoreService: AssessmentScoreService,
-    private traineeService: TraineeService
+    private traineeService: TraineeService , 
+    private reportService : ReportsService
   ) {
     this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
 
@@ -120,8 +123,15 @@ export class AttemptAssessmentComponent implements OnInit {
         .subscribe((data) => {
           console.log('Assessment quantity reduced');
         });
+      
     });
-    // Handle the submission logic here
+    // Add report 
+    let rid = this.reportService.getReportsCount() + 1 ; 
+    let r = new Report(rid , String(this.assessmentId ), this.loggedUserId , this.marks , `${this.finalScore}/${this.arrQuestions.length}`) ; 
+    this.reportService.addReport(r).subscribe((data) => {
+      console.log("added report") ; 
+    })
+    
   }
 
   getScore(answers: any) {
@@ -132,18 +142,22 @@ export class AttemptAssessmentComponent implements OnInit {
       if (this.arrQuestions[i].type === 'true-false') {
         if (this.arrQuestions[i].correctAnswer === ans.toString()) {
           score += 1;
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:1})
+          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:1}) ; 
+          this.marks.push(true) ; 
         }
         else{
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:0})
+          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:0}) ;
+          this.marks.push(false) ;
         }
       } else {
         if (this.arrQuestions[i].correctAnswer === ans) {
           score += 1;
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:1})
+          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:1});
+          this.marks.push(true) ; 
         }
         else{
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:0})
+          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:0});
+          this.marks.push(false) ;
         }
       }
     }
