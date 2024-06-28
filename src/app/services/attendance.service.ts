@@ -14,18 +14,27 @@ export class AttendanceService {
     }),
   };
   constructor(private httpClient: HttpClient) { }
-  addAttendance(a:Attendance){
-    return this.httpClient.post<Attendance>(this.baseUrl + "/attendance" , a , this.httpHeader).pipe(catchError(this.httpError));
+
+  addAttendance(a: Attendance) {
+    return this.httpClient.post<Attendance>(this.baseUrl + "/attendance", a, this.httpHeader).pipe(catchError(this.httpError));
   }
+
   getAttendance(){
     return this.httpClient.get<Attendance[]>(this.baseUrl + "/attendance" , this.httpHeader).pipe(catchError(this.httpError))
   }
-  getAttendanceById(id:number){
-    return this.httpClient.get<Attendance>(this.baseUrl + "/attendance/" + id , this.httpHeader).pipe(catchError(this.httpError))
+
+  getAttendanceRecords() {
+    return this.httpClient.get<Attendance[]>(this.baseUrl + "/attendance", this.httpHeader).pipe(catchError(this.httpError));
   }
-  updateAttendance(id:number , att : Attendance){
-    return this.httpClient.put<Attendance>(this.baseUrl + "/attendance/" + id , att , this.httpHeader).pipe(catchError(this.httpError))
+
+  getAttendanceById(id: number) {
+    return this.httpClient.get<Attendance>(this.baseUrl + "/attendance/" + id, this.httpHeader).pipe(catchError(this.httpError));
   }
+
+  updateAttendance(id: number, att: Attendance) {
+    return this.httpClient.put<Attendance>(this.baseUrl + "/attendance/" + id, att, this.httpHeader).pipe(catchError(this.httpError));
+  }
+
   private httpError(error: HttpErrorResponse) {
     let msg = '';
     if (error.error instanceof ErrorEvent) {

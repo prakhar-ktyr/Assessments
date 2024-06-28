@@ -13,33 +13,36 @@ export class ReportsService {
       'content-type': 'application/json',
     }),
   };
-  constructor(private httpClient:HttpClient) { }
-  getReports(){
-    return this.httpClient.get<Report[]>(this.baseUrl + "/reports/" , this.httpHeader).pipe(catchError(this.httpError)) ;
-  }
-  getReportsCount(){
-    let count = 0 ; 
-    this.getReports().subscribe(data => {
-      count = data.length ; 
-    })
-    return count ; 
-  }
-  getReportById(id:number){
-    return this.httpClient.get<Report>(this.baseUrl + "/reports/" + id , this.httpHeader).pipe(catchError(this.httpError)) ; 
-  }
-  addReport(r:Report){
-    return this.httpClient.post<Report>(this.baseUrl + "/reports/", JSON.stringify(r) , this.httpHeader).pipe(catchError(this.httpError)) ; 
-  }
-  httpError(error:HttpErrorResponse){
-    let msg='';
-    if(error.error instanceof ErrorEvent){
-      msg=error.error.message;
-    }
-    else{
-      msg=`Error Code:${error.status}\nMessafe:${error.message}`;
-    }
-    console.log(msg);
-    return throwError(msg);
+  constructor(private httpClient: HttpClient) { }
+
+  getReports() {
+    return this.httpClient.get<Report[]>(this.baseUrl + "/reports", this.httpHeader).pipe(catchError(this.httpError));
   }
 
+  getReportsCount() {
+    let count = 0;
+    this.getReports().subscribe(data => {
+      count = data.length;
+    });
+    return count;
+  }
+
+  getReportById(id: number) {
+    return this.httpClient.get<Report>(this.baseUrl + "/reports/" + id, this.httpHeader).pipe(catchError(this.httpError));
+  }
+
+  addReport(r: Report) {
+    return this.httpClient.post<Report>(this.baseUrl + "/reports", JSON.stringify(r), this.httpHeader).pipe(catchError(this.httpError));
+  }
+
+  private httpError(error: HttpErrorResponse) {
+    let msg = '';
+    if (error.error instanceof ErrorEvent) {
+      msg = error.error.message;
+    } else {
+      msg = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    console.error(msg);
+    return throwError(msg);
+  }
 }

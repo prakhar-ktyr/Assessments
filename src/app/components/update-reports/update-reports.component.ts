@@ -22,7 +22,7 @@ import { ReportsService } from '../../services/reports.service';
 export class UpdateReportsComponent implements OnInit {
   updateForm: FormGroup;
   reports: Report[] = []; // This should be fetched from your service
-  selectedReport: Report = new Report(0 , "0" , "0" , [] , "0");
+  selectedReport: Report = new Report(0 , "0" , "0" , [] , "0", "");
 
   constructor(private fb: FormBuilder , private reportService : ReportsService) {
     // Initialize the form

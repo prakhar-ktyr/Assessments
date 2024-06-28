@@ -61,6 +61,7 @@ import { ViewAssessmentComponent } from './components/view-assessment/view-asses
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatBadgeModule} from '@angular/material/badge';
+import { ReportComponent } from './components/report/report.component';
 
 @NgModule({
   declarations: [
@@ -101,7 +102,8 @@ import {MatBadgeModule} from '@angular/material/badge';
     UpdateReportsComponent,
     UpdateAssessmentComponent,
     ViewAssessmentComponent,
-    LoginModalComponent
+    LoginModalComponent,
+    ReportComponent
   ],
   imports: [
     ReactiveFormsModule,
