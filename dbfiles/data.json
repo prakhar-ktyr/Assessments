@@ -3207,7 +3207,7 @@
     {
       "id": "25",
       "assessmentName": "Perl",
-      "assessmentDescription": "This assessment covers Perl, a highly capable, feature-rich programming language with over 30 years of development. Test your skills in Perl syntax, and more.",
+      "assessmentDescription": "This assessment covers Perl, a highly capable, feature-rich programming language with over 30 years of development. Test your skills in Perl syntax, regex, and more.",
       "assessmentImage": "/assets/images/perl.png",
       "questions": [
         {
@@ -3459,7 +3459,7 @@
     {
       "id": "27",
       "assessmentName": "MATLAB",
-      "assessmentDescription": "This assessment covers MATLAB, a high-level language and interactive environment for numerical computation, visualization, and programming.",
+      "assessmentDescription": "This assessment covers MATLAB, a high-level language and interactive environment for numerical computation, visualization, and programming. Test your skills in MATLAB syntax, functions, and more.",
       "assessmentImage": "/assets/images/matlab.png",
       "questions": [
         {
@@ -3680,7 +3680,7 @@
       "id": "4",
       "assessmentId": "4",
       "traineeId": "2",
-      "quantity": "80"
+      "quantity": "79"
     },
     {
       "id": "5",
@@ -4277,6 +4277,12 @@
       "userId": "2",
       "date": "2024-06-28T04:49:03.950Z",
       "status": "success"
+    },
+    {
+      "id": "98",
+      "userId": "2",
+      "date": "2024-06-28T04:49:50.193Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -4403,6 +4409,12 @@
     {
       "id": "21",
       "assessmentId": "3",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "22",
+      "assessmentId": "4",
       "traineeId": 2,
       "score": 0
     }
@@ -4657,6 +4669,24 @@
         false
       ],
       "assessmentId": "3",
+      "userId": "2",
+      "score": "0/10"
+    },
+    {
+      "id": 1,
+      "marks": [
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "assessmentId": "4",
       "userId": "2",
       "score": "0/10"
     }
