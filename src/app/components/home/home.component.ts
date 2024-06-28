@@ -10,20 +10,19 @@ import { Cart } from '../../models/cart';
 import { LoginModalComponent } from '../login-modal/login-modal.component';
 import { MatDialog } from '@angular/material/dialog';
 
-
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
+  styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent {
   arrAssessments: Assessment[] = [];
-  loggedUserId:string = "0" ; 
-  
+  loggedUserId: string = '0';
+
   constructor(
     private router: Router,
     private assessmentService: AssessmentService,
-    private locatStorageService: LocalStorageService,
+    private localStorageService: LocalStorageService,
     private cartService: CartService,
     private dialog: MatDialog
   ) {
@@ -32,16 +31,13 @@ export class HomeComponent {
         this.arrAssessments.push(data[i]);
       }
     });
-    let loginId = this.locatStorageService.getItem("loggedUserId") ; 
-    this.loggedUserId = loginId === null ? "0" : loginId ; 
-
-    
+    let loginId = this.localStorageService.getItem('loggedUserId');
+    this.loggedUserId = loginId === null ? '0' : loginId;
   }
 
   displayDetails(aid: number, aName: string, aDescription: string) {
     this.router.navigate(['viewDetails/' + aid]);
   }
-
 
   handleAddToCart(newAssessmentForCart: Assessment): void {
     if (!this.isLoggedIn()) {
@@ -52,7 +48,7 @@ export class HomeComponent {
   }
 
   isLoggedIn(): boolean {
-    return this.locatStorageService.getItem('loggedUserId') !== null;
+    return this.localStorageService.getItem('loggedUserId') !== null;
   }
 
   openLoginModal(): void {
@@ -62,7 +58,7 @@ export class HomeComponent {
   addToCart(newAssessmentForCart: Assessment): void {
     let cartExists = false;
     let arrCart: Cart[] = [];
-    let cartId = this.locatStorageService.getItem('loggedUserId');
+    let cartId = this.localStorageService.getItem('loggedUserId');
 
     if (cartId === null) {
       console.log("User not logged in , can't add to cart");
@@ -111,5 +107,7 @@ export class HomeComponent {
     })
   }
 
-  
+  viewMore(): void {
+    this.router.navigate(['/assessments']);
+  }
 }
