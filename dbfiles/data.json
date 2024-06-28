@@ -3207,7 +3207,7 @@
     {
       "id": "25",
       "assessmentName": "Perl",
-      "assessmentDescription": "This assessment covers Perl, a highly capable, feature-rich programming language with over 30 years of development. Test your skills in Perl syntax, regex, and more.",
+      "assessmentDescription": "This assessment covers Perl, a highly capable, feature-rich programming language with over 30 years of development. Test your skills in Perl syntax, and more.",
       "assessmentImage": "/assets/images/perl.png",
       "questions": [
         {
@@ -3459,7 +3459,7 @@
     {
       "id": "27",
       "assessmentName": "MATLAB",
-      "assessmentDescription": "This assessment covers MATLAB, a high-level language and interactive environment for numerical computation, visualization, and programming. Test your skills in MATLAB syntax, functions, and more.",
+      "assessmentDescription": "This assessment covers MATLAB, a high-level language and interactive environment for numerical computation, visualization, and programming.",
       "assessmentImage": "/assets/images/matlab.png",
       "questions": [
         {

@@ -1,34 +1,23 @@
-<!-- I am the Home Component <br/>
-{{assessmentName}} -->
-
-<!-- <div *ngFor="let aName of arrAssessmentNames">
-    {{aName}}
-</div> -->
-
-<!-- Generated entire component 4 times. -->
-
 <table class="table">
     <tbody>
-    <tr class="imp">
-        <td *ngFor="let a of arrAssessments">
-            <div class="card" [ngClass]="{'greyed-out': !a.isActive}">
-                <img [src]="a.assessmentImage" class="card-img-top" alt="Image">
-                <div class="card-body">
-                    <h5 class="card-title">{{a.assessmentName}}</h5>
-                    <p class="card-text">{{a.assessmentDescription}}</p>
+        <tr class="imp">
+            <td *ngFor="let a of arrAssessments">
+                <div class="card" [ngClass]="{'greyed-out': !a.isActive}">
+                    <img [src]="a.assessmentImage" class="card-img-top" alt="Image">
+                    <div class="card-body">
+                        <h5 class="card-title">{{a.assessmentName}}</h5>
+                        <p class="card-text">{{a.assessmentDescription}}</p>
+                    </div>
+                    <div class="card-footer">
+                        <button class="btn btn-primary btn-primary-custom" (click)="displayDetails(a.id , a.assessmentName, a.assessmentDescription)">Details</button>
+                        <button href="#" class="btn btn-primary btn-primary-custom" (click)="handleAddToCart(a)">Add to Cart</button>
+                    </div>
                 </div>
-                <div class="card-footer">
-                    <button class="btn btn-primary btn-primary-custom" (click)="displayDetails(a.id , a.assessmentName, a.assessmentDescription)">Details</button>
-                    <button href="#" class="btn btn-primary btn-primary-custom" (click)="handleAddToCart(a)">Add to Cart</button>
-                </div>
-            </div>
-        </td>
-    </tr>
-</tbody>
+            </td>
+        </tr>
+    </tbody>
 </table>
 
-
-
-<!-- <div *ngFor="let u of arrUsers">
-    {{u.id}} {{u.firstName}} {{u.lastName}} {{u.email}}
-</div> -->
+<div class="text-center mt-4">
+    <button class="btn btn-secondary btn-secondary-custom" (click)="viewMore()">View More</button>
+</div>
