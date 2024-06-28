@@ -4403,6 +4403,18 @@
       "userId": "2",
       "date": "2024-06-28T06:24:13.654Z",
       "status": "success"
+    },
+    {
+      "id": "89",
+      "userId": "2",
+      "date": "2024-06-27T18:15:44.141Z",
+      "status": "success"
+    },
+    {
+      "id": "90",
+      "userId": "2",
+      "date": "2024-06-28T04:07:20.858Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -4564,24 +4576,26 @@
     }
   ],
   "reports": [
+    
+
     {
       "id": 1,
       "marks": [
+        true,
         false,
+        true,
+        true,
         false,
+        true,
         false,
+        true,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        true
       ],
       "assessmentId": "6",
       "userId": "2",
-      "score": "0/10",
-      "date": "2024-06-28T06:12:52.131Z"
+      "score": "6/10",
+      "date": "2024-06-01"
     },
     {
       "id": 2,
@@ -4600,7 +4614,67 @@
       "assessmentId": "6",
       "userId": "2",
       "score": "0/10",
-      "date": "2024-06-28T06:13:33.758Z"
+      "date": "2024-06-10"
+    },
+    {
+      "id": 3,
+      "marks": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        true,
+        true,
+        false,
+        false,
+        true,
+        false
+      ],
+      "assessmentId": "7",
+      "userId": "2",
+      "score": "6/10",
+      "date": "2024-06-15"
+    },
+    {
+      "id": 4,
+      "marks": [
+        false,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false,
+        true,
+        false
+      ],
+      "assessmentId": "8",
+      "userId": "2",
+      "score": "5/10",
+      "date": "2024-06-20"
+    },
+    {
+      "id": 5,
+      "marks": [
+        false,
+        true,
+        false,
+        false,
+        true,
+        false,
+        false,
+        false,
+        false,
+        false
+      ],
+      "assessmentId": "9",
+      "userId": "2",
+      "score": "2/10",
+      "date": "2024-06-28"
     },
     {
       "id": 3,
