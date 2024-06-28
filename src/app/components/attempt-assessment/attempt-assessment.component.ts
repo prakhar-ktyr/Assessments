@@ -126,22 +126,28 @@ export class AttemptAssessmentComponent implements OnInit {
         }
       });
       // Add report
-      let rid = this.reportService.getReportsCount() + 1;
-      let r = new Report(
-        rid,
-        String(this.assessmentId),
-        this.loggedUserId,
-        this.marks,
-        `${this.finalScore}/${this.arrQuestions.length}`
-      );
-      this.reportService.addReport(r).subscribe((data) => {
-        console.log('added report');
-      });
-      this.traineeService
-        .updateAssessmentTraineeById(updateId, newAssessmentTrainee)
-        .subscribe((data) => {
-          console.log('Assessment quantity reduced');
+      let rid = 0 ;
+      // this.reportService.getReportsCount() + 1;
+      this.reportService.getReports().subscribe(data => {
+        rid = data.length + 1 ; 
+        let r = new Report(
+          rid,
+          String(this.assessmentId),
+          this.loggedUserId,
+          this.marks,
+          `${this.finalScore}/${this.arrQuestions.length}`,
+          new Date().toISOString().split('T')[0] 
+        );
+        this.reportService.addReport(r).subscribe((data) => {
+          console.log('added report');
         });
+        this.traineeService
+          .updateAssessmentTraineeById(updateId, newAssessmentTrainee)
+          .subscribe((data) => {
+            console.log('Assessment quantity reduced');
+          });
+      })
+    
     });
   }
 
