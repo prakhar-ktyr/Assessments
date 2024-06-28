@@ -4403,7 +4403,6 @@
       "userId": "2",
       "date": "2024-06-28T06:24:13.654Z",
       "status": "success"
-<<<<<<< HEAD
     },
     {
       "id": "89",
@@ -4416,8 +4415,6 @@
       "userId": "2",
       "date": "2024-06-28T04:07:20.858Z",
       "status": "success"
-=======
->>>>>>> 711eecdeb86c7fd4008491c9e91f5b17c8f26269
     }
   ],
   "assessmentScore": [
@@ -4579,7 +4576,6 @@
     }
   ],
   "reports": [
-<<<<<<< HEAD
     
 
     {
@@ -4603,10 +4599,6 @@
     },
     {
       "id": 2,
-=======
-    {
-      "id": 1,
->>>>>>> 711eecdeb86c7fd4008491c9e91f5b17c8f26269
       "marks": [
         false,
         false,
@@ -4622,34 +4614,9 @@
       "assessmentId": "6",
       "userId": "2",
       "score": "0/10",
-<<<<<<< HEAD
       "date": "2024-06-10"
     },
     {
-=======
-      "date": "2024-06-28T06:12:52.131Z"
-    },
-    {
-      "id": 2,
-      "marks": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "6",
-      "userId": "2",
-      "score": "0/10",
-      "date": "2024-06-28T06:13:33.758Z"
-    },
-    {
->>>>>>> 711eecdeb86c7fd4008491c9e91f5b17c8f26269
       "id": 3,
       "marks": [
         false,
@@ -4663,7 +4630,6 @@
         true,
         false,
         false,
-<<<<<<< HEAD
         true,
         false
       ],
@@ -4726,12 +4692,6 @@
       ],
       "assessmentId": "9",
       "userId": "2",
-=======
-        false
-      ],
-      "assessmentId": "9",
-      "userId": "2",
->>>>>>> 711eecdeb86c7fd4008491c9e91f5b17c8f26269
       "score": "2/10",
       "date": "2024-06-28"
     }
