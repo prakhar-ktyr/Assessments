@@ -131,13 +131,35 @@
           "pincode": "208027"
         }
       ]
+    },
+    {
+      "id": "7",
+      "firstName": "miti",
+      "lastName": "bhat",
+      "email": "miti@gmail.com",
+      "phone": "123",
+      "dob": "2024-06-14",
+      "role": "Faculty",
+      "password": "1",
+      "address": [
+        {
+          "id": "0",
+          "houseNo": "1",
+          "street": "a",
+          "area": "a",
+          "city": "c",
+          "state": "ss",
+          "country": "co",
+          "pincode": "123"
+        }
+      ]
     }
   ],
   "courses": [
     {
       "id": "1",
       "courseName": "Introduction to Programming",
-      "courseDescription": "Learn the basics of programming",
+      "courseDescription": "Learn the basics of programming. qq",
       "categoryId": 1
     },
     {
@@ -184,7 +206,7 @@
           "type": "multiple-choice",
           "choices": [
             "MVC",
-            "MVVM",
+            "MVVMQQ",
             "Singleton",
             "Observer"
           ],
@@ -293,7 +315,7 @@
           "correctAnswer": "all of the above"
         }
       ],
-      "price": 1999,
+      "price": 999,
       "facultyId": "1",
       "time": "8",
       "isActive": true
@@ -3581,6 +3603,50 @@
       "facultyId": "27",
       "time": "3600",
       "isActive": true
+    },
+    {
+      "id": "91",
+      "isActive": true,
+      "assessmentName": "Machine Learning",
+      "assessmentDescription": "qw",
+      "assessmentImage": "dsf",
+      "questions": [
+        {
+          "id": 1,
+          "text": "jyya",
+          "type": "multiple-choice",
+          "choices": [
+            "wedq",
+            "wdrgds",
+            "gfb",
+            "tyu"
+          ],
+          "correctAnswer": "tyu"
+        },
+        {
+          "id": 2,
+          "text": "kjshd",
+          "type": "true-false",
+          "choices": [
+            "true",
+            "false"
+          ],
+          "correctAnswer": "true"
+        },
+        {
+          "id": 3,
+          "text": "klshdf",
+          "type": "true-false",
+          "choices": [
+            "true",
+            "false"
+          ],
+          "correctAnswer": "false"
+        }
+      ],
+      "price": 3000,
+      "facultyId": 7,
+      "time": "3600"
     }
   ],
   "cart": [
@@ -3693,6 +3759,36 @@
       "assessmentId": "6",
       "traineeId": "2",
       "quantity": "0"
+    },
+    {
+      "id": "7",
+      "assessmentId": "4",
+      "traineeId": "7",
+      "quantity": "2"
+    },
+    {
+      "id": "7",
+      "assessmentId": "5",
+      "traineeId": "7",
+      "quantity": "1"
+    },
+    {
+      "id": "9",
+      "assessmentId": "9",
+      "traineeId": "2",
+      "quantity": "2"
+    },
+    {
+      "id": "9",
+      "assessmentId": "8",
+      "traineeId": "2",
+      "quantity": "2"
+    },
+    {
+      "id": "9",
+      "assessmentId": "9",
+      "traineeId": "2",
+      "quantity": "3"
     }
   ],
   "attendance": [
@@ -4283,6 +4379,42 @@
       "userId": "2",
       "date": "2024-06-28T04:49:50.193Z",
       "status": "success"
+    },
+    {
+      "id": "99",
+      "userId": "7",
+      "date": "2024-06-28T05:12:09.434Z",
+      "status": "success"
+    },
+    {
+      "id": "100",
+      "userId": "2",
+      "date": "2024-06-28T06:12:42.576Z",
+      "status": "success"
+    },
+    {
+      "id": "101",
+      "userId": "2",
+      "date": "2024-06-28T06:13:23.391Z",
+      "status": "success"
+    },
+    {
+      "id": "102",
+      "userId": "2",
+      "date": "2024-06-28T06:24:13.654Z",
+      "status": "success"
+    },
+    {
+      "id": "89",
+      "userId": "2",
+      "date": "2024-06-27T18:15:44.141Z",
+      "status": "success"
+    },
+    {
+      "id": "90",
+      "userId": "2",
+      "date": "2024-06-28T04:07:20.858Z",
+      "status": "success"
     }
   ],
   "assessmentScore": [
@@ -4417,173 +4549,56 @@
       "assessmentId": "4",
       "traineeId": 2,
       "score": 0
+    },
+    {
+      "id": "23",
+      "assessmentId": "4",
+      "traineeId": 7,
+      "score": 10
+    },
+    {
+      "id": "24",
+      "assessmentId": "6",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "25",
+      "assessmentId": "6",
+      "traineeId": 2,
+      "score": 0
+    },
+    {
+      "id": "26",
+      "assessmentId": "9",
+      "traineeId": 2,
+      "score": 2
     }
   ],
   "reports": [
-    {
-      "id": "1",
-      "marks": [
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "4",
-      "userId": "2",
-      "score": "3/10"
-    },
-    {
-      "id": "1",
-      "marks": [
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "4",
-      "userId": "2",
-      "score": "4/10"
-    },
-    {
-      "id": "1",
-      "marks": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "2",
-      "userId": "4",
-      "score": "0/10"
-    },
-    {
-      "id": "1",
-      "marks": [
-        true,
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "4",
-      "userId": "2",
-      "score": "5/10"
-    },
-    {
-      "id": "1",
-      "marks": [
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "4",
-      "userId": "2",
-      "score": "2/10"
-    },
-    {
-      "id": "1",
-      "marks": [
-        true,
-        true,
-        true,
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "4",
-      "userId": "2",
-      "score": "4/10"
-    },
+    
+
     {
       "id": 1,
       "marks": [
         true,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "4",
-      "userId": "2",
-      "score": "1/10"
-    },
-    {
-      "id": 1,
-      "marks": [
+        true,
+        true,
         false,
         true,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "5",
-      "userId": "2",
-      "score": "1/10"
-    },
-    {
-      "id": 1,
-      "marks": [
-        false,
         true,
         false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
+        true
       ],
-      "assessmentId": "5",
+      "assessmentId": "6",
       "userId": "2",
-      "score": "1/10"
+      "score": "6/10",
+      "date": "2024-06-01"
     },
     {
-      "id": 1,
+      "id": 2,
       "marks": [
         false,
         false,
@@ -4598,97 +4613,84 @@
       ],
       "assessmentId": "6",
       "userId": "2",
-      "score": "0/10"
+      "score": "0/10",
+      "date": "2024-06-10"
     },
     {
-      "id": 1,
-      "marks": [
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false
-      ],
-      "assessmentId": "2",
-      "userId": "2",
-      "score": "0/10"
-    },
-    {
-      "id": 1,
+      "id": 3,
       "marks": [
         true,
         true,
         false,
         false,
+        true,
+        true,
         false,
         false,
-        false,
-        false,
-        false,
+        true,
         false
       ],
-      "assessmentId": "4",
+      "assessmentId": "7",
       "userId": "2",
-      "score": "2/10"
+      "score": "6/10",
+      "date": "2024-06-15"
     },
     {
-      "id": 1,
+      "id": 4,
       "marks": [
         false,
         false,
+        true,
         false,
+        true,
         false,
+        true,
         false,
-        false,
-        false,
-        false,
-        false,
+        true,
         false
       ],
-      "assessmentId": "3",
+      "assessmentId": "8",
       "userId": "2",
-      "score": "0/10"
+      "score": "5/10",
+      "date": "2024-06-20"
     },
     {
-      "id": 1,
+      "id": 5,
       "marks": [
         false,
+        true,
         false,
         false,
-        false,
-        false,
+        true,
         false,
         false,
         false,
         false,
         false
       ],
-      "assessmentId": "3",
+      "assessmentId": "9",
       "userId": "2",
-      "score": "0/10"
+      "score": "2/10",
+      "date": "2024-06-28"
     },
     {
-      "id": 1,
+      "id": 3,
       "marks": [
         false,
+        true,
         false,
         false,
-        false,
-        false,
+        true,
         false,
         false,
         false,
         false,
         false
       ],
-      "assessmentId": "4",
+      "assessmentId": "9",
       "userId": "2",
-      "score": "0/10"
+      "score": "2/10",
+      "date": "2024-06-28"
     }
   ]
 }
