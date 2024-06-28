@@ -15,6 +15,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import { ReportsService } from '../../services/reports.service';
 import { Report } from '../../models/report';
+import { title } from 'process';
 
 @Component({
   selector: 'app-attempt-assessment',
@@ -23,7 +24,7 @@ import { Report } from '../../models/report';
 })
 export class AttemptAssessmentComponent implements OnInit {
   @ViewChild('stepper') stepper!: MatStepper;
-  message : string = "Congratulations you have passed !" 
+  message: string = 'Congratulations you have passed !';
   hasFinished: boolean = false;
   hasStarted: boolean = false;
   assessmentId: number = 0;
@@ -33,19 +34,23 @@ export class AttemptAssessmentComponent implements OnInit {
   startTime: Date = new Date();
   loggedUserId: string = '';
   assessmentDuration: number = 0;
-  marks:boolean[] = [] ; 
+  marks: boolean[] = [];
   chartOptions = {
     title: {
       text: 'Marks distribution',
     },
     animationEnabled: true,
+    axisY: {
+      title: 'Scores',
+      gridThickness: 0 // Removes horizontal grid lines
+    },
+    axisX: {
+      title: 'Questions',
+    },
     data: [
       {
         type: 'column',
-        dataPoints: [
-          { label: 'Apple', y: 10 },
-
-        ],
+        dataPoints: [{ label: 'Apple', y: 10 }],
       },
     ],
   };
@@ -58,8 +63,8 @@ export class AttemptAssessmentComponent implements OnInit {
     private assessmentService: AssessmentService,
     private attendanceService: AttendanceService,
     private assessmentScoreService: AssessmentScoreService,
-    private traineeService: TraineeService , 
-    private reportService : ReportsService
+    private traineeService: TraineeService,
+    private reportService: ReportsService
   ) {
     this.loggedUserId = this.localStorageService.getItem('loggedUserId') || '0';
 
@@ -90,8 +95,8 @@ export class AttemptAssessmentComponent implements OnInit {
     console.log('Submitted answers:', answers);
     this.finalScore = this.getScore(answers);
     // if score less than 50% , then fail
-    if(2 * this.finalScore < this.arrQuestions.length){
-      this.message = "Sorry you have failed , better try next time !"
+    if (2 * this.finalScore < this.arrQuestions.length) {
+      this.message = 'Sorry you have failed , better try next time !';
     }
     this.assessmentScoreService.getAssessmentScore().subscribe((data) => {
       let totalAssessmentScore = data.length;
@@ -119,23 +124,25 @@ export class AttemptAssessmentComponent implements OnInit {
           updateId = Number(ass.id);
           newAssessmentTrainee = ass;
         }
-        
+      });
+      // Add report
+      let rid = this.reportService.getReportsCount() + 1;
+      let r = new Report(
+        rid,
+        String(this.assessmentId),
+        this.loggedUserId,
+        this.marks,
+        `${this.finalScore}/${this.arrQuestions.length}`
+      );
+      this.reportService.addReport(r).subscribe((data) => {
+        console.log('added report');
+      });
       this.traineeService
-      .updateAssessmentTraineeById(updateId, newAssessmentTrainee)
-      .subscribe((data) => {
-        console.log('Assessment quantity reduced');
-      });
-      });
-
-      
+        .updateAssessmentTraineeById(updateId, newAssessmentTrainee)
+        .subscribe((data) => {
+          console.log('Assessment quantity reduced');
+        });
     });
-    // Add report 
-    let rid = this.reportService.getReportsCount() + 1 ; 
-    let r = new Report(rid , String(this.assessmentId ), this.loggedUserId , this.marks , `${this.finalScore}/${this.arrQuestions.length}`) ; 
-    this.reportService.addReport(r).subscribe((data) => {
-      console.log("added report") ; 
-    })
-    
   }
 
   getScore(answers: any) {
@@ -146,26 +153,36 @@ export class AttemptAssessmentComponent implements OnInit {
       if (this.arrQuestions[i].type === 'true-false') {
         if (this.arrQuestions[i].correctAnswer === ans.toString()) {
           score += 1;
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:1}) ; 
-          this.marks.push(true) ; 
-        }
-        else{
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:0}) ;
-          this.marks.push(false) ;
+          this.chartOptions.data[0].dataPoints.push({
+            label: `Q${i + 1}`,
+            y: 1,
+          });
+          this.marks.push(true);
+        } else {
+          this.chartOptions.data[0].dataPoints.push({
+            label: `Q${i + 1}`,
+            y: 0,
+          });
+          this.marks.push(false);
         }
       } else {
         if (this.arrQuestions[i].correctAnswer === ans) {
           score += 1;
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:1});
-          this.marks.push(true) ; 
-        }
-        else{
-          this.chartOptions.data[0].dataPoints.push({label:`Q${i + 1}` , y:0});
-          this.marks.push(false) ;
+          this.chartOptions.data[0].dataPoints.push({
+            label: `Q${i + 1}`,
+            y: 1,
+          });
+          this.marks.push(true);
+        } else {
+          this.chartOptions.data[0].dataPoints.push({
+            label: `Q${i + 1}`,
+            y: 0,
+          });
+          this.marks.push(false);
         }
       }
     }
-    this.chartOptions.data[0].dataPoints.shift() ; 
+    this.chartOptions.data[0].dataPoints.shift();
     return score;
   }
   getFormGroup(index: number): FormGroup {
@@ -199,9 +216,9 @@ export class AttemptAssessmentComponent implements OnInit {
   generateReport() {
     const data = document.getElementById('pdfContent');
     if (data) {
-      html2canvas(data).then(canvas => {
+      html2canvas(data).then((canvas) => {
         const imgWidth = 208;
-        const imgHeight = canvas.height * imgWidth / canvas.width;
+        const imgHeight = (canvas.height * imgWidth) / canvas.width;
         const contentDataURL = canvas.toDataURL('image/png');
         const pdf = new jsPDF('p', 'mm', 'a4');
 
@@ -212,13 +229,11 @@ export class AttemptAssessmentComponent implements OnInit {
         pdf.setFontSize(25);
 
         // Add an optional title or header
-        pdf.text("Assessment Report", 10, 10); // (text, x, y)
+        pdf.text('Assessment Report', 10, 10); // (text, x, y)
 
         pdf.addImage(contentDataURL, 'PNG', 0, position, imgWidth, imgHeight);
         pdf.save('assessment-report.pdf');
       });
     }
   }
-
-  
 }

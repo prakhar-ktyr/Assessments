@@ -46,6 +46,7 @@ export class TraineeService {
     let count:number = 0 ; 
     this.getAssessmentTrainess().subscribe(data => {
       count = data.length ; 
+      return count ;
     })
     return count ; 
   }

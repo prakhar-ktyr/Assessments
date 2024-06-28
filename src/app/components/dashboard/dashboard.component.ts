@@ -6,6 +6,7 @@ import { AssessmentService } from '../../services/assessment.service';
 import { TraineeService } from '../../services/trainee.service';
 import { AssessmentTrainees } from '../../models/assessmentTrainess';
 import { Router } from '@angular/router';
+import { AssessmentScoreService } from '../../services/assessment-score.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -18,14 +19,59 @@ export class DashboardComponent implements OnInit {
   loggedUserRole: string = "";
   quantityMap = new Map();
   arrAssessmentTrainees: AssessmentTrainees[] = [];
+  marks :number [] = [] ; 
+  assessmentIds:string[] = [] ; 
+  chartOptions = {
+    animationEnabled: true,
+    theme: "light2",
+    title:{
+      text: "Progress across assessments"
+    },
+    axisX: {
+      title:"assessment id" ,
+      minimum: 0,
+      maximum: 20,
+      interval: 1
+    },
+    axisY: {
+      title: "Scores",
+      // gridThickness: 0 // Removes horizontal grid lines
+  },
+    data: [{        
+      type: "scatter",
+      toolTipContent: "<b>assessment id :</b> {x} <br/><b> score :</b> {y}",
+          indexLabelFontSize: 16,
+      dataPoints: [
+        {x:"0",y:0}
+
+      ]
+    }]
+  } ;
+
 
   constructor(
     private router: Router,
     private localStorageService: LocalStorageService,
     private assessmentService: AssessmentService,
     private traineeService: TraineeService,
+    private assessmentScoreService:AssessmentScoreService,
     private cdr: ChangeDetectorRef
-  ) {}
+  ) {
+
+    this.assessmentScoreService.getAssessmentScore().subscribe(data =>{
+      data.forEach(d => {
+        if(String(d.traineeId) === this.loggedUserId){
+          this.marks.push(d.score) ; 
+          this.assessmentIds.push(String(d.assessmentId)); 
+        }
+      })
+
+      for(let i = 0 ; i < this.marks.length ; i++){
+        this.chartOptions.data[0].dataPoints.push({x : this.assessmentIds[i] , y : this.marks[i]}) ; 
+      }
+      this.chartOptions.data[0].dataPoints.shift() ; 
+    })
+  }
 
   ngOnInit(): void {
     this.loggedUserId = this.localStorageService.getItem("loggedUserId") || "0";
@@ -38,6 +84,8 @@ export class DashboardComponent implements OnInit {
     } else {
       this.fetchAssessmentsForOther();
     }
+    
+    
   }
 
   fetchAssessmentsForAdmin(): void {
@@ -64,6 +112,21 @@ export class DashboardComponent implements OnInit {
         }
       })
     });
+
+    this.assessmentScoreService.getAssessmentScore().subscribe(data =>{
+      data.forEach(d => {
+        if(String(d.traineeId) === this.loggedUserId){
+          this.marks.push(d.score) ; 
+          this.assessmentIds.push(String(d.assessmentId)); 
+        }
+      })
+
+      for(let i = 0 ; i < this.marks.length ; i++){
+        this.chartOptions.data[0].dataPoints.push({x : this.assessmentIds[i] , y : this.marks[i]}) ; 
+      }
+      this.chartOptions.data[0].dataPoints.shift() ; 
+    })
+    this.cdr.detectChanges();
   }
 
   fetchAssessmentsForOther(): void {

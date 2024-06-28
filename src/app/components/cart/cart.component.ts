@@ -81,23 +81,25 @@ export class CartComponent {
     this.traineeService.getAssessmentTrainess().subscribe((data) => {
       arrAssTrainees = data;
       this.currentUserCart.arrAssessments.forEach((ass, index) => {
-        let newId = this.traineeService.getAssessmentTraineesCount() + 1;
-        let newAssId = String(ass.id);
-        let newAss = new AssessmentTrainees(
-          newId.toString(),
-          newAssId,
-          this.loggedUserId,
-          this.currentUserCart.quantity[index].toString()
-        );
-        this.traineeService
-          .updateAssessmentTrainees(newAss)
-          .subscribe((data) => {
-            console.log('Added new entity to dashboard');
-          });
-     
+        let newId = 0 ; 
+        this.traineeService.getAssessmentTrainess().subscribe(data => {
+          newId = data.length + 1 ; 
+          let newAssId = String(ass.id);
+          let newAss = new AssessmentTrainees(
+            String(newId),
+            newAssId,
+            this.loggedUserId,
+            this.currentUserCart.quantity[index].toString()
+          );
+          this.traineeService
+            .updateAssessmentTrainees(newAss)
+            .subscribe((data) => {
+              console.log('Added new entity to dashboard');
+              this.clearCart() ; 
+            });
+        })
+       
       });
-
-      this.clearCart() ; 
  
     });
   }

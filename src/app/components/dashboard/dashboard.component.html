@@ -17,4 +17,8 @@
       </div>
     </div>
   </div>
+
+  <div class="row mt-4">
+    <canvasjs-chart *ngIf="loggedUserRole === 'Trainee'" [options]="chartOptions"></canvasjs-chart>
+  </div>
 </div>
